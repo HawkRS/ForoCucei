@@ -81,6 +81,14 @@
   flex-flow: column;
 }
 
+.team-container{
+  background: snow;
+  text-align: center;
+  color: #1c1c1c;
+  flex-grow: 5;
+  display: flex;
+  flex-flow: row;
+}
 
 .text-container{
   text-align: justify;
@@ -89,6 +97,12 @@
 }
 .text-container h3,
 .text-container h4{
+  color: royalblue;
+}
+.member, .member h5{
+  text-align: justify;
+  color: gray;
+  flex-grow: 1;
   color: royalblue;
 }
 
