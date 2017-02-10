@@ -1,0 +1,108 @@
+@import "normalize.css";
+/*@import "bootstrap.css";  PA DESPUES HAHA*/
+
+*{
+  /*border: 5px solid teal;*/
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+/*CABECERA - LOGO - MENU*/
+#main-header{
+  display: flex;
+  flex-flow: column;
+}
+
+.head{
+  color: white;
+  background: #1c1c1c;
+  height: 30px;
+  text-align: right;
+}
+
+.header-bar{
+  background: midnightblue;
+  height: 100px;
+  display: inherit;
+  flex-flow: row;
+}
+
+.logo{
+  color: yellow;
+  font-size: 30px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.nav-bar{
+  color: snow;
+  font-size: 20px;
+  text-align: center;
+  flex-grow: 4;
+}
+
+/* SECCION PRINCIPAL*/
+
+.main-container{
+  display: flex;
+  flex-flow: row;
+}
+
+/* SIDE MENU - FORUM TOPICS */
+.side-container{
+  background: lightgray;
+  text-align: center;
+  color: #1c1c1c;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.user-menu{
+  color: limegreen;
+  flex-grow: 1;
+}
+
+.forum-topics{
+  color: goldenrod;
+  flex-grow: 3;
+}
+
+/* CENTER SECTION */
+.center-container{
+  background: snow;
+  text-align: center;
+  color: #1c1c1c;
+  flex-grow: 5;
+  display: flex;
+  flex-flow: column;
+}
+
+
+.text-container{
+  text-align: justify;
+  color: gray;
+  flex-grow: 1;
+}
+.text-container h3,
+.text-container h4{
+  color: royalblue;
+}
+
+/* FOOTER */
+
+.footer-container{
+  background: #1e1e1e;
+  height: 120px;
+  display: flex;
+  flex-flow: row;
+}
+
+.contact, .site-map{
+  text-align: center;
+  color: snow;
+  flex-grow: 1;
+}
