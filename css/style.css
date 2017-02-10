@@ -21,6 +21,7 @@
   background: #1c1c1c;
   height: 30px;
   text-align: right;
+  padding: 10px;
 }
 
 .header-bar{
@@ -28,6 +29,7 @@
   height: 100px;
   display: inherit;
   flex-flow: row;
+  padding: 10px;
 }
 
 .logo{
@@ -59,6 +61,7 @@
   flex-grow: 1;
   display: flex;
   flex-flow: column;
+  padding: 10px;
 }
 
 .user-menu{
@@ -79,6 +82,7 @@
   flex-grow: 5;
   display: flex;
   flex-flow: column;
+  padding: 10px;
 }
 
 .team-container{
@@ -94,16 +98,21 @@
   text-align: justify;
   color: gray;
   flex-grow: 1;
+  padding: 10px;
 }
 .text-container h3,
 .text-container h4{
   color: royalblue;
+}
+.member{
+  padding: 15px;
 }
 .member, .member h5{
   text-align: justify;
   color: gray;
   flex-grow: 1;
   color: royalblue;
+  padding: 10px;
 }
 
 /* FOOTER */
@@ -113,10 +122,12 @@
   height: 120px;
   display: flex;
   flex-flow: row;
+
 }
 
 .contact, .site-map{
   text-align: center;
   color: snow;
   flex-grow: 1;
+  padding: 10px;
 }
