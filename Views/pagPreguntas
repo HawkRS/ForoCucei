@@ -5,8 +5,8 @@
     <title>Formular una pregunta</title>
   </head>
   <body>
-    <!-- Aquí empieza el área de la izquierda -->
     <div id="content">
+      <!-- Aquí empieza el área de la izquierda -->
       <div id="mainbar" class="ask-mainbar">
         <div id="question-form">
           <!--   Título de la pregunta    -->
@@ -54,7 +54,7 @@
               </div>
             </div>
           </div>
-          <!--    Aquí está el submit para publicar la pregunta -->
+          <!-- Aquí está el submit para publicar la pregunta y el disclaimer-->
           <div id="questions-only-section">
             <div class="form-submit cbt">
               <input id="submit-button" type="submit" value="Publicar tu pregunta" tabindex="120">
@@ -64,6 +64,7 @@
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
