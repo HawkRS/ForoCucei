@@ -1,0 +1,137 @@
+@import "nomalize.css"
+
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+#content{
+    min-height: 450px;
+    margin: 0 auto;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 1060px;
+    padding: 15px;
+    background-color: #FFF;
+}
+
+#mainbar, .mainbar{
+    float: left;
+    width: 728px;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+/*Título de la pregunta*/
+.form-item{
+  padding: 10px 0 15px 0;
+}
+
+.ask-title-table{
+    width: 668px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.ask-title-cell-key{
+    width: 40px;
+}
+
+.form-item label{
+    display: block;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+#title{
+    width: 598px;
+}
+
+/*    Area de registro    */
+
+.form-item{
+    padding: 10px 0 15px 0;
+}
+
+.form-item label{
+    display: block;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+element.style {
+    width: 650px;
+}
+
+/*   Login    */
+
+.new-login-form{
+    margin-top: 15px;
+    width: 670px;
+}
+
+.new-login-form .new-login-left{
+    display: inline-block;
+    vertical-align: top;
+    width: 275px;
+}
+
+.preferred-login{
+    background: #f9f9f9;
+    width: 258px;
+    border: 1px solid #d4d4d4;
+    box-shadow: -1px 1px #f2f2f2;
+    color: #848d95;
+    padding: 7px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    height: 16px;
+}
+
+/*   Publicar la pregunta   */
+
+input[type="submit"]{
+    color: #FFF;
+    background-color: #0095ff;
+    border-color: #07c;
+    box-shadow: inset 0 1px 0 #66bfff;
+    display: inline-block;
+    position: relative;
+    padding: .61538462em 1em;
+    vertical-align: middle;
+    min-height: 2.46153846em;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: inherit;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    outline: none;
+    touch-action: manipulation;
+    transition: all .1s ease-in;
+}
+
+.privacy-policy-agreement {
+    font-style: italic;
+}
+
+.ask-page .privacy-policy-agreement, .question-page .privacy-policy-agreement {
+    margin-top: 15px;
+}
