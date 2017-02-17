@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Formular una pregunta</title>
+  </head>
+  <body>
+    <!-- Aquí empieza el área de la izquierda -->
+    <div id="content">
+      <div id="mainbar" class="ask-mainbar">
+        <div id="question-form">
+          <!--   Título de la pregunta    -->
+          <table class="ask-title-table">
+            <tbody>
+              <tr>
+                <td class="ask-title-cell-key">
+                  <label for="title">Título</label>
+                </td>
+                <td class="ask-title-cell-value">
+                  <input id="title" type="text" name="title" maxlength="300"
+                  class="ask-title-field" placeholder="¿Cuál es tu pregunta?"/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--      Parte en la que se escribe la pregunta completa   -->
+          <div id="post-editor" class="post-editor-js">
+            <textarea class="wmd-input" name="post-text" rows="15" cols="92" tabindex="101"></textarea>
+          </div>
+          <!--                  Area de etiquetas y registro                 -->
+          <div style="position: relative;">
+            <div class="form-item">
+              <label>Etiquetas</label>
+              <div class="tag-editor">
+                <input type="text" placeholder="Pon por lo menos una etiqueta">
+              </div>
+            </div>
+            <!--      Aquí empieza el registro   -->
+            <div class="new-login-form">
+              <div class="new-login-left">
+                <h3>Registrarse o iniciar sesión</h3>
+                <div class="preferred-login google-login">
+                  <p>
+                    <span class="icon"></span>
+                    <span>Registrarse mediante google</span>
+                  </p>
+                </div>
+                <div class="preferred-login facebook-login">
+                  <p>
+                    <span class="icon"></span>
+                    <span>Registrarse mediante facebook</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--    Aquí está el submit para publicar la pregunta -->
+          <div id="questions-only-section">
+            <div class="form-submit cbt">
+              <input id="submit-button" type="submit" value="Publicar tu pregunta" tabindex="120">
+              <p class="privacy-policy-agreement">
+                "Al publicar tu pregunta, expresas tu conformidad con la
+                política de privacidad y los términos de servicio."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
