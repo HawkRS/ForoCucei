@@ -86,7 +86,21 @@ header{  border-bottom: 3px solid $color-terciario;}
 }
 /*MENUS*/
 
+.navbar-container {
+  float: right;
+  /*border: 5px solid red;*/
+  width: 80%;
+  display: flex;
+  flex-flow: row; }
+  .navbar-container li {
+    text-align: center;
+    flex-grow: 1;
+    /*border: 5px solid silver;*/ }
+    .navbar-container li a {
+      color: $color-secundario; }
 
+.mobile-nav, .desk-nav {
+  text-align: right; }
 
 /* DROPDOWN MENU */
 .dropbtn {
@@ -153,22 +167,29 @@ header{  border-bottom: 3px solid $color-terciario;}
 
   .desk-nav {
     display: none; }
- }
+}
 @media (min-width: 992px) {
   .mobile-nav {
     display: none; }
 
   .navbar-container {
     width: 90%; }
-    .navbar-container li a {
-      margin: 5px;
-      font-size: .75em; } }
+  .navbar-container li a {
+    margin: 5px;
+    font-size: .75em; }
+  .desk-nav {
+    position: relative;
+    top: 15px; }
+}
+
 @media (min-width: 1200px) {
   .mobile-nav {
     display: none; }
-
+  .desk-nav {
+    position: relative;
+    top: 15px; }
   .navbar-container {
     width: 90%; }
-    .navbar-container li a {
-      margin: 5px;
-      font-size: 1em; } }
+  .navbar-container li a {
+    margin: 5px;
+    font-size: 1em; } }
