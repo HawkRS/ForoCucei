@@ -1,5 +1,6 @@
-@import url(normalize.css);
-@import url(bootstrap.css);
+@import "normalize.css";
+@import "bootstrap.css";
+
 /* COLORES */
 /*opcion UNO*/
 /*$color-primario: #caebf2;
@@ -18,120 +19,113 @@ $color-terciario: #1a0315;*/
 $color-secundario: #88d317;
 $color-terciario: #1a0315;*/
 /*opcion CUATRO*/
+$color-primario: #002B33;
+$color-secundario: #0EB5B2;
+$color-terciario: #5CBF00;
+$background: snow;
+$texto: #1c1c1c;
+$complementario: #efefef;
+$search-bar : lighten($color-primario, 5);
+
 /*ESTILO GENERAL DEL DOCUMENTO*/
 * {
   list-style-type: none;
   text-decoration: none;
-  font-family: 'Hammersmith One', sans-serif; }
-
-.root {
+  font-family: 'Hammersmith One', sans-serif;
+}
+.root{
   margin: 0;
-  padding: 0; }
-
+  padding: 0;
+}
 /* HEADER */
-.header-container {
-  background: #002B33;
+.header-container{
+  background: $color-primario;
   padding: 10px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
-  flex-flow: row; }
-
+  flex-flow: row;
+  }
 /* usa el tag header, pero se cambiara a clase si usamos mas headers*/
-header {
-  border-bottom: 3px solid #5CBF00; }
-
+header{  border-bottom: 3px solid $color-terciario;}
 /*pruebas de acomodo del header*/
-.header-element {
-  /*border: 5px solid red;*/ }
+.header-element{/*border: 5px solid red;*/}
 
 /*USER - LOGO - MENU*/
-#logo {
+#logo{
   font-family: 'Krona One', sans-serif;
-  color: #5CBF00;
-  -webkit-flex-grow: 3;
-  -ms-flex-positive: 3;
+  color: $color-terciario;
   flex-grow: 3;
   text-align: center;
-  font-size: 1.2em; }
-
-#menu-nav, #user-nav {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
+  font-size: 1.2em;
+}
+#menu-nav, #user-nav{
   flex-grow: 1;
-  text-align: center; }
-
-.fa-user-circle-o, .fa-bars, .fa-search {
+  text-align: center;
+}
+.fa-user-circle-o, .fa-bars, .fa-search{
   margin: auto;
-  color: #0EB5B2; }
-
-.search-container {
-  background: #00414d;
-  padding: 5px; }
-
-.search-bar-form {
+  color: $color-secundario;
+}
+.search-container{
+  background: $search-bar;
+  padding: 5px;
+}
+.search-bar-form{
   margin: auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
-  flex-flow: row; }
-
+  flex-flow: row;
+}
 /* SEARCH BAR */
-.input-text {
-  -webkit-flex-grow: 4;
-  -ms-flex-positive: 4;
+
+.input-text{
   flex-grow: 4;
-  margin: 0px 5px; }
-
-.btn {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
+  margin: 0px 5px;
+}
+.btn{
   flex-grow: 1;
-  margin: 0px 5px; }
-
+  margin: 0px 5px;
+}
 /*MENUS*/
+
+
+
 /* DROPDOWN MENU */
+
 /* MEDIA QUERIES */
 @media (max-width: 767px) {
   .mobile-nav {
     position: relative;
     float: right;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     text-align: right; }
-  .desk-nav {
-    display: none; } }
 
+  .desk-nav {
+    display: none; }
+}
 @media (max-width: 991px) {
   .mobile-nav {
     position: relative;
     float: right;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     text-align: right; }
-  .desk-nav {
-    display: none; } }
 
+  .desk-nav {
+    display: none; }
+ }
 @media (min-width: 992px) {
   .mobile-nav {
     display: none; }
+
   .navbar-container {
     width: 90%; }
-  .navbar-container li a {
-    margin: 5px;
-    font-size: .75em; } }
-
+    .navbar-container li a {
+      margin: 5px;
+      font-size: .75em; } }
 @media (min-width: 1200px) {
   .mobile-nav {
     display: none; }
+
   .navbar-container {
     width: 90%; }
-  .navbar-container li a {
-    margin: 5px;
-    font-size: 1em; } }
+    .navbar-container li a {
+      margin: 5px;
+      font-size: 1em; } }
