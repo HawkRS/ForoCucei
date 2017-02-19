@@ -165,11 +165,11 @@ header{  border-bottom: 3px solid $color-terciario;}
     display: flex;
     text-align: right; }
 
-  .desk-nav {
+  .desk-nav{
     display: none; }
 }
 @media (min-width: 992px) {
-  .mobile-nav {
+  .mobile-nav, .mobile-user-nav {
     display: none; }
 
   .navbar-container {
@@ -183,7 +183,7 @@ header{  border-bottom: 3px solid $color-terciario;}
 }
 
 @media (min-width: 1200px) {
-  .mobile-nav {
+  .mobile-nav, .mobile-user-nav {
     display: none; }
   .desk-nav {
     position: relative;

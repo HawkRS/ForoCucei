@@ -182,7 +182,7 @@ header {
     display: none; } }
 
 @media (min-width: 992px) {
-  .mobile-nav {
+  .mobile-nav, .mobile-user-nav {
     display: none; }
   .navbar-container {
     width: 90%; }
@@ -194,7 +194,7 @@ header {
     top: 15px; } }
 
 @media (min-width: 1200px) {
-  .mobile-nav {
+  .mobile-nav, .mobile-user-nav {
     display: none; }
   .desk-nav {
     position: relative;
