@@ -53,7 +53,17 @@ $search-bar : lighten($color-primario, 5);
 h1,h2{
   color: $color-primario;
 }
-
+.lang-tag{
+  font-size: .8em;
+  padding: 3px 4px 2px;
+}
+.c-tag      {background: #0061EA;color: white;box-shadow: 0px 5px (darken(#0061EA, 15));}
+.python-tag {background: #E2D300;color: white;box-shadow: 0px 5px (darken(#E2D300, 15));}
+.php-tag    {background: #1B5F82;color: white;box-shadow: 0px 5px (darken(#1B5F82, 15));}
+.csharp-tag {background: #8E00BA;color: white;box-shadow: 0px 5px (darken(#8E00BA, 15));}
+.css-tag    {background: #33F76B;color: white;box-shadow: 0px 5px (darken(#33F76B, 15));}
+.java-tag   {background: #EA0000;color: white;box-shadow: 0px 5px (darken(#EA0000, 15));}
+.html-tag   {background: #DD4200;color: white;box-shadow: 0px 5px (darken(#DD4200, 15));}
 /* HEADER */
 .header-container{
   background: $color-primario;
