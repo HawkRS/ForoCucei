@@ -32,9 +32,6 @@ $color-terciario: #1a0315;*/
 h1, h2 {
   color: #002B33; }
 
-h3 {
-  color: #0EB5B2; }
-
 /* HEADER */
 .header-container {
   background: #002B33;
@@ -203,6 +200,7 @@ header {
   .tutorial-article h3 {
     padding: 5px 0px;
     margin: 0;
+    color: #0EB5B2;
     border-left: 4px solid #5CBF00; }
 
 .tuto-content {
@@ -211,13 +209,30 @@ header {
   display: -ms-flexbox;
   display: flex; }
 
-.tuto-text, .tuto-image {
+.ask-text, .ask-image, .tuto-text, .tuto-image {
   margin: 2px 10px; }
 
-.tuto-image {
+.ask-image, .tuto-image {
   display: block; }
-  .tuto-image img {
+  .ask-image img, .tuto-image img {
     margin: auto; }
+
+/* BLOQUE DE PREGUNTAS*/
+.ask-article {
+  background: #0EB5B2;
+  margin: 10px 0;
+  padding: 5px; }
+  .ask-article h3 {
+    padding: 5px 0px;
+    margin: 0;
+    color: #002B33;
+    border-left: 4px solid #5CBF00; }
+
+.ask-content {
+  background: #eaeaea;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
@@ -235,7 +250,7 @@ header {
     -webkit-flex-flow: column-reverse;
     -ms-flex-flow: column-reverse;
     flex-flow: column-reverse; }
-  .tuto-content {
+  .tuto-content, .ask-content {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; } }
@@ -255,7 +270,7 @@ header {
     -webkit-flex-flow: column-reverse;
     -ms-flex-flow: column-reverse;
     flex-flow: column-reverse; }
-  .tuto-content {
+  .tuto-content, .ask-content {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; } }
@@ -278,7 +293,7 @@ header {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
-  .tuto-content {
+  .tuto-content, .ask-content {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; } }
@@ -299,7 +314,15 @@ header {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
-  .tuto-content {
+  .side-container {
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2; }
+  .center-container {
+    -webkit-flex-grow: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3; }
+  .tuto-content, .ask-content {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; } }

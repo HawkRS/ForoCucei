@@ -53,7 +53,7 @@ $search-bar : lighten($color-primario, 5);
 h1,h2{
   color: $color-primario;
 }
-h3{color: $color-secundario;}
+
 /* HEADER */
 .header-container{
   background: $color-primario;
@@ -189,7 +189,6 @@ header{  border-bottom: 3px solid $color-terciario;}
   background: $sidebar;
   padding: 5px;
 }
-
 .center-container{
   background: $background;
   padding: 5px;
@@ -204,6 +203,7 @@ header{  border-bottom: 3px solid $color-terciario;}
   h3{
     padding: 5px 0px;
     margin: 0;
+    color: $color-secundario;
     border-left: 4px solid $color-terciario;
   }
   padding: 5px;
@@ -212,14 +212,30 @@ header{  border-bottom: 3px solid $color-terciario;}
   background: $background;
   display: flex;
 }
-.tuto-text, .tuto-image{
+.ask-text,.ask-image,.tuto-text, .tuto-image{
   margin: 2px 10px;
 }
-.tuto-image{
+.ask-image, .tuto-image{
   display: block;
   img{
     margin: auto;
   }
+}
+/* BLOQUE DE PREGUNTAS*/
+.ask-article{
+  background: $color-secundario;
+  margin: 10px 0;
+  h3{
+    padding: 5px 0px;
+    margin: 0;
+    color: $color-primario;
+    border-left: 4px solid $color-terciario;
+  }
+  padding: 5px;
+}
+.ask-content{
+  background: $background;
+  display: flex;
 }
 
 
@@ -236,7 +252,7 @@ header{  border-bottom: 3px solid $color-terciario;}
     display: none; }
   .main-container{
     flex-flow: column-reverse;}
-  .tuto-content{
+  .tuto-content, .ask-content{
     flex-flow: column;}
 }
 /* LARGE PHONES -TABLETS */
@@ -251,7 +267,7 @@ header{  border-bottom: 3px solid $color-terciario;}
     display: none; }
   .main-container{
     flex-flow: column-reverse;}
-  .tuto-content{
+  .tuto-content, .ask-content{
     flex-flow: column;}
 }
 /* LAPTOPS - SMALL SCREENS */
@@ -270,8 +286,10 @@ header{  border-bottom: 3px solid $color-terciario;}
     float: right;
   }
   .main-container{
-    flex-flow: row;}
-  .tuto-content{
+    flex-flow: row;
+  }
+
+  .tuto-content, .ask-content{
     flex-flow: row;}
 }
 /* LARGE SCREENS */
@@ -287,7 +305,10 @@ header{  border-bottom: 3px solid $color-terciario;}
     margin: 5px;
     font-size: 1em; }
   .main-container{
-    flex-flow: row;}
-  .tuto-content{
+    flex-flow: row;
+  }
+  .side-container{flex-grow: 2;}
+  .center-container{flex-grow: 3;}
+  .tuto-content, .ask-content{
     flex-flow: row;}
 }
