@@ -34,6 +34,7 @@ $color-secundario: #0EB5B2;
 $color-terciario: #5CBF00;
 $background: snow;
 $texto: #1c1c1c;
+$sidebar: #cecece;
 $complementario: #efefef;
 $search-bar : lighten($color-primario, 5);
 
@@ -174,6 +175,18 @@ header{  border-bottom: 3px solid $color-terciario;}
   margin: 0px 5px;
 }
 
+/* MIDDLE SECTION */
+.main-container{
+  display: flex;
+}
+
+.side-container{
+  background: $sidebar;
+}
+
+.center-container{
+  background: $background;
+}
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
 @media (max-width: 767px)
@@ -185,6 +198,8 @@ header{  border-bottom: 3px solid $color-terciario;}
     text-align: right;}
   .desk-nav {
     display: none; }
+  .main-container{
+    flex-flow: column-reverse;}
 }
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px)
@@ -196,6 +211,8 @@ header{  border-bottom: 3px solid $color-terciario;}
     text-align: right; }
   .desk-nav{
     display: none; }
+  .main-container{
+    flex-flow: column-reverse;}
 }
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
@@ -212,6 +229,8 @@ header{  border-bottom: 3px solid $color-terciario;}
   .search-bar{
     float: right;
   }
+  .main-container{
+    flex-flow: row;}
 }
 /* LARGE SCREENS */
 @media (min-width: 1200px) {
@@ -225,5 +244,6 @@ header{  border-bottom: 3px solid $color-terciario;}
   .navbar-container li a {
     margin: 5px;
     font-size: 1em; }
-
+  .main-container{
+    flex-flow: row;}
 }
