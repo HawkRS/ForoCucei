@@ -195,14 +195,29 @@ header {
 .bienvenida {
   border-bottom: 2px inset #0EB5B2; }
 
+/* BLOQUE DE TUTORIALES*/
 .tutorial-article {
-  background: #dddddd;
-  padding: 10px; }
+  background: #002B33;
+  margin: 10px 0;
+  padding: 5px; }
+  .tutorial-article h3 {
+    padding: 5px 0px;
+    margin: 0;
+    border-left: 4px solid #5CBF00; }
 
 .tuto-content {
+  background: #eaeaea;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+
+.tuto-text, .tuto-image {
+  margin: 2px 10px; }
+
+.tuto-image {
+  display: block; }
+  .tuto-image img {
+    margin: auto; }
 
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */

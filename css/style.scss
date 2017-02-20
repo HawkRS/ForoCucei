@@ -197,12 +197,31 @@ header{  border-bottom: 3px solid $color-terciario;}
 .bienvenida{
   border-bottom: 2px inset $color-secundario;
 }
+/* BLOQUE DE TUTORIALES*/
 .tutorial-article{
-  background: darken($background, 5);
-  padding: 10px;}
+  background: $color-primario;
+  margin: 10px 0;
+  h3{
+    padding: 5px 0px;
+    margin: 0;
+    border-left: 4px solid $color-terciario;
+  }
+  padding: 5px;
+}
 .tuto-content{
+  background: $background;
   display: flex;
 }
+.tuto-text, .tuto-image{
+  margin: 2px 10px;
+}
+.tuto-image{
+  display: block;
+  img{
+    margin: auto;
+  }
+}
+
 
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
