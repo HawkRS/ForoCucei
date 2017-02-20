@@ -29,6 +29,12 @@ $color-terciario: #1a0315;*/
   margin: 0;
   padding: 0; }
 
+h1, h2 {
+  color: #002B33; }
+
+h3 {
+  color: #0EB5B2; }
+
 /* HEADER */
 .header-container {
   background: #002B33;
@@ -179,10 +185,24 @@ header {
   display: flex; }
 
 .side-container {
-  background: #cecece; }
+  background: #cecece;
+  padding: 5px; }
 
 .center-container {
-  background: snow; }
+  background: #eaeaea;
+  padding: 5px; }
+
+.bienvenida {
+  border-bottom: 2px inset #0EB5B2; }
+
+.tutorial-article {
+  background: #dddddd;
+  padding: 10px; }
+
+.tuto-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
@@ -199,7 +219,11 @@ header {
   .main-container {
     -webkit-flex-flow: column-reverse;
     -ms-flex-flow: column-reverse;
-    flex-flow: column-reverse; } }
+    flex-flow: column-reverse; }
+  .tuto-content {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column; } }
 
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px) {
@@ -215,7 +239,11 @@ header {
   .main-container {
     -webkit-flex-flow: column-reverse;
     -ms-flex-flow: column-reverse;
-    flex-flow: column-reverse; } }
+    flex-flow: column-reverse; }
+  .tuto-content {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column; } }
 
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
@@ -234,6 +262,10 @@ header {
   .main-container {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
+    flex-flow: row; }
+  .tuto-content {
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
     flex-flow: row; } }
 
 /* LARGE SCREENS */
@@ -249,6 +281,10 @@ header {
     margin: 5px;
     font-size: 1em; }
   .main-container {
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row; }
+  .tuto-content {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; } }

@@ -32,7 +32,7 @@ $color-terciario: #1a0315;*/
 $color-primario: #002B33;
 $color-secundario: #0EB5B2;
 $color-terciario: #5CBF00;
-$background: snow;
+$background: #eaeaea;
 $texto: #1c1c1c;
 $sidebar: #cecece;
 $complementario: #efefef;
@@ -49,6 +49,11 @@ $search-bar : lighten($color-primario, 5);
   margin: 0;
   padding: 0;
 }
+
+h1,h2{
+  color: $color-primario;
+}
+h3{color: $color-secundario;}
 /* HEADER */
 .header-container{
   background: $color-primario;
@@ -182,11 +187,23 @@ header{  border-bottom: 3px solid $color-terciario;}
 
 .side-container{
   background: $sidebar;
+  padding: 5px;
 }
 
 .center-container{
   background: $background;
+  padding: 5px;
 }
+.bienvenida{
+  border-bottom: 2px inset $color-secundario;
+}
+.tutorial-article{
+  background: darken($background, 5);
+  padding: 10px;}
+.tuto-content{
+  display: flex;
+}
+
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
 @media (max-width: 767px)
@@ -200,6 +217,8 @@ header{  border-bottom: 3px solid $color-terciario;}
     display: none; }
   .main-container{
     flex-flow: column-reverse;}
+  .tuto-content{
+    flex-flow: column;}
 }
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px)
@@ -213,6 +232,8 @@ header{  border-bottom: 3px solid $color-terciario;}
     display: none; }
   .main-container{
     flex-flow: column-reverse;}
+  .tuto-content{
+    flex-flow: column;}
 }
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
@@ -231,6 +252,8 @@ header{  border-bottom: 3px solid $color-terciario;}
   }
   .main-container{
     flex-flow: row;}
+  .tuto-content{
+    flex-flow: row;}
 }
 /* LARGE SCREENS */
 @media (min-width: 1200px) {
@@ -245,5 +268,7 @@ header{  border-bottom: 3px solid $color-terciario;}
     margin: 5px;
     font-size: 1em; }
   .main-container{
+    flex-flow: row;}
+  .tuto-content{
     flex-flow: row;}
 }
