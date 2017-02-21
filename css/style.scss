@@ -64,6 +64,17 @@ h1,h2{
 .css-tag    {background: #33F76B;color: white;box-shadow: 0px 5px (darken(#33F76B, 15));}
 .java-tag   {background: #EA0000;color: white;box-shadow: 0px 5px (darken(#EA0000, 15));}
 .html-tag   {background: #DD4200;color: white;box-shadow: 0px 5px (darken(#DD4200, 15));}
+
+/*ESTILOS PARA DATOS DEL USUARIO */
+.user-name{
+  color: lighten($color-primario, 10);
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: right;
+  right: 5px;
+}
+
+
 /* HEADER */
 .header-container{
   background: $color-primario;
@@ -88,7 +99,7 @@ header{  border-bottom: 3px solid $color-terciario;}
   flex-grow: 1;
   text-align: center;
 }
-.fa-user-circle-o, .fa-bars, .fa-search{
+.fa-user-mobile-nav, .fa-bars, .fa-search{
   margin: auto;
   color: $color-secundario;
 }
@@ -162,7 +173,7 @@ header{  border-bottom: 3px solid $color-terciario;}
 
 .dropdown:hover .dropbtn {
   background-color: $color-primario;
-  .fa-user-circle-o, .fa-bars{
+  .fa-user-mobile-nav, .fa-bars{
   color: $color-terciario;}
 }
 
@@ -194,7 +205,6 @@ header{  border-bottom: 3px solid $color-terciario;}
 .main-container{
   display: flex;
 }
-
 .side-container{
   background: $sidebar;
   padding: 5px;
@@ -203,8 +213,31 @@ header{  border-bottom: 3px solid $color-terciario;}
   background: $background;
   padding: 5px;
 }
+/* USER DESK NAV */
+.desk-user-nav{
+  border-bottom: 2px solid silver;
+  display: block;
+}
+.desk-user-header{
+  background: darken($sidebar, 5);
+  box-shadow: 0px 5px (darken($sidebar, 15));
+}
+.fa-user-desk-nav{
+  color: $color-secundario;
+  margin: 5px;
+}
+.user-info-container{
+  float: right;
+  display: flex;
+  flex-flow: column;
+  text-align: right;
+  padding: 5px;
+  border: 2px solid darken($sidebar, 15);
+  background: darken($sidebar, 5);
+}
+/* CENTER SECCION */
 .bienvenida{
-  border-bottom: 2px inset $color-secundario;
+  border-bottom: 2px solid $color-secundario;
 }
 /* BLOQUE DE TUTORIALES*/
 .tutorial-article{
@@ -264,6 +297,8 @@ header{  border-bottom: 3px solid $color-terciario;}
     flex-flow: column-reverse;}
   .tuto-content, .ask-content{
     flex-flow: column;}
+  .desk-user-nav{
+    display:none;}
 }
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px)
@@ -279,6 +314,8 @@ header{  border-bottom: 3px solid $color-terciario;}
     flex-flow: column-reverse;}
   .tuto-content, .ask-content{
     flex-flow: column;}
+  .desk-user-nav{
+    display:none;}
 }
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
@@ -298,7 +335,8 @@ header{  border-bottom: 3px solid $color-terciario;}
   .main-container{
     flex-flow: row;
   }
-
+  .side-container{flex: 1;}
+  .center-container{flex: 5;}
   .tuto-content, .ask-content{
     flex-flow: row;}
 }
@@ -317,8 +355,8 @@ header{  border-bottom: 3px solid $color-terciario;}
   .main-container{
     flex-flow: row;
   }
-  .side-container{flex-grow: 2;}
-  .center-container{flex-grow: 3;}
+  .side-container{flex: 1;}
+  .center-container{flex: 5;}
   .tuto-content, .ask-content{
     flex-flow: row;}
 }

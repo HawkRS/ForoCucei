@@ -71,6 +71,14 @@ h1, h2 {
   color: white;
   box-shadow: 0px 5px #912b00; }
 
+/*ESTILOS PARA DATOS DEL USUARIO */
+.user-name {
+  color: #005666;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: right;
+  right: 5px; }
+
 /* HEADER */
 .header-container {
   background: #002B33;
@@ -106,7 +114,7 @@ header {
   flex-grow: 1;
   text-align: center; }
 
-.fa-user-circle-o, .fa-bars, .fa-search {
+.fa-user-mobile-nav, .fa-bars, .fa-search {
   margin: auto;
   color: #0EB5B2; }
 
@@ -180,7 +188,7 @@ header {
 
 .dropdown:hover .dropbtn {
   background-color: #002B33; }
-  .dropdown:hover .dropbtn .fa-user-circle-o, .dropdown:hover .dropbtn .fa-bars {
+  .dropdown:hover .dropbtn .fa-user-mobile-nav, .dropdown:hover .dropbtn .fa-bars {
     color: #5CBF00; }
 
 /* SEARCH BAR */
@@ -228,8 +236,35 @@ header {
   background: #eaeaea;
   padding: 5px; }
 
+/* USER DESK NAV */
+.desk-user-nav {
+  border-bottom: 2px solid silver;
+  display: block; }
+
+.desk-user-header {
+  background: #c1c1c1;
+  box-shadow: 0px 5px #a8a8a8; }
+
+.fa-user-desk-nav {
+  color: #0EB5B2;
+  margin: 5px; }
+
+.user-info-container {
+  float: right;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  text-align: right;
+  padding: 5px;
+  border: 2px solid #a8a8a8;
+  background: #c1c1c1; }
+
+/* CENTER SECCION */
 .bienvenida {
-  border-bottom: 2px inset #0EB5B2; }
+  border-bottom: 2px solid #0EB5B2; }
 
 /* BLOQUE DE TUTORIALES*/
 .tutorial-article {
@@ -292,7 +327,9 @@ header {
   .tuto-content, .ask-content {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
-    flex-flow: column; } }
+    flex-flow: column; }
+  .desk-user-nav {
+    display: none; } }
 
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px) {
@@ -312,7 +349,9 @@ header {
   .tuto-content, .ask-content {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
-    flex-flow: column; } }
+    flex-flow: column; }
+  .desk-user-nav {
+    display: none; } }
 
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
@@ -332,6 +371,14 @@ header {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
+  .side-container {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .center-container {
+    -webkit-flex: 5;
+    -ms-flex: 5;
+    flex: 5; }
   .tuto-content, .ask-content {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
@@ -354,13 +401,13 @@ header {
     -ms-flex-flow: row;
     flex-flow: row; }
   .side-container {
-    -webkit-flex-grow: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2; }
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
   .center-container {
-    -webkit-flex-grow: 3;
-    -ms-flex-positive: 3;
-    flex-grow: 3; }
+    -webkit-flex: 5;
+    -ms-flex: 5;
+    flex: 5; }
   .tuto-content, .ask-content {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
