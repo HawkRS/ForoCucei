@@ -11,6 +11,7 @@
 }
 
 
+
 /* COLORES */
 /*opcion UNO*/
 /*$color-primario: #caebf2;
@@ -44,6 +45,7 @@ $search-bar : lighten($color-primario, 5);
   text-decoration: none;
   font-family: 'Hammersmith One', sans-serif;
 }
+a:hover{text-decoration: none;}
 
 .root{
   margin: 0;
@@ -57,13 +59,22 @@ h1,h2{
   font-size: .8em;
   padding: 3px 4px 2px;
 }
-.c-tag      {background: #0061EA;color: white;box-shadow: 0px 5px (darken(#0061EA, 15));}
-.python-tag {background: #E2D300;color: white;box-shadow: 0px 5px (darken(#E2D300, 15));}
-.php-tag    {background: #1B5F82;color: white;box-shadow: 0px 5px (darken(#1B5F82, 15));}
-.csharp-tag {background: #8E00BA;color: white;box-shadow: 0px 5px (darken(#8E00BA, 15));}
-.css-tag    {background: #33F76B;color: white;box-shadow: 0px 5px (darken(#33F76B, 15));}
-.java-tag   {background: #EA0000;color: white;box-shadow: 0px 5px (darken(#EA0000, 15));}
-.html-tag   {background: #DD4200;color: white;box-shadow: 0px 5px (darken(#DD4200, 15));}
+/* ESTILO LENGUAJES */
+$c-color : #0061EA;
+$python-color:#E2D300;
+$php-color:#1B5F82;
+$csharp-color:#8E00BA;
+$java-color:#EA0000;
+$html-color:#DD4200;
+$css-color:#33F76B;
+.c-tag      {background: $css-color;   color: white;box-shadow: 0px 5px (darken(#0061EA, 15));}
+.python-tag {background: $python-color;color: white;box-shadow: 0px 5px (darken(#E2D300, 15));}
+.php-tag    {background: $php-color;   color: white;box-shadow: 0px 5px (darken(#1B5F82, 15));}
+.csharp-tag {background: $csharp-color;color: white;box-shadow: 0px 5px (darken(#8E00BA, 15));}
+.css-tag    {background: $css-color;   color: white;box-shadow: 0px 5px (darken(#33F76B, 15));}
+.java-tag   {background: $java-color;  color: white;box-shadow: 0px 5px (darken(#EA0000, 15));}
+.html-tag   {background: $html-color;  color: white;box-shadow: 0px 5px (darken(#DD4200, 15));}
+
 
 /*ESTILOS PARA DATOS DEL USUARIO */
 .user-name{
@@ -235,6 +246,57 @@ header{  border-bottom: 3px solid $color-terciario;}
   border: 2px solid darken($sidebar, 15);
   background: darken($sidebar, 5);
 }
+
+
+/* SECCION CANALES */
+
+.desk-forums{
+  padding: 10px 0;
+  display: flex;
+  flex-flow: column;
+}
+.forum-opc{
+  padding: 5px;
+  margin: 10px 0;
+  width: 100%;
+  color: $texto;
+  .fa-code{
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}
+.c-forum{
+  .fa-code{
+    color: $c-color;}
+}
+.csharp-forum{
+  .fa-code{
+    color: $csharp-color;}
+}
+.css-forum{
+  .fa-code{
+    color: $css-color;}
+}
+.html-forum{
+  .fa-code{
+    color: $html-color;}
+}
+.java-forum{
+  .fa-code{
+    color: $java-color;}
+}
+.php-forum{
+  .fa-code{
+    color: $php-color;}
+}
+.python-forum{
+  .fa-code{
+    color: $python-color;}
+}
+
+
+
 /* CENTER SECCION */
 .bienvenida{
   border-bottom: 2px solid $color-secundario;

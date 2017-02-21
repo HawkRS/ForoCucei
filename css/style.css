@@ -25,6 +25,9 @@ $color-terciario: #1a0315;*/
   text-decoration: none;
   font-family: 'Hammersmith One', sans-serif; }
 
+a:hover {
+  text-decoration: none; }
+
 .root {
   margin: 0;
   padding: 0; }
@@ -36,8 +39,9 @@ h1, h2 {
   font-size: .8em;
   padding: 3px 4px 2px; }
 
+/* ESTILO LENGUAJES */
 .c-tag {
-  background: #0061EA;
+  background: #33F76B;
   color: white;
   box-shadow: 0px 5px #00419e; }
 
@@ -261,6 +265,47 @@ header {
   padding: 5px;
   border: 2px solid #a8a8a8;
   background: #c1c1c1; }
+
+/* SECCION CANALES */
+.desk-forums {
+  padding: 10px 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
+.forum-opc {
+  padding: 5px;
+  margin: 10px 0;
+  width: 100%;
+  color: #1c1c1c; }
+  .forum-opc .fa-code {
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 1.2em; }
+
+.c-forum .fa-code {
+  color: #0061EA; }
+
+.csharp-forum .fa-code {
+  color: #8E00BA; }
+
+.css-forum .fa-code {
+  color: #33F76B; }
+
+.html-forum .fa-code {
+  color: #DD4200; }
+
+.java-forum .fa-code {
+  color: #EA0000; }
+
+.php-forum .fa-code {
+  color: #1B5F82; }
+
+.python-forum .fa-code {
+  color: #E2D300; }
 
 /* CENTER SECCION */
 .bienvenida {
