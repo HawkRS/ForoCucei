@@ -280,7 +280,27 @@ header{  border-bottom: 3px solid $color-terciario;}
   background: $background;
   display: flex;
 }
+/* FOOTER */
 
+.footer-container{
+  background: #1e1e1e;
+  height: 120px;
+  display: flex;
+  flex-flow: row;
+
+}
+
+.contact, .site-map{
+  text-align: center;
+  color: snow;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.fa-arrow-circle-up{
+  text-align: center;
+  color: lighten(#1e1e1e, 5);
+}
 
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
