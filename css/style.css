@@ -238,7 +238,7 @@ header {
 
 .center-container {
   background: #eaeaea;
-  padding: 5px; }
+  padding: 20px; }
 
 /* USER DESK NAV */
 .desk-user-nav {
@@ -376,6 +376,44 @@ header {
   text-align: center;
   color: #2b2b2b; }
 
+/* TEAM STYLE */
+.team-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.member-block {
+  background: #b7b7b7;
+  margin: 10px;
+  padding: 5px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.fa-user {
+  display: block !important;
+  color: #002B33;
+  margin: auto;
+  text-align: center;
+  /*border: 5px solid red;*/ }
+
+h4 {
+  padding: 5px;
+  background: #008199;
+  color: #efefef;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 0;
+  /*border: 5px solid red;*/ }
+
+.member-text {
+  padding: 0 10px 5px; }
+
+.member-content {
+  height: auto;
+  color: #eaeaea;
+  background: #005666; }
+
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
 @media (max-width: 767px) {
@@ -397,7 +435,11 @@ header {
     -ms-flex-flow: column;
     flex-flow: column; }
   .desk-user-nav {
-    display: none; } }
+    display: none; }
+  .team-container {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column; } }
 
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px) {
@@ -419,7 +461,11 @@ header {
     -ms-flex-flow: column;
     flex-flow: column; }
   .desk-user-nav {
-    display: none; } }
+    display: none; }
+  .team-container {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column; } }
 
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
@@ -450,6 +496,10 @@ header {
   .tuto-content, .ask-content {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
+    flex-flow: row; }
+  .team-container {
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
     flex-flow: row; } }
 
 /* LARGE SCREENS */
@@ -477,6 +527,10 @@ header {
     -ms-flex: 5;
     flex: 5; }
   .tuto-content, .ask-content {
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row; }
+  .team-container {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; } }
