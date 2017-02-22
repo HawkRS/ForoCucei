@@ -539,7 +539,7 @@ h4 {
     -ms-flex-flow: row;
     flex-flow: row; }
   .contact-container {
-    width: 70%; } }
+    width: 50%; } }
 
 /* LARGE SCREENS */
 @media (min-width: 1200px) {
