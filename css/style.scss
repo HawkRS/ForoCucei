@@ -396,6 +396,29 @@ h4{
   color: $background;
   background: lighten($color-primario, 10);
 }
+
+/* CONTACTO */
+.contact-container{
+  background: $background;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  width: 50%;
+  margin: auto;
+}
+.contact-form{
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+.form-element{
+  display: flex;
+  flex-flow: column;
+}
+.form-btn{
+  margin: 10px;
+  display: flex;
+  flex-flow: row;
+}
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
 @media (max-width: 767px)
