@@ -41,19 +41,19 @@ h1, h2 {
 
 /* ESTILO LENGUAJES */
 .c-tag {
-  background: #33F76B;
+  background: #338ff7;
   color: white;
-  box-shadow: 0px 5px #00419e; }
+  box-shadow: 0px 5px #0868d5; }
 
 .python-tag {
-  background: #E2D300;
+  background: #e2b600;
   color: white;
-  box-shadow: 0px 5px #968c00; }
+  box-shadow: 0px 5px #967800; }
 
 .php-tag {
-  background: #1B5F82;
+  background: #773bc5;
   color: white;
-  box-shadow: 0px 5px #0e3143; }
+  box-shadow: 0px 5px #53298b; }
 
 .csharp-tag {
   background: #8E00BA;
@@ -61,9 +61,9 @@ h1, h2 {
   box-shadow: 0px 5px #54006e; }
 
 .css-tag {
-  background: #33F76B;
+  background: #338ff7;
   color: white;
-  box-shadow: 0px 5px #08d543; }
+  box-shadow: 0px 5px #0868d5; }
 
 .java-tag {
   background: #EA0000;
@@ -76,12 +76,13 @@ h1, h2 {
   box-shadow: 0px 5px #912b00; }
 
 /*ESTILOS PARA DATOS DEL USUARIO */
-.user-name {
+.user-name, .forum-header {
   color: #005666;
   font-weight: bold;
   font-size: 1.5em;
   text-align: right;
-  right: 5px; }
+  right: 5px;
+  padding: 10px; }
 
 /* HEADER */
 .header-container {
@@ -276,36 +277,79 @@ header {
   -ms-flex-flow: column;
   flex-flow: column; }
 
-.forum-opc {
-  padding: 5px;
-  margin: 10px 0;
-  width: 100%;
-  color: #1c1c1c; }
-  .forum-opc .fa-code {
-    margin-right: 5px;
-    font-weight: bold;
-    font-size: 1.2em; }
+.forum-list {
+  padding: 0; }
+  .forum-list li {
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    text-align: left;
+    border-bottom: 3px solid gray;
+    font-weight: bold; }
+    .forum-list li a {
+      color: #1c1c1c; }
+    .forum-list li .fa-code {
+      font-weight: bold;
+      margin-right: 10px; }
+
+.forum-list li:hover {
+  transition: 600ms;
+  -o-transition: 600ms;
+  -ms-transition: 600ms;
+  -moz-transition: 600ms;
+  -webkit-transition: 600ms; }
+  .forum-list li:hover a {
+    color: white; }
+  .forum-list li:hover .fa-code {
+    color: white; }
 
 .c-forum .fa-code {
   color: #0061EA; }
 
+.c-forum:hover {
+  background: #0061EA;
+  border-bottom: 3px solid #003784; }
+
 .csharp-forum .fa-code {
   color: #8E00BA; }
 
+.csharp-forum:hover {
+  background: #8E00BA;
+  border-bottom: 3px solid #400054; }
+
 .css-forum .fa-code {
-  color: #33F76B; }
+  color: #338ff7; }
+
+.css-forum:hover {
+  background: #338ff7;
+  border-bottom: 3px solid #075cbd; }
 
 .html-forum .fa-code {
   color: #DD4200; }
 
+.html-forum:hover {
+  background: #DD4200;
+  border-bottom: 3px solid #772400; }
+
 .java-forum .fa-code {
   color: #EA0000; }
 
+.java-forum:hover {
+  background: #EA0000;
+  border-bottom: 3px solid #840000; }
+
 .php-forum .fa-code {
-  color: #1B5F82; }
+  color: #773bc5; }
+
+.php-forum:hover {
+  background: #773bc5;
+  border-bottom: 3px solid #482377; }
 
 .python-forum .fa-code {
-  color: #E2D300; }
+  color: #e2b600; }
+
+.python-forum:hover {
+  background: #e2b600;
+  border-bottom: 3px solid #7c6400; }
 
 /* CENTER SECCION */
 .bienvenida {
