@@ -33,6 +33,7 @@ $color-terciario: #1a0315;*/
 $color-primario: #002B33;
 $color-secundario: #0EB5B2;
 $color-terciario: #5CBF00;
+
 $background: #eaeaea;
 $texto: #1c1c1c;
 $sidebar: #cecece;
@@ -338,6 +339,11 @@ header{  border-bottom: 3px solid $color-terciario;}
   border-bottom: 2px solid $color-secundario;
 }
 /* BLOQUE DE TUTORIALES*/
+.tuto-container{
+  h2{
+    color: black;
+  }
+}
 .tutorial-article{
   background: $color-primario;
   margin: 10px 0;
@@ -346,6 +352,16 @@ header{  border-bottom: 3px solid $color-terciario;}
     margin: 0;
     color: $color-secundario;
     border-left: 4px solid $color-terciario;
+  }
+  padding: 5px;
+}
+.tutorial-article-all{
+  background: lightgrey;
+  margin: 10px 0;
+  h3{
+    padding: 5px 0px;
+    margin: 0;
+    color: $color-primario;
   }
   padding: 5px;
 }
@@ -448,6 +464,13 @@ h4{
 .form-element{
   display: flex;
   flex-flow: column;
+}
+.form-element-tuto{
+  display: flex;
+  flex-flow: column;
+  margin: 25px;
+  padding: 20px;
+  width: 70%;
 }
 .form-btn{
   margin: 10px;
