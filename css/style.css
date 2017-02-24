@@ -88,11 +88,7 @@ h1, h2 {
 .header-container {
   background: #002B33;
   padding: 10px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
 
 /* usa el tag header, pero se cambiara a clase si usamos mas headers*/
@@ -107,15 +103,11 @@ header {
 #logo {
   font-family: 'Krona One', sans-serif;
   color: #5CBF00;
-  -webkit-flex-grow: 3;
-  -ms-flex-positive: 3;
   flex-grow: 3;
   text-align: center;
   font-size: 1.2em; }
 
 #menu-nav, #user-nav {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: center; }
 
@@ -128,16 +120,10 @@ header {
   float: right;
   /*border: 5px solid red;*/
   width: 80%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
   .navbar-container li {
     text-align: center;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     /*border: 5px solid silver;*/ }
     .navbar-container li a {
@@ -198,7 +184,7 @@ header {
 
 /* SEARCH BAR */
 .search-container {
-  background: #00414d;
+  background: #00404d;
   padding: 5px; }
 
 .search-bar {
@@ -208,29 +194,19 @@ header {
   /*border: 5px solid red;*/ }
 
 .search-bar-form {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
 
 .input-text {
-  -webkit-flex-grow: 4;
-  -ms-flex-positive: 4;
   flex-grow: 4;
   margin: 0px 5px; }
 
 .btn {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   margin: 0px 5px; }
 
 /* MIDDLE SECTION */
 .main-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex; }
 
 .side-container {
@@ -256,11 +232,7 @@ header {
 
 .user-info-container {
   float: right;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
   flex-flow: column;
   text-align: right;
   padding: 5px;
@@ -270,11 +242,7 @@ header {
 /* SECCION CANALES */
 .desk-forums {
   padding: 10px 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
   flex-flow: column; }
 
 .forum-list {
@@ -356,6 +324,9 @@ header {
   border-bottom: 2px solid #0EB5B2; }
 
 /* BLOQUE DE TUTORIALES*/
+.tuto-container h2 {
+  color: black; }
+
 .tutorial-article {
   background: #002B33;
   margin: 10px 0;
@@ -366,10 +337,17 @@ header {
     color: #0EB5B2;
     border-left: 4px solid #5CBF00; }
 
+.tutorial-article-all {
+  background: lightgrey;
+  margin: 10px 0;
+  padding: 5px; }
+  .tutorial-article-all h3 {
+    padding: 5px 0px;
+    margin: 0;
+    color: #002B33; }
+
 .tuto-content {
   background: #eaeaea;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex; }
 
 .ask-text, .ask-image, .tuto-text, .tuto-image {
@@ -393,26 +371,18 @@ header {
 
 .ask-content {
   background: #eaeaea;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex; }
 
 /* FOOTER */
 .footer-container {
   background: #1e1e1e;
   height: 120px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
 
 .contact, .site-map {
   text-align: center;
   color: snow;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 10px; }
 
@@ -422,16 +392,12 @@ header {
 
 /* TEAM STYLE */
 .team-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex; }
 
 .member-block {
   background: #b7b7b7;
   margin: 10px;
   padding: 5px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1; }
 
 .fa-user {
@@ -467,28 +433,23 @@ h4 {
 
 .contact-form {
   margin: auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
   flex-flow: column; }
 
 .form-element {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
   flex-flow: column; }
+
+.form-element-tuto {
+  display: flex;
+  flex-flow: column;
+  margin: 25px;
+  padding: 20px;
+  width: 70%; }
 
 .form-btn {
   margin: 10px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
 
 /* MEDIA QUERIES */
@@ -497,125 +458,119 @@ h4 {
   .mobile-nav {
     position: relative;
     float: right;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     text-align: right; }
+
   .desk-nav {
     display: none; }
+
   .main-container {
-    -webkit-flex-flow: column-reverse;
-    -ms-flex-flow: column-reverse;
     flex-flow: column-reverse; }
+
   .tuto-content, .ask-content {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column; }
+
   .desk-user-nav {
     display: none; }
+
   .team-container {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column; }
+
   .contact-container {
     width: 80%; } }
-
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px) {
   .mobile-nav {
     position: relative;
     float: right;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     text-align: right; }
+
   .desk-nav {
     display: none; }
+
   .main-container {
-    -webkit-flex-flow: column-reverse;
-    -ms-flex-flow: column-reverse;
     flex-flow: column-reverse; }
+
   .tuto-content, .ask-content {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column; }
+
   .desk-user-nav {
     display: none; }
+
   .team-container {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column; }
+
   .contact-container {
     width: 80%; } }
-
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
   .mobile-nav, .mobile-user-nav {
     display: none; }
+
   .navbar-container {
     width: 90%; }
+
   .navbar-container li a {
     margin: 5px;
     font-size: .75em; }
+
   .desk-nav {
     position: relative;
     top: 15px; }
+
   .search-bar {
     float: right; }
+
   .main-container {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .side-container {
-    -webkit-flex: 1;
-    -ms-flex: 1;
     flex: 1; }
+
   .center-container {
-    -webkit-flex: 5;
-    -ms-flex: 5;
     flex: 5; }
+
   .tuto-content, .ask-content {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .team-container {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .contact-container {
     width: 50%; } }
-
 /* LARGE SCREENS */
 @media (min-width: 1200px) {
   .mobile-nav, .mobile-user-nav {
     display: none; }
+
   .desk-nav {
     position: relative;
     top: 15px; }
+
   .navbar-container {
     width: 90%; }
+
   .navbar-container li a {
     margin: 5px;
     font-size: 1em; }
+
   .main-container {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .side-container {
-    -webkit-flex: 1;
-    -ms-flex: 1;
     flex: 1; }
+
   .center-container {
-    -webkit-flex: 5;
-    -ms-flex: 5;
     flex: 5; }
+
   .tuto-content, .ask-content {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .team-container {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .contact-container {
     width: 50%; } }
+
+/*# sourceMappingURL=style.css.map */
