@@ -343,6 +343,7 @@ header{  border-bottom: 3px solid $color-terciario;}
   h2{
     color: black;
   }
+  border-bottom: 3px solid $color-terciario;
 }
 .tutorial-article{
   background: $color-primario;
@@ -387,6 +388,25 @@ header{  border-bottom: 3px solid $color-terciario;}
   flex: 1;
 }
 .add-tuto-text{color: $color-primario;}
+.admin-section{
+  background: darken($background, 10);
+  margin: auto;
+  padding: 10px;
+  display: flex;
+}
+.btn-admin{
+  flex:1;
+}
+
+.tuto-res{
+  margin: 10px 0;
+  padding: 15px;
+  background: darken($background, 5);
+  border: 2px solid darken($background, 20);
+}
+.user-name-res{
+  color: $color-primario;
+}
 /* BLOQUE DE PREGUNTAS*/
 .ask-article{
   background: $color-secundario;
@@ -503,8 +523,8 @@ h4{
     flex-flow: column;}
   .desk-user-nav{
     display:none;}
-  .team-container, .add-tuto{flex-flow: column;}
-  .contact-container, .edit-panel{width: 80%;}
+  .team-container, .add-tuto, .admin-section{flex-flow: column;}
+  .contact-container, .edit-panel, .admin-section{width: 80%;}
 }
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px)
@@ -522,8 +542,8 @@ h4{
     flex-flow: column;}
   .desk-user-nav{
     display:none;}
-  .team-container, .add-tuto{flex-flow: column;}
-  .contact-container, .edit-panel{width: 80%;}
+  .team-container, .add-tuto, .admin-section{flex-flow: column;}
+  .contact-container, .edit-panel, .admin-section{width: 80%;}
 }
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
@@ -547,8 +567,9 @@ h4{
   .center-container{flex: 5;}
   .tuto-content, .ask-content{
     flex-flow: row;}
-  .team-container, .add-tuto{flex-flow: row;}
+  .team-container, .add-tuto, .admin-section{flex-flow: row;}
   .contact-container, .edit-panel{width: 50%;}
+  .admin-section{width: 70%;}
 }
 /* LARGE SCREENS */
 @media (min-width: 1200px) {
@@ -569,6 +590,7 @@ h4{
   .center-container{flex: 5;}
   .tuto-content, .ask-content{
     flex-flow: row;}
-  .team-container, .add-tuto{flex-flow: row;}
+  .team-container, .add-tuto, .admin-section{flex-flow: row;}
   .contact-container, .edit-panel{width: 50%;}
+  .admin-section{width: 70%;}
 }
