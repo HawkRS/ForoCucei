@@ -1,0 +1,158 @@
+.login-section {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    animation: login-background 60s infinite;
+    background-image: url('../img/login-background2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.login-container {
+    align-self: center;
+    min-width: 800px;
+    min-height: 500px;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    box-shadow:  5px 5px 5px #333;
+}
+
+.login-title {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+}
+
+.login-title > h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.login-title > h3 {
+    margin-top: 0px;
+}
+
+
+.login-form {
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form > form {
+    width: 90%;
+}
+
+.signup-link {
+    margin: 15px 0;
+}
+
+.forgot-password-link {
+    margin: 20px 0;
+}
+
+.logo {
+    font-size: 50px;
+    border: 2px solid green;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    color: green;
+    text-align: center;
+    margin: 20px;
+}
+
+.forgot-text {
+    font-weight: bold;
+    margin: 15px 5%;
+}
+
+@keyframes login-background {
+    0% {
+        background-image: url('../img/login-background3.jpg');
+    }
+
+    20% {
+        background-image: url('../img/login-background3.jpg');
+    }
+
+    25% {
+        background-image: url('../img/login-background2.jpg');
+    }
+
+    45% {
+        background-image: url('../img/login-background2.jpg');
+    }
+
+    50% {
+        background-image: url('../img/login-background.jpg');
+    }
+
+    70% {
+        background-image: url('../img/login-background.jpg');
+    }
+
+    75% {
+        background-image: url('../img/login-background4.jpg');
+    }
+
+    90% {
+        background-image: url('../img/login-background4.jpg');
+    }
+
+    100% {
+        background-image: url('../img/login-background3.jpg');
+    }
+}
+
+@-moz-keyframes login-background {
+    0% {
+        background-image: url('../img/login-background3.jpg');
+    }
+
+    20% {
+        background-image: url('../img/login-background3.jpg');
+    }
+
+    25% {
+        background-image: url('../img/login-background2.jpg');
+    }
+
+    45% {
+        background-image: url('../img/login-background2.jpg');
+    }
+
+    50% {
+        background-image: url('../img/login-background.jpg');
+    }
+
+    70% {
+        background-image: url('../img/login-background.jpg');
+    }
+
+    75% {
+        background-image: url('../img/login-background4.jpg');
+    }
+
+    90% {
+        background-image: url('../img/login-background4.jpg');
+    }
+
+    100% {
+        background-image: url('../img/login-background3.jpg');
+    }
+}
