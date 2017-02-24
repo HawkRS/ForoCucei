@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css"  type="text/css" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Krona+One" rel="stylesheet">
     <script src="https://use.fontawesome.com/af69e7979f.js"></script>
-    <title>Inicio</title>
+    <title>Editar-Usuario</title>
   </head>
   <body>
     <div class="root">
@@ -121,83 +121,32 @@
         </aside>
         <!-- SECCION PRINCIPAL -->
         <section class="center-container">
-          <div class="panel">
+          <div class="panel edit-panel">
             <div class="panel-header">
-              USUARIOS REGISTRADOS
+              EDITAR USUARIO
             </div>
             <div class="panel-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Nickname</th>
-                    <th>Correo</th>
-                    <th>Fecha de registro</th>
-                    <th>Preguntas</th>
-                    <th>Respuestas</th>
-                  </tr>
-                  <tr>
-                    <td>John Doe</td>
-                    <td>BigJD</td>
-                    <td>johndoe@mail.com</td>
-                    <td>15-12-16</td>
-                    <td>15</td>
-                    <td>63</td>
-                    <td><a href="editar_usuario.html"><button class="btn btn-warning" type="button" name="button">Editar</button></a></td>
-                    <td><button class="btn btn-danger" type="button" name="button">Eliminar</button></td>
-                  </tr>
-                  <tr>
-                    <td>Jane Doe</td>
-                    <td>PrettyJane</td>
-                    <td>janedoe@mail.com</td>
-                    <td>08-11-16</td>
-                    <td>125</td>
-                    <td>115</td>
-                    <td><a href="editar_usuario.html"><button class="btn btn-warning" type="button" name="button">Editar</button></a></td>
-                    <td><button class="btn btn-danger" type="button" name="button">Eliminar</button></td>
-                  </tr>
-                  <tr>
-                    <td>Tony Montana</td>
-                    <td>Scarface</td>
-                    <td>littlefriend@mail.com</td>
-                    <td>03-01-17</td>
-                    <td>89</td>
-                    <td>69</td>
-                    <td><a href="editar_usuario.html"><button class="btn btn-warning" type="button" name="button">Editar</button></a></td>
-                    <td><button class="btn btn-danger" type="button" name="button">Eliminar</button></td>
-                  </tr>
-                  <tr>
-                    <td>David Toral</td>
-                    <td>Garlan0</td>
-                    <td>toraldo@mail.com</td>
-                    <td>30-10-16</td>
-                    <td>10</td>
-                    <td>150</td>
-                    <td><a href="editar_usuario.html"><button class="btn btn-warning" type="button" name="button">Editar</button></a></td>
-                    <td><button class="btn btn-danger" type="button" name="button">Eliminar</button></td>
-                  </tr>
-                  <tr>
-                    <td>Miguel Serrano</td>
-                    <td>Serranom</td>
-                    <td>Serranom4@mail.com</td>
-                    <td>30-10-16</td>
-                    <td>6</td>
-                    <td>120</td>
-                    <td><a href="editar_usuario.html"><button class="btn btn-warning" type="button" name="button">Editar</button></a></td>
-                    <td><button class="btn btn-danger" type="button" name="button">Eliminar</button></td>
-                  </tr>
-                  <tr>
-                    <td>Carlos Gonzalez</td>
-                    <td>Hawkrs</td>
-                    <td>Hawkrs@mail.com</td>
-                    <td>10-10-16</td>
-                    <td>10</td>
-                    <td>98</td>
-                    <td><a href="editar_usuario.html"><button class="btn btn-warning" type="button" name="button">Editar</button></a></td>
-                    <td><button class="btn btn-danger" type="button" name="button">Eliminar</button></td>
-                  </tr>
-                </thead>
-              </table>
+              <div class="edit-container">
+                <form class="edit-form" action="usuarios.html" method="post">
+                  <div class="form-element">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" value="John Doe" required >
+                  </div>
+                  <div class="form-element">
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" value="johndoe@mail.com" required >
+                  </div>
+                  <div class="form-element">
+                    <label for="nickname">Nickname</label>
+                    <input type="text" name="nickname" value="BigJD" required >
+                  </div>
+                  <div class="form-btn">
+                    <input class="btn btn-primary" type="submit" name="Guardar" value="Enviar">
+                    <input class="btn btn-warning" type="reset" name="reset" value="Borrar">
+                    <input class="btn btn-danger"  type="button" name="name" value="Cancelar">
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </section>
