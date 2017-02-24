@@ -45,6 +45,11 @@
                     <button class="dropbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
                     <div class="dropdown-content">
                       <li><a href="index.html">Inicio</a></li>
+                      <li><a href="tutoriales.html">Tutoriales</a></li>
+                      <li><a href="#canales">Canales</a></li>
+                      <li><a href="faq.html">FAQ</a></li>
+                      <li><a href="contacto.html">Contacto</a></li>
+                      <li><a href="nosotros.html">Nosotros</a></li>
                       <li><a href="#">Tutoriales</a></li>
                       <li><a href="#">Canales</a></li>
                       <li><a href="#">Noticias</a></li>
@@ -57,6 +62,11 @@
                 <!-- MENU-ESCRITORIO -->
                 <nav class="desk-nav">
                   <ul class="navbar-container">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Tutoriales</a></li>
                     <li><a href="#">Canales</a></li>
@@ -103,6 +113,18 @@
 
         <!-- CANALES -->
         <div class="desk-forums">
+          <div class="desk-user-header">
+            <strong><span class="forum-header">Canales</span></strong>
+          </div>
+          <ul class="forum-list">
+            <li class="c-forum"     ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>C/C++</a></li>
+            <li class="csharp-forum"><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>C#</a></li>
+            <li class="css-forum"   ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>CSS</a></li>
+            <li class="python-forum"><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>PYTHON</a></li>
+            <li class="java-forum"  ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>JAVA</a></li>
+            <li class="php-forum"   ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>PHP</a></li>
+            <li class="html-forum"  ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>HTML</a></li>
+          </ul>
           <a href="#"><span class="c-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>C/C++</span></a>
           <a href="#"><span class="csharp-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>C#</span></a>
           <a href="#"><span class="python-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>PYTHON</span></a>
@@ -143,6 +165,43 @@
             </p>
           </div>
         </div>
+        
+        <div class="tuto-res">
+          <article class="res">
+            <strong><span class="user-name-res">John Doe</span></strong>
+            <p>
+              Ea usu doctus fierent forensibus, vix iisque tacimates ad. Bonorum
+               omittam mei ex. Qui possim impetus et, an mel feugiat nusquam ass
+               ueverit. Mentitum assueverit sed ea, vim singulis voluptatum te,
+               vim no vero semper. Vim modus constituto an, posse intellegat ut
+               nam. Zril soleat dolorum ei sit.
+            </p>
+          </article>
+          <form class="admin-section" action="add_tuto.html" method="post">
+            <input class="btn btn-danger btn-admin" type="button" name="eliminar" value="Eliminar Comentario">
+            <input class="btn btn-warning btn-admin"type="submit" name="editar" value="Editar Comentario">
+          </form>
+        </div>
+
+        <div class="tuto-res">
+          <article class="res">
+            <strong><span class="user-name-res">Jane Doe</span></strong>
+            <p>
+              Usu esse falli at, mel in iusto dicam nonumes. Quis purto na
+              m ex. Ne ullum dolor nec, ius quando omnium id. Possit dolor
+              um ei mea. Fierent pericula an per. Tale principes cu per. I
+              d rebum invenire expetendis eum.
+            </p>
+          </article>
+          <form class="admin-section" action="add_tuto.html" method="post">
+            <input class="btn btn-danger btn-admin" type="button" name="eliminar" value="Eliminar Comentario">
+            <input class="btn btn-warning btn-admin"type="submit" name="editar" value="Editar Comentario">
+          </form>
+        </div>
+
+        <div class="form-element-tuto">
+          <label for="comentario">Comentario</label>
+          <textarea name="comentario" id="comentario" rows="10" cols="10" required=""></textarea>
         <div class="tuto-content-all">
           <table>
             <tbody>
@@ -169,6 +228,10 @@
             <input class="btn btn-success" type="submit" name="publicar" value="Publicar">
           </div>
         </div>
+        <form class="admin-section" action="add_tuto.html" method="post">
+          <input class="btn btn-danger btn-admin" type="button" name="eliminar" value="Eliminar Tutorial">
+          <input class="btn btn-warning btn-admin"type="submit" name="editar" value="Editar Tutorial">
+        </form>
       </section>
     </main>
     <footer class="footer-container">
