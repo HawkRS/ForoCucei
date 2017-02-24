@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Comunidad de estudiantes apoyandose unos a otros">
     <meta name="keywords" content="python,c++,c#,java,html,css,php,JavaScript,mysql,programacion,cucei">
-    <meta name="Resource-type" content="tutorials">
+    <meta name="Resource-type" content="howto">
     <link rel="stylesheet" href="css/style.css"  type="text/css" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Krona+One" rel="stylesheet">
     <script src="https://use.fontawesome.com/af69e7979f.js"></script>
-    <title>Tutoriales</title>
+    <title>Inicio</title>
   </head>
   <body>
+    <div class="root">
     <!-- HEADER -->
     <a name="inicio"></a>
     <div class="container-fluid">
@@ -26,114 +27,92 @@
                     <a href="user-profile.html">Mi Perfil</a>
                     <a href="#">Mis preguntas</a>
                     <a href="login.html">Cerrar Sesion</a>
-                  </div>
-                </div>
-              </nav>
-            </div>
+                  </div></div>
+                </nav>
+              </div>
 
-            <!-- LOGO -->
-            <div id="logo" class="header-element">
-              FORO CUCEI
-            </div>
+              <!-- LOGO -->
+              <div id="logo" class="header-element">
+                FORO CUCEI
+              </div>
 
-            <!-- MENU -->
-            <div id="menu-nav" class="header-element">
-              <div class="navbar-top">
-                <!-- MENU MOVIL -->
-                <nav class="mobile-nav">
-                  <div class="dropdown" style="float:right;">
-                    <button class="dropbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
-                    <div class="dropdown-content">
+              <!-- MENU -->
+              <div id="menu-nav" class="header-element">
+                <div class="navbar-top">
+                  <!-- MENU MOVIL -->
+                  <nav class="mobile-nav">
+                    <div class="dropdown" style="float:right;">
+                      <button class="dropbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+                      <div class="dropdown-content">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tutoriales.html">Tutoriales</a></li>
+                        <li><a href="#canales">Canales</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                      </div>
+                    </div>
+                  </nav>
+                  <!-- MENU-ESCRITORIO -->
+                  <nav class="desk-nav">
+                    <ul class="navbar-container">
                       <li><a href="index.html">Inicio</a></li>
                       <li><a href="tutoriales.html">Tutoriales</a></li>
-                      <li><a href="#canales">Canales</a></li>
                       <li><a href="faq.html">FAQ</a></li>
                       <li><a href="contacto.html">Contacto</a></li>
                       <li><a href="nosotros.html">Nosotros</a></li>
-                      <li><a href="#">Tutoriales</a></li>
-                      <li><a href="#">Canales</a></li>
-                      <li><a href="#">Noticias</a></li>
-                      <li><a href="#">FAQ</a></li>
-                      <li><a href="#">Contacto</a></li>
-                      <li><a href="#">Nosotros</a></li>
-                    </div>
-                  </div>
-                </nav>
-                <!-- MENU-ESCRITORIO -->
-                <nav class="desk-nav">
-                  <ul class="navbar-container">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="tutoriales.html">Tutoriales</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Tutoriales</a></li>
-                    <li><a href="#">Canales</a></li>
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                  </ul>
-                </nav>
+                    </ul>
+                  </nav>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- BARRA DE BUSQUEDA -->
-          <div class="search-container col-xs-12">
-            <div class="search-bar">
-              <form class="search-bar-form" action="index.html" method="post">
-                <input type="search" class="input-text" name="Buscar" placeholder="Buscar">
-                <button type="submit" class="btn" name="Buscar"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
-              </form>
+            <!-- BARRA DE BUSQUEDA -->
+            <div class="search-container col-xs-12">
+              <div class="search-bar">
+                <form class="search-bar-form" action="index.html" method="post">
+                  <input type="search" class="input-text" name="Buscar" placeholder="Buscar">
+                  <button type="submit" class="btn" name="Buscar"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
+                </form>
+              </div>
             </div>
-          </div>
-        </header>
-    </div>
+          </header>
+      </div>
+      <!-- TERMINA HEADER -->
+      <!-- SECCION MEDIA -->
+      <main class="main-container">
 
-    <!-- TERMINA HEADER -->
-    <main class="main-container">
-      <aside class="side-container">
-
-        <!-- USER NAV -->
-        <div class="desk-user-nav">
-          <div class="desk-user-header">
-            <i class="fa fa-user-circle-o fa-user-desk-nav fa-3x" aria-hidden="true"></i>
-            <strong><span class="user-name">John Doe</span></strong>
+        <aside class="side-container">
+          <!-- USER NAV -->
+          <div class="desk-user-nav">
+            <div class="desk-user-header">
+              <i class="fa fa-user-circle-o fa-user-desk-nav fa-3x" aria-hidden="true"></i>
+              <strong><span class="user-name">John Doe</span></strong>
+            </div>
+            <nav class="">
+              <ul>
+                <li><a href="#">Mi Perfil</a></li>
+                <li><a href="#">Mis preguntas</a></li>
+                <li><a href="#">Cerrar Sesion</a></li>
+              </ul>
+            </nav>
           </div>
-          <nav class="">
-            <ul>
-              <li><a href="user-profile.html">Mi Perfil</a></li>
-              <li><a href="#">Mis preguntas</a></li>
-              <li><a href="login.html">Cerrar Sesion</a></li>
+          <!-- CANALES -->
+          <a name="canales"></a>
+          <div class="desk-forums">
+            <div class="desk-user-header">
+              <strong><span class="forum-header">Canales</span></strong>
+            </div>
+            <ul class="forum-list">
+              <li class="c-forum"     ><a href="preguntas.html"><i class="fa fa-code fa-2x" aria-hidden="true"></i>C/C++</a></li>
+              <li class="csharp-forum"><a href="preguntas.html"><i class="fa fa-code fa-2x" aria-hidden="true"></i>C#</a></li>
+              <li class="css-forum"   ><a href="preguntas.html"><i class="fa fa-code fa-2x" aria-hidden="true"></i>CSS</a></li>
+              <li class="python-forum"><a href="preguntas.html"><i class="fa fa-code fa-2x" aria-hidden="true"></i>PYTHON</a></li>
+              <li class="java-forum"  ><a href="preguntas.html"><i class="fa fa-code fa-2x" aria-hidden="true"></i>JAVA</a></li>
+              <li class="php-forum"   ><a href="preguntas.html"><i class="fa fa-code fa-2x" aria-hidden="true"></i>PHP</a></li>
+              <li class="html-forum"  ><a href="preguntas.html"><i class="fa fa-code fa-2x" aria-hidden="true"></i>HTML</a></li>
             </ul>
-          </nav>
-        </div>
-
-        <!-- CANALES -->
-        <div class="desk-forums">
-          <div class="desk-user-header">
-            <strong><span class="forum-header">Canales</span></strong>
           </div>
-          <ul class="forum-list">
-            <li class="c-forum"     ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>C/C++</a></li>
-            <li class="csharp-forum"><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>C#</a></li>
-            <li class="css-forum"   ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>CSS</a></li>
-            <li class="python-forum"><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>PYTHON</a></li>
-            <li class="java-forum"  ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>JAVA</a></li>
-            <li class="php-forum"   ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>PHP</a></li>
-            <li class="html-forum"  ><a href="#"><i class="fa fa-code fa-2x" aria-hidden="true"></i>HTML</a></li>
-          </ul>
-          <a href="#"><span class="c-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>C/C++</span></a>
-          <a href="#"><span class="csharp-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>C#</span></a>
-          <a href="#"><span class="python-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>PYTHON</span></a>
-          <a href="#"><span class="java-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>JAVA</span></a>
-          <a href="#"><span class="php-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>PHP</span></a>
-          <a href="#"><span class="html-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>HTML</span></a>
-          <a href="#"><span class="css-forum forum-opc"><i class="fa fa-code" aria-hidden="true"></i>CSS</span></a>
-        </div>
-      </aside>
+        </aside>
       <!-- SECCION PRINCIPAL -->
 
       <section class="center-container">
@@ -154,10 +133,6 @@
             <div class="tuto-content">
               <figure class="tuto-image">
                 <a href="tutIndividual.html"><img class="img-responsive" src="img/tuto.png" alt="tutorial" /></a>
-            <h3>Como instalar LAMP y no morir en el intento</h3>
-            <div class="tuto-content">
-              <figure class="tuto-image">
-                <img class="img-responsive" src="img/tuto.png" alt="tutorial" />
               </figure>
               <p class="tuto-text">
                 Look, just because I don't be givin' no man a foot massage don't make
@@ -174,10 +149,6 @@
             <div class="tuto-content">
               <figure class="tuto-image">
                 <a href="tutIndividual.html"><img class="img-responsive" src="img/tuto.png" alt="tutorial" /></a>
-            <h3>Como armar una peda con 300 para 20 personas</h3>
-            <div class="tuto-content">
-              <figure class="tuto-image">
-                <img class="img-responsive" src="img/tuto.png" alt="tutorial" />
               </figure>
               <p class="tuto-text">
                 Normally, both your asses would be dead as fucking fried chicken,
@@ -195,10 +166,6 @@
             <div class="tuto-content">
               <figure class="tuto-image">
                 <a href="tutIndividual.html"><img class="img-responsive" src="img/tuto.png" alt="tutorial" /></a>
-            <h3>Cucei sin buitres no es cucei</h3>
-            <div class="tuto-content">
-              <figure class="tuto-image">
-                <img class="img-responsive" src="img/tuto.png" alt="tutorial" />
               </figure>
               <p class="tuto-text">
                 Your bones don't break, mine do. That's clear. Your cells react
@@ -217,10 +184,6 @@
             <div class="tuto-content">
               <figure class="tuto-image">
                 <a href="tutIndividual.html"><img class="img-responsive" src="img/tuto.png" alt="tutorial" /></a>
-            <h3>Cómo buitrear sin recibir una cachetada</h3>
-            <div class="tuto-content">
-              <figure class="tuto-image">
-                <img class="img-responsive" src="img/tuto.png" alt="tutorial" />
               </figure>
               <p class="tuto-text">
                 You asked me if we were in the meth business or the money
@@ -238,10 +201,6 @@
             <div class="tuto-content">
               <figure class="tuto-image">
                 <a href="tutIndividual.html"><img class="img-responsive" src="img/tuto.png" alt="tutorial" /></a>
-            <h3>Conseguir un título siendo almirante</h3>
-            <div class="tuto-content">
-              <figure class="tuto-image">
-                <img class="img-responsive" src="img/tuto.png" alt="tutorial" />
               </figure>
               <p class="tuto-text">
                 Today's your lucky day. Look around, kiddo - it's all yours.
@@ -260,10 +219,6 @@
             <div class="tuto-content">
               <figure class="tuto-image">
                 <a href="tutIndividual.html"><img class="img-responsive" src="img/tuto.png" alt="tutorial" /></a>
-            <h3>Comandos básicos de linux</h3>
-            <div class="tuto-content">
-              <figure class="tuto-image">
-                <img class="img-responsive" src="img/tuto.png" alt="tutorial" />
               </figure>
               <p class="tuto-text">
                 What? What do you want?! No. Don't even tell me you're hungry.
