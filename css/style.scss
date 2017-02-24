@@ -61,29 +61,31 @@ h1,h2{
 }
 /* ESTILO LENGUAJES */
 $c-color : #0061EA;
-$python-color:#E2D300;
-$php-color:#1B5F82;
+$python-color:#e2b600;
+$php-color:#773bc5;
 $csharp-color:#8E00BA;
 $java-color:#EA0000;
 $html-color:#DD4200;
-$css-color:#33F76B;
-.c-tag      {background: $css-color;   color: white;box-shadow: 0px 5px (darken(#0061EA, 15));}
-.python-tag {background: $python-color;color: white;box-shadow: 0px 5px (darken(#E2D300, 15));}
-.php-tag    {background: $php-color;   color: white;box-shadow: 0px 5px (darken(#1B5F82, 15));}
-.csharp-tag {background: $csharp-color;color: white;box-shadow: 0px 5px (darken(#8E00BA, 15));}
-.css-tag    {background: $css-color;   color: white;box-shadow: 0px 5px (darken(#33F76B, 15));}
-.java-tag   {background: $java-color;  color: white;box-shadow: 0px 5px (darken(#EA0000, 15));}
-.html-tag   {background: $html-color;  color: white;box-shadow: 0px 5px (darken(#DD4200, 15));}
+$css-color:#338ff7;
+.c-tag      {background: $css-color;   color: white;box-shadow: 0px 5px (darken($css-color, 15));}
+.python-tag {background: $python-color;color: white;box-shadow: 0px 5px (darken($python-color, 15));}
+.php-tag    {background: $php-color;   color: white;box-shadow: 0px 5px (darken($php-color, 15));}
+.csharp-tag {background: $csharp-color;color: white;box-shadow: 0px 5px (darken($csharp-color, 15));}
+.css-tag    {background: $css-color;   color: white;box-shadow: 0px 5px (darken($css-color, 15));}
+.java-tag   {background: $java-color;  color: white;box-shadow: 0px 5px (darken($java-color, 15));}
+.html-tag   {background: $html-color;  color: white;box-shadow: 0px 5px (darken($html-color, 15));}
 
 
 /*ESTILOS PARA DATOS DEL USUARIO */
-.user-name{
+.user-name, .forum-header{
   color: lighten($color-primario, 10);
   font-weight: bold;
   font-size: 1.5em;
   text-align: right;
   right: 5px;
+  padding: 10px;
 }
+
 
 
 /* HEADER */
@@ -222,7 +224,7 @@ header{  border-bottom: 3px solid $color-terciario;}
 }
 .center-container{
   background: $background;
-  padding: 5px;
+  padding: 20px;
 }
 /* USER DESK NAV */
 .desk-user-nav{
@@ -255,46 +257,65 @@ header{  border-bottom: 3px solid $color-terciario;}
   display: flex;
   flex-flow: column;
 }
-.forum-opc{
-  padding: 5px;
-  margin: 10px 0;
-  width: 100%;
-  color: $texto;
-  .fa-code{
-    margin-right: 5px;
+.forum-list{
+  padding: 0;
+  li{
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    text-align: left;
+    border-bottom: 3px solid gray;
+    a{color: $texto;}
     font-weight: bold;
-    font-size: 1.2em;
+    .fa-code{
+      font-weight: bold;
+      margin-right: 10px;
+    }
   }
 }
-.c-forum{
-  .fa-code{
-    color: $c-color;}
-}
-.csharp-forum{
-  .fa-code{
-    color: $csharp-color;}
-}
-.css-forum{
-  .fa-code{
-    color: $css-color;}
-}
-.html-forum{
-  .fa-code{
-    color: $html-color;}
-}
-.java-forum{
-  .fa-code{
-    color: $java-color;}
-}
-.php-forum{
-  .fa-code{
-    color: $php-color;}
-}
-.python-forum{
-  .fa-code{
-    color: $python-color;}
+.forum-list{
+  li:hover{
+    a{color: white;}
+    .fa-code{
+      color: white;}
+    @include transition(600ms);
+  }
 }
 
+.c-forum{.fa-code{color: $c-color;}}
+.c-forum:hover{
+  background: $c-color;
+  border-bottom: 3px solid darken($c-color, 20);
+}
+.csharp-forum{.fa-code{color: $csharp-color;}}
+.csharp-forum:hover{
+  background: $csharp-color;
+  border-bottom: 3px solid darken($csharp-color, 20);
+}
+.css-forum{.fa-code{color: $css-color;}}
+.css-forum:hover{
+  background: $css-color;
+  border-bottom: 3px solid darken($css-color, 20);
+}
+.html-forum{.fa-code{color: $html-color;}}
+.html-forum:hover{
+  background: $html-color;
+  border-bottom: 3px solid darken($html-color, 20);
+}
+.java-forum{.fa-code{color: $java-color;}}
+.java-forum:hover{
+  background: $java-color;
+  border-bottom: 3px solid darken($java-color, 20);
+}
+.php-forum{.fa-code{color: $php-color;}}
+.php-forum:hover{
+  background: $php-color;
+  border-bottom: 3px solid darken($php-color, 20);
+}
+.python-forum{.fa-code{color: $python-color;}}
+.python-forum:hover{
+  background: $python-color;
+  border-bottom: 3px solid darken($python-color, 20);
+}
 
 
 /* CENTER SECCION */
@@ -363,7 +384,62 @@ header{  border-bottom: 3px solid $color-terciario;}
   text-align: center;
   color: lighten(#1e1e1e, 5);
 }
+/* TEAM STYLE */
+.team-container{
+  display: flex;
+}
+.member-block{
 
+  background: darken($background, 20);
+  margin: 10px;
+  padding: 5px;
+  flex: 1;
+}
+.fa-user{
+  display: block !important;
+  color: $color-primario;
+  margin: auto;
+  text-align: center;
+  /*border: 5px solid red;*/}
+
+h4{
+  padding: 5px;
+  background: lighten($color-primario, 20);
+  color: $complementario;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 0;
+  /*border: 5px solid red;*/
+}
+.member-text{padding: 0 10px 5px;}
+.member-content{
+  height: auto;
+  color: $background;
+  background: lighten($color-primario, 10);
+}
+
+/* CONTACTO */
+.contact-container{
+  background: $background;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+
+  margin: auto;
+}
+.contact-form{
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+.form-element{
+  display: flex;
+  flex-flow: column;
+}
+.form-btn{
+  margin: 10px;
+  display: flex;
+  flex-flow: row;
+}
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
 @media (max-width: 767px)
@@ -381,6 +457,8 @@ header{  border-bottom: 3px solid $color-terciario;}
     flex-flow: column;}
   .desk-user-nav{
     display:none;}
+  .team-container{flex-flow: column;}
+  .contact-container{width: 80%;}
 }
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px)
@@ -398,6 +476,8 @@ header{  border-bottom: 3px solid $color-terciario;}
     flex-flow: column;}
   .desk-user-nav{
     display:none;}
+  .team-container{flex-flow: column;}
+  .contact-container{width: 80%;}
 }
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
@@ -421,6 +501,8 @@ header{  border-bottom: 3px solid $color-terciario;}
   .center-container{flex: 5;}
   .tuto-content, .ask-content{
     flex-flow: row;}
+  .team-container{flex-flow: row;}
+  .contact-container{width: 50%;}
 }
 /* LARGE SCREENS */
 @media (min-width: 1200px) {
@@ -441,4 +523,6 @@ header{  border-bottom: 3px solid $color-terciario;}
   .center-container{flex: 5;}
   .tuto-content, .ask-content{
     flex-flow: row;}
+  .team-container{flex-flow: row;}
+  .contact-container{width: 50%;}
 }
