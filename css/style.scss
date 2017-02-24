@@ -378,6 +378,15 @@ header{  border-bottom: 3px solid $color-terciario;}
     margin: auto;
   }
 }
+.add-tuto{
+  display: flex;
+  background: lightgrey;
+  padding: 10px;
+}
+.add-tuto-element{
+  flex: 1;
+}
+.add-tuto-text{color: $color-primario;}
 /* BLOQUE DE PREGUNTAS*/
 .ask-article{
   background: $color-secundario;
@@ -494,7 +503,7 @@ h4{
     flex-flow: column;}
   .desk-user-nav{
     display:none;}
-  .team-container{flex-flow: column;}
+  .team-container, .add-tuto{flex-flow: column;}
   .contact-container, .edit-panel{width: 80%;}
 }
 /* LARGE PHONES -TABLETS */
@@ -513,7 +522,7 @@ h4{
     flex-flow: column;}
   .desk-user-nav{
     display:none;}
-  .team-container{flex-flow: column;}
+  .team-container, .add-tuto{flex-flow: column;}
   .contact-container, .edit-panel{width: 80%;}
 }
 /* LAPTOPS - SMALL SCREENS */
@@ -538,7 +547,7 @@ h4{
   .center-container{flex: 5;}
   .tuto-content, .ask-content{
     flex-flow: row;}
-  .team-container{flex-flow: row;}
+  .team-container, .add-tuto{flex-flow: row;}
   .contact-container, .edit-panel{width: 50%;}
 }
 /* LARGE SCREENS */
@@ -560,6 +569,6 @@ h4{
   .center-container{flex: 5;}
   .tuto-content, .ask-content{
     flex-flow: row;}
-  .team-container{flex-flow: row;}
+  .team-container, .add-tuto{flex-flow: row;}
   .contact-container, .edit-panel{width: 50%;}
 }

@@ -407,6 +407,21 @@ header {
   .ask-image img, .tuto-image img {
     margin: auto; }
 
+.add-tuto {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: lightgrey;
+  padding: 10px; }
+
+.add-tuto-element {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.add-tuto-text {
+  color: #002B33; }
+
 /* BLOQUE DE PREGUNTAS*/
 .ask-article {
   background: #0EB5B2;
@@ -551,7 +566,7 @@ h4 {
     flex-flow: column; }
   .desk-user-nav {
     display: none; }
-  .team-container {
+  .team-container, .add-tuto {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; }
@@ -579,7 +594,7 @@ h4 {
     flex-flow: column; }
   .desk-user-nav {
     display: none; }
-  .team-container {
+  .team-container, .add-tuto {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; }
@@ -616,7 +631,7 @@ h4 {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
-  .team-container {
+  .team-container, .add-tuto {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
@@ -651,7 +666,7 @@ h4 {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
-  .team-container {
+  .team-container, .add-tuto {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
