@@ -369,6 +369,17 @@ header{  border-bottom: 3px solid $color-terciario;}
   background: $background;
   display: flex;
 }
+.tuto-content-all{
+  background: $background;
+  margin: 20px 80px;
+  padding: 5px;
+  border-top: 1px solid lightgrey;
+  .vote-count{
+    margin: 5px;
+    padding: 5px;
+    color: lighten(red, 10%);
+  }
+}
 .ask-text,.ask-image,.tuto-text, .tuto-image{
   margin: 2px 10px;
 }
@@ -393,6 +404,27 @@ header{  border-bottom: 3px solid $color-terciario;}
 .ask-content{
   background: $background;
   display: flex;
+}
+.ask-article-all{
+  background: lightgrey;
+  margin: 10px 10px;
+  h3{
+    padding: 5px 0px;
+    margin: 0;
+    color: $color-primario;
+  }
+  padding: 5px;
+}
+.answer-content{
+  background: $background;
+  margin: 20px 80px;
+  padding: 5px;
+  border-top: 1px solid lightgrey;
+  .vote-count{
+    margin: 5px;
+    padding: 5px;
+    color: lighten(red, 10%);
+  }
 }
 /* FOOTER */
 
@@ -466,6 +498,13 @@ h4{
   flex-flow: column;
 }
 .form-element-tuto{
+  display: flex;
+  flex-flow: column;
+  margin: 25px;
+  padding: 20px;
+  width: 70%;
+}
+.form-element-ask{
   display: flex;
   flex-flow: column;
   margin: 25px;
