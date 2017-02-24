@@ -371,6 +371,11 @@ header {
   border-bottom: 2px solid #0EB5B2; }
 
 /* BLOQUE DE TUTORIALES*/
+.tuto-container {
+  border-bottom: 3px solid #5CBF00; }
+  .tuto-container h2 {
+    color: black; }
+
 .tutorial-article {
   background: #002B33;
   margin: 10px 0;
@@ -381,11 +386,30 @@ header {
     color: #0EB5B2;
     border-left: 4px solid #5CBF00; }
 
+.tutorial-article-all {
+  background: lightgrey;
+  margin: 10px 0;
+  padding: 5px; }
+  .tutorial-article-all h3 {
+    padding: 5px 0px;
+    margin: 0;
+    color: #002B33; }
+
 .tuto-content {
   background: #eaeaea;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+
+.tuto-content-all {
+  background: #eaeaea;
+  margin: 20px 80px;
+  padding: 5px;
+  border-top: 1px solid lightgrey; }
+  .tuto-content-all .vote-count {
+    margin: 5px;
+    padding: 5px;
+    color: #ff3333; }
 
 .ask-text, .ask-image, .tuto-text, .tuto-image {
   margin: 2px 10px; }
@@ -394,6 +418,43 @@ header {
   display: block; }
   .ask-image img, .tuto-image img {
     margin: auto; }
+
+.add-tuto {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: lightgrey;
+  padding: 10px; }
+
+.add-tuto-element {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.add-tuto-text {
+  color: #002B33; }
+
+.admin-section {
+  background: #d1d1d1;
+  margin: auto;
+  padding: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.btn-admin {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.tuto-res {
+  margin: 10px 0;
+  padding: 15px;
+  background: #dddddd;
+  border: 2px solid #b7b7b7; }
+
+.user-name-res {
+  color: #002B33; }
 
 /* BLOQUE DE PREGUNTAS*/
 .ask-article {
@@ -411,6 +472,25 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+
+.ask-article-all {
+  background: lightgrey;
+  margin: 10px 10px;
+  padding: 5px; }
+  .ask-article-all h3 {
+    padding: 5px 0px;
+    margin: 0;
+    color: #002B33; }
+
+.answer-content {
+  background: #eaeaea;
+  margin: 20px 80px;
+  padding: 5px;
+  border-top: 1px solid lightgrey; }
+  .answer-content .vote-count {
+    margin: 5px;
+    padding: 5px;
+    color: #ff3333; }
 
 /* FOOTER */
 .footer-container {
@@ -497,6 +577,24 @@ h4 {
   -ms-flex-flow: column;
   flex-flow: column; }
 
+.form-element-tuto {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  margin: 25px;
+  padding: 20px;
+  width: 70%; }
+
+.form-element-ask {
+  display: flex;
+  flex-flow: column;
+  margin: 25px;
+  padding: 20px;
+  width: 70%; }
+
 .form-btn {
   margin: 10px;
   display: -webkit-flex;
@@ -528,11 +626,11 @@ h4 {
     flex-flow: column; }
   .desk-user-nav {
     display: none; }
-  .team-container {
+  .team-container, .add-tuto, .admin-section {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; }
-  .contact-container, .edit-panel {
+  .contact-container, .edit-panel, .admin-section {
     width: 80%; } }
 
 /* LARGE PHONES -TABLETS */
@@ -556,11 +654,11 @@ h4 {
     flex-flow: column; }
   .desk-user-nav {
     display: none; }
-  .team-container {
+  .team-container, .add-tuto, .admin-section {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; }
-  .contact-container, .edit-panel {
+  .contact-container, .edit-panel, .admin-section {
     width: 80%; } }
 
 /* LAPTOPS - SMALL SCREENS */
@@ -593,12 +691,14 @@ h4 {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
-  .team-container {
+  .team-container, .add-tuto, .admin-section {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
   .contact-container, .edit-panel {
-    width: 50%; } }
+    width: 50%; }
+  .admin-section {
+    width: 70%; } }
 
 /* LARGE SCREENS */
 @media (min-width: 1200px) {
@@ -628,9 +728,11 @@ h4 {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
-  .team-container {
+  .team-container, .add-tuto, .admin-section {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row; }
   .contact-container, .edit-panel {
-    width: 50%; } }
+    width: 50%; }
+  .admin-section {
+    width: 70%; } }
