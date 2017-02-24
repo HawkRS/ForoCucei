@@ -84,6 +84,18 @@ h1, h2 {
   right: 5px;
   padding: 10px; }
 
+/* TABLAS Y PANELES*/
+.panel {
+  background: #eaeaea;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.panel-header {
+  margin: 0;
+  background: #008199;
+  color: #eaeaea;
+  text-align: left;
+  padding: 15px 5px; }
+
 /* HEADER */
 .header-container {
   background: #002B33;

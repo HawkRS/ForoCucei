@@ -85,7 +85,19 @@ $css-color:#338ff7;
   right: 5px;
   padding: 10px;
 }
+/* TABLAS Y PANELES*/
 
+.panel{
+  background: $background;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.panel-header{
+  margin: 0;
+  background: lighten($color-primario, 20);
+  color: $background;
+  text-align: left;
+  padding: 15px 5px;
+}
 
 
 /* HEADER */
