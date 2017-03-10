@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css"  type="text/css" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Krona+One" rel="stylesheet">
     <script src="https://use.fontawesome.com/af69e7979f.js"></script>
-    <title>Inicio</title>
+    <title>Contacto</title>
   </head>
   <body>
     <div class="root">
@@ -133,19 +133,19 @@
               <form class="contact-form" action="index.html" method="post">
                 <div class="form-element">
                   <label for="nombre">Tu nombre</label>
-                  <input type="text" name="nombre" required >
+                  <input type="text" id="nombre" name="nombre" required >
                 </div>
                 <div class="form-element">
                   <label for="correo">Tu correo</label>
-                  <input type="email" name="correo" required >
+                  <input type="email" id="correo" name="correo" required >
                 </div>
                 <div class="form-element">
                   <label for="asunto">Asunto</label>
-                  <input type="text" name="asunto" required >
+                  <input type="text" id="asunto" name="asunto" required >
                 </div>
                 <div class="form-element">
                   <label for="mensaje">Mensaje</label>
-                  <textarea name="mensaje" cols="30" rows="10" required></textarea>
+                  <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
                 </div>
                 <div class="form-btn">
                   <input class="btn btn-primary" type="submit" name="enviar" value="Enviar">
@@ -158,10 +158,13 @@
       </main>
       <footer class="footer-container">
         <div class="contact">
-          CONTACTO
+          <a href="contacto.html">CONTACTO</a>
+        </div>
+        <div class="terms">
+          <a href="pagTerminos.html">TERMINOS Y CONDICIONES</a>
         </div>
         <div class="site-map">
-          MAPA DEL SITIO
+          <a href="#">MAPA DEL SITIO</a>
         </div>
         <div class="back-button">
           <a href="#inicio"><i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i></a>
