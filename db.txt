@@ -17,4 +17,22 @@ password varchar(18) NOT NULL,
 roles int NOT NULL DEFAULT 5,
 PRIMARY KEY (id),
 CONSTRAINT users_cons UNIQUE (correo,nickname),
+
+otras TABLAS
+TUTORIALES
+pregphp
+pregpython
+pregcsharp
+pregcplus
+pregjava
+preghtml
+pregcss
+comtutos
+comphp
+compython
+comcsharp
+comcplus
+comjava
+comhtml
+comcss
 );
