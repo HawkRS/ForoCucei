@@ -11,7 +11,10 @@ CREATE DATABASE DBp247jdB;
 CREATE TABLE users (
 id int NOT NULL AUTO_INCREMENT,
 nombre varchar(96) NOT NULL,
-nickname varchar(96) NOT NULL UNIQUE,
+nickname varchar(45) NOT NULL UNIQUE,
+correo varchar(45) NOT NULL UNIQUE,
+password varchar(18) NOT NULL,
+roles int NOT NULL DEFAULT 5,
 PRIMARY KEY (id),
 CONSTRAINT users_cons UNIQUE (correo,nickname),
 );
