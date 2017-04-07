@@ -35,4 +35,5 @@ comcplus
 comjava
 comhtml
 comcss
+CREATE TABLE `dbp247jdb`.`pregphp` ( `id` INT NOT NULL , `titulo` VARCHAR(96) NOT NULL , `creador` VARCHAR(30) NOT NULL , `img` BLOB NOT NULL , `texto` BLOB NOT NULL , `categoria` VARCHAR(30) NOT NULL ) ENGINE = InnoDB;
 );
