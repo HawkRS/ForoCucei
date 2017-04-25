@@ -30,7 +30,8 @@ a:hover {
 
 .root {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #eaeaea; }
 
 h1, h2 {
   color: #002B33; }
@@ -103,34 +104,23 @@ h1, h2 {
 .header-container {
   background: #002B33;
   padding: 10px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
 
 /* usa el tag header, pero se cambiara a clase si usamos mas headers*/
 header {
-  border-bottom: 3px solid #5CBF00; }
+  border-bottom: 10px solid #5CBF00; }
 
 /*pruebas de acomodo del header*/
-.header-element {
-  /*border: 5px solid red;*/ }
-
 /*USER - LOGO - MENU*/
 #logo {
   font-family: 'Krona One', sans-serif;
   color: #5CBF00;
-  -webkit-flex-grow: 3;
-  -ms-flex-positive: 3;
   flex-grow: 3;
   text-align: center;
   font-size: 1.2em; }
 
 #menu-nav, #user-nav {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: center; }
 
@@ -143,16 +133,10 @@ header {
   float: right;
   /*border: 5px solid red;*/
   width: 80%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
   .navbar-container li {
     text-align: center;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     /*border: 5px solid silver;*/ }
     .navbar-container li a {
@@ -213,7 +197,7 @@ header {
 
 /* SEARCH BAR */
 .search-container {
-  background: #00414d;
+  background: #00404d;
   padding: 5px; }
 
 .search-bar {
@@ -223,47 +207,40 @@ header {
   /*border: 5px solid red;*/ }
 
 .search-bar-form {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
 
 .input-text {
-  -webkit-flex-grow: 4;
-  -ms-flex-positive: 4;
   flex-grow: 4;
   margin: 0px 5px; }
 
 .btn {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   margin: 0px 5px; }
 
 /* MIDDLE SECTION */
 .main-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin: auto;
+  background: #eaeaea; }
 
 .side-container {
-  background: #cecece;
-  padding: 5px; }
+  background: #eaeaea; }
 
 .center-container {
-  background: #eaeaea;
-  padding: 20px; }
+  background: #eaeaea; }
 
 /* USER DESK NAV */
 .desk-user-nav {
+  background: white;
   border-bottom: 2px solid silver;
-  display: block; }
+  display: block;
+  margin: 10px; }
 
 .desk-user-header {
-  background: #c1c1c1;
-  box-shadow: 0px 5px #a8a8a8; }
+  background: #dddddd;
+  box-shadow: 0px 5px #c4c4c4;
+  margin: 10px; }
 
 .fa-user-desk-nav {
   color: #0EB5B2;
@@ -271,26 +248,19 @@ header {
 
 .user-info-container {
   float: right;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
   flex-flow: column;
   text-align: right;
   padding: 5px;
-  border: 2px solid #a8a8a8;
-  background: #c1c1c1; }
+  border: 2px solid #c4c4c4;
+  background: #dddddd; }
 
 /* SECCION CANALES */
 .desk-forums {
-  padding: 10px 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  background: white;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column; }
+  flex-flow: column;
+  margin: 10px; }
 
 .forum-list {
   padding: 0; }
@@ -372,19 +342,23 @@ header {
 
 /* BLOQUE DE TUTORIALES*/
 .tuto-container {
-  border-bottom: 3px solid #5CBF00; }
+  background-color: white; }
   .tuto-container h2 {
-    color: black; }
+    background: #002B33;
+    color: white;
+    padding: 5px 10px; }
+  .tuto-container article {
+    background-color: white; }
 
 .tutorial-article {
   background: #002B33;
-  margin: 10px 0;
-  padding: 5px; }
+  margin: 10px; }
   .tutorial-article h3 {
-    padding: 5px 0px;
+    padding: 5px 5px;
     margin: 0;
     color: #0EB5B2;
-    border-left: 4px solid #5CBF00; }
+    border-left: 4px solid #5CBF00;
+    border-bottom: 4px solid #5CBF00; }
 
 .tutorial-article-all {
   background: lightgrey;
@@ -396,9 +370,8 @@ header {
     color: #002B33; }
 
 .tuto-content {
-  background: #eaeaea;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  padding: 10px;
+  background: white;
   display: flex; }
 
 .tuto-content-all {
@@ -411,6 +384,12 @@ header {
     padding: 5px;
     color: #ff3333; }
 
+.div-line {
+  margin: 0px 5px;
+  border-width: 1px;
+  border-style: dashed;
+  border-color: silver; }
+
 .ask-text, .ask-image, .tuto-text, .tuto-image {
   margin: 2px 10px; }
 
@@ -420,15 +399,11 @@ header {
     margin: auto; }
 
 .add-tuto {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   background: lightgrey;
   padding: 10px; }
 
 .add-tuto-element {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1; }
 
 .add-tuto-text {
@@ -438,13 +413,9 @@ header {
   background: #d1d1d1;
   margin: auto;
   padding: 10px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex; }
 
 .btn-admin {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1; }
 
 .tuto-res {
@@ -457,24 +428,32 @@ header {
   color: #002B33; }
 
 /* BLOQUE DE PREGUNTAS*/
+.ask-container {
+  background-color: white; }
+  .ask-container h2 {
+    background: #002B33;
+    color: white;
+    padding: 5px 10px; }
+  .ask-container article {
+    background-color: white; }
+
 .ask-article {
-  background: #0EB5B2;
-  margin: 10px 0;
-  padding: 5px; }
+  background: #002B33;
+  margin: 10px; }
   .ask-article h3 {
-    padding: 5px 0px;
+    padding: 5px 5px;
     margin: 0;
-    color: #002B33;
-    border-left: 4px solid #5CBF00; }
+    color: #0EB5B2;
+    border-left: 4px solid #0EB5B2;
+    border-bottom: 4px solid #0EB5B2; }
 
 .ask-content {
-  background: #eaeaea;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  padding: 10px;
+  background: white;
   display: flex; }
 
 .ask-article-all {
-  background: lightgrey;
+  background: white;
   margin: 10px 10px;
   padding: 5px; }
   .ask-article-all h3 {
@@ -496,18 +475,12 @@ header {
 .footer-container {
   background: #1e1e1e;
   height: 120px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
 
 .contact, .site-map {
   text-align: center;
   color: snow;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 10px; }
 
@@ -517,16 +490,12 @@ header {
 
 /* TEAM STYLE */
 .team-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex; }
 
 .member-block {
   background: #b7b7b7;
   margin: 10px;
   padding: 5px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1; }
 
 .fa-user {
@@ -562,27 +531,15 @@ h4 {
 
 .contact-form {
   margin: auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
   flex-flow: column; }
 
 .form-element {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
   flex-flow: column; }
 
 .form-element-tuto {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
   flex-flow: column;
   margin: 25px;
   padding: 20px;
@@ -597,11 +554,7 @@ h4 {
 
 .form-btn {
   margin: 10px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row; }
 
 /* MEDIA QUERIES */
@@ -610,129 +563,131 @@ h4 {
   .mobile-nav {
     position: relative;
     float: right;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     text-align: right; }
+
   .desk-nav {
     display: none; }
+
   .main-container {
-    -webkit-flex-flow: column-reverse;
-    -ms-flex-flow: column-reverse;
-    flex-flow: column-reverse; }
+    flex-flow: column-reverse;
+    width: 95%; }
+
   .tuto-content, .ask-content {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column; }
+
   .desk-user-nav {
     display: none; }
+
   .team-container, .add-tuto, .admin-section {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column; }
+
   .contact-container, .edit-panel, .admin-section {
     width: 80%; } }
-
 /* LARGE PHONES -TABLETS */
 @media (max-width: 991px) {
   .mobile-nav {
     position: relative;
     float: right;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     text-align: right; }
+
   .desk-nav {
     display: none; }
+
   .main-container {
-    -webkit-flex-flow: column-reverse;
-    -ms-flex-flow: column-reverse;
-    flex-flow: column-reverse; }
+    flex-flow: column-reverse;
+    width: 80%; }
+
   .tuto-content, .ask-content {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column; }
+
   .desk-user-nav {
     display: none; }
+
   .team-container, .add-tuto, .admin-section {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column; }
+
   .contact-container, .edit-panel, .admin-section {
     width: 80%; } }
-
 /* LAPTOPS - SMALL SCREENS */
 @media (min-width: 992px) {
   .mobile-nav, .mobile-user-nav {
     display: none; }
+
   .navbar-container {
     width: 90%; }
+
   .navbar-container li a {
     margin: 5px;
     font-size: .75em; }
+
   .desk-nav {
     position: relative;
     top: 15px; }
+
   .search-bar {
     float: right; }
+
   .main-container {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row; }
+    flex-flow: row;
+    width: 70%; }
+
   .side-container {
-    -webkit-flex: 1;
-    -ms-flex: 1;
     flex: 1; }
+
   .center-container {
-    -webkit-flex: 5;
-    -ms-flex: 5;
-    flex: 5; }
+    flex: 5;
+    padding: 20px; }
+
   .tuto-content, .ask-content {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .team-container, .add-tuto, .admin-section {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .contact-container, .edit-panel {
     width: 50%; }
+
   .admin-section {
     width: 70%; } }
-
 /* LARGE SCREENS */
 @media (min-width: 1200px) {
   .mobile-nav, .mobile-user-nav {
     display: none; }
+
   .desk-nav {
     position: relative;
     top: 15px; }
+
   .navbar-container {
     width: 90%; }
+
   .navbar-container li a {
     margin: 5px;
     font-size: 1em; }
+
   .main-container {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row; }
+    flex-flow: row;
+    width: 70%; }
+
   .side-container {
-    -webkit-flex: 1;
-    -ms-flex: 1;
     flex: 1; }
+
   .center-container {
-    -webkit-flex: 5;
-    -ms-flex: 5;
-    flex: 5; }
+    flex: 5;
+    padding: 20px; }
+
   .tuto-content, .ask-content {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .team-container, .add-tuto, .admin-section {
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row; }
+
   .contact-container, .edit-panel {
     width: 50%; }
+
   .admin-section {
     width: 70%; } }
+
+/*# sourceMappingURL=style.css.map */

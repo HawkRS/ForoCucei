@@ -36,7 +36,7 @@ $color-terciario: #5CBF00;
 
 $background: #eaeaea;
 $texto: #1c1c1c;
-$sidebar: #cecece;
+$sidebar: #eaeaea;
 $complementario: #efefef;
 $search-bar : lighten($color-primario, 5);
 
@@ -51,6 +51,7 @@ a:hover{text-decoration: none;}
 .root{
   margin: 0;
   padding: 0;
+  background: $background;
 }
 
 h1,h2{
@@ -112,9 +113,12 @@ $css-color:#338ff7;
   flex-flow: row;
   }
 /* usa el tag header, pero se cambiara a clase si usamos mas headers*/
-header{  border-bottom: 3px solid $color-terciario;}
+header{
+  border-bottom: 10px solid $color-terciario;
+
+}
 /*pruebas de acomodo del header*/
-.header-element{/*border: 5px solid red;*/}
+//.header-element{/*border: 5px solid red;*/}
 
 /*USER - LOGO - MENU*/
 #logo{
@@ -153,7 +157,6 @@ header{  border-bottom: 3px solid $color-terciario;}
       text-decoration: none;
       border-bottom: 3px solid $color-terciario;
       @include transition(600ms);
-
     }
   }
 }
@@ -233,23 +236,28 @@ header{  border-bottom: 3px solid $color-terciario;}
 /* MIDDLE SECTION */
 .main-container{
   display: flex;
+  margin: auto;
+  background: $background;
 }
 .side-container{
-  background: $sidebar;
-  padding: 5px;
+  background: $background;
+  //padding: 5px;
 }
 .center-container{
   background: $background;
-  padding: 20px;
+  //padding: 20px;
 }
 /* USER DESK NAV */
 .desk-user-nav{
+  background: white;
   border-bottom: 2px solid silver;
   display: block;
+  margin: 10px;
 }
 .desk-user-header{
   background: darken($sidebar, 5);
   box-shadow: 0px 5px (darken($sidebar, 15));
+  margin: 10px;
 }
 .fa-user-desk-nav{
   color: $color-secundario;
@@ -269,9 +277,10 @@ header{  border-bottom: 3px solid $color-terciario;}
 /* SECCION CANALES */
 
 .desk-forums{
-  padding: 10px 0;
+  background: white;
   display: flex;
   flex-flow: column;
+  margin: 10px;
 }
 .forum-list{
   padding: 0;
@@ -340,21 +349,34 @@ header{  border-bottom: 3px solid $color-terciario;}
 }
 /* BLOQUE DE TUTORIALES*/
 .tuto-container{
-  h2{
-    color: black;
+  background-color: white;
+  .tuto-header{
+    //padding: 1px 10px;
+    //padding-top: 1px;
   }
-  border-bottom: 3px solid $color-terciario;
+  h2{
+    background: $color-primario;
+    color: white;
+    padding: 5px 10px;
+  }
+
+  article{
+    background-color: white;
+    //padding: 10px;}
+  //border-bottom: 3px solid $color-terciario;
+}
 }
 .tutorial-article{
   background: $color-primario;
-  margin: 10px 0;
+  margin: 10px;
   h3{
-    padding: 5px 0px;
+    padding: 5px 5px;
     margin: 0;
     color: $color-secundario;
     border-left: 4px solid $color-terciario;
+    border-bottom: 4px solid $color-terciario;
   }
-  padding: 5px;
+  //padding: 5px;
 }
 .tutorial-article-all{
   background: lightgrey;
@@ -367,7 +389,8 @@ header{  border-bottom: 3px solid $color-terciario;}
   padding: 5px;
 }
 .tuto-content{
-  background: $background;
+  padding: 10px;
+  background: white;
   display: flex;
 }
 .tuto-content-all{
@@ -381,6 +404,14 @@ header{  border-bottom: 3px solid $color-terciario;}
     color: lighten(red, 10%);
   }
 }
+
+.div-line{
+  margin: 0px 5px;
+  border-width:1px;
+  border-style:dashed;
+  border-color: silver;
+}
+
 .ask-text,.ask-image,.tuto-text, .tuto-image{
   margin: 2px 10px;
 }
@@ -419,23 +450,42 @@ header{  border-bottom: 3px solid $color-terciario;}
   color: $color-primario;
 }
 /* BLOQUE DE PREGUNTAS*/
-.ask-article{
-  background: $color-secundario;
-  margin: 10px 0;
-  h3{
-    padding: 5px 0px;
-    margin: 0;
-    color: $color-primario;
-    border-left: 4px solid $color-terciario;
+.ask-container{
+  background-color: white;
+  .ask-header{
+    //padding: 1px 10px;
+    //padding-top: 1px;
   }
-  padding: 5px;
+  h2{
+    background: $color-primario;
+    color: white;
+    padding: 5px 10px;
+  }
+
+  article{
+    background-color: white;
+    //padding: 10px;}
+  //border-bottom: 3px solid $color-terciario;
+}
+}
+.ask-article{
+  background: $color-primario;
+  margin: 10px;
+  h3{
+    padding: 5px 5px;
+    margin: 0;
+    color: $color-secundario;
+    border-left: 4px solid $color-secundario;
+    border-bottom: 4px solid $color-secundario;
+  }
 }
 .ask-content{
-  background: $background;
+  padding: 10px;
+  background: white;
   display: flex;
 }
 .ask-article-all{
-  background: lightgrey;
+  background: white;
   margin: 10px 10px;
   h3{
     padding: 5px 0px;
@@ -511,40 +561,40 @@ h4{
 }
 
 /* CONTACTO */
-.contact-container{
-  background: $background;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 10px;
-  margin: auto;
-}
-.contact-form{
-  margin: auto;
-  display: flex;
-  flex-flow: column;
-}
-.form-element{
-  display: flex;
-  flex-flow: column;
-}
-.form-element-tuto{
-  display: flex;
-  flex-flow: column;
-  margin: 25px;
-  padding: 20px;
-  width: 70%;
-}
-.form-element-ask{
-  display: flex;
-  flex-flow: column;
-  margin: 25px;
-  padding: 20px;
-  width: 70%;
-}
-.form-btn{
-  margin: 10px;
-  display: flex;
-  flex-flow: row;
-}
+  .contact-container{
+    background: $background;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin: auto;
+  }
+  .contact-form{
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+  }
+  .form-element{
+    display: flex;
+    flex-flow: column;
+  }
+  .form-element-tuto{
+    display: flex;
+    flex-flow: column;
+    margin: 25px;
+    padding: 20px;
+    width: 70%;
+  }
+  .form-element-ask{
+    display: flex;
+    flex-flow: column;
+    margin: 25px;
+    padding: 20px;
+    width: 70%;
+  }
+  .form-btn{
+    margin: 10px;
+    display: flex;
+    flex-flow: row;
+  }
 /* MEDIA QUERIES */
 /* SMALL - MEDIUM PHONES */
 @media (max-width: 767px)
@@ -557,7 +607,8 @@ h4{
   .desk-nav {
     display: none; }
   .main-container{
-    flex-flow: column-reverse;}
+    flex-flow: column-reverse;
+    width: 95%;}
   .tuto-content, .ask-content{
     flex-flow: column;}
   .desk-user-nav{
@@ -576,7 +627,9 @@ h4{
   .desk-nav{
     display: none; }
   .main-container{
-    flex-flow: column-reverse;}
+    flex-flow: column-reverse;
+    width: 80%;
+  }
   .tuto-content, .ask-content{
     flex-flow: column;}
   .desk-user-nav{
@@ -601,9 +654,10 @@ h4{
   }
   .main-container{
     flex-flow: row;
+    width: 70%;
   }
   .side-container{flex: 1;}
-  .center-container{flex: 5;}
+  .center-container{flex: 5;padding: 20px;}
   .tuto-content, .ask-content{
     flex-flow: row;}
   .team-container, .add-tuto, .admin-section{flex-flow: row;}
@@ -624,9 +678,10 @@ h4{
     font-size: 1em; }
   .main-container{
     flex-flow: row;
+    width: 70%;
   }
   .side-container{flex: 1;}
-  .center-container{flex: 5;}
+  .center-container{flex: 5;padding: 20px;}
   .tuto-content, .ask-content{
     flex-flow: row;}
   .team-container, .add-tuto, .admin-section{flex-flow: row;}
