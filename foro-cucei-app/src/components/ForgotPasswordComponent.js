@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+require('styles/style.css');
+require('styles//Login.css');
 require('styles//ForgotPassword.css');
 
 class ForgotPasswordComponent extends React.Component {

@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+require('styles/style.css');
+require('styles//Login.css');
 require('styles//SignIn.css');
 
 class SignInComponent extends React.Component {
