@@ -10,6 +10,7 @@ import SignInComponent from './Login/SignInComponent';
 import SignUpComponent from './Login/SignUpComponent';
 import ForgotPasswordComponent from './Login/ForgotPasswordComponent';
 import HomeComponent from './Home/HomeComponent';
+import FaqComponent from './Pages/FaqComponent';
 class AppComponent extends React.Component {
   render() {
     return (
@@ -19,6 +20,7 @@ class AppComponent extends React.Component {
           <Route exact={true} path={"/signin"} component={SignInComponent}/>
           <Route exact={true} path={"/signup"} component={SignUpComponent}/>
           <Route exact={true} path={"/forgot-password"} component={ForgotPasswordComponent}/>
+          <Route exact={true} path={"/faq"} component={FaqComponent}/>
         </div>
       </Router>
     );
