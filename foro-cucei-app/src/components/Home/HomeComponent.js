@@ -8,8 +8,8 @@ require('styles/style.css');
 import CategoriesSideBarComponent from '../SideBar/CategoriesSideBarComponent';
 import HeaderComponent from '../Helpers/HeaderComponent';
 import FooterComponent from '../Helpers/FooterComponent';
-import TutorialListComponent from './TutorialListComponent';
-import QuestionsListComponent from './QuestionsListComponent';
+//import TutorialListComponent from './TutorialListComponent';
+//import QuestionsListComponent from './QuestionsListComponent';
 
 class HomeComponent extends React.Component {
   render() {
