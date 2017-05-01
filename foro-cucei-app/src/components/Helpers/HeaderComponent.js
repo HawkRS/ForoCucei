@@ -19,11 +19,11 @@ class HeaderComponent extends React.Component {
                       <button className="dropbtn"><i className="fa fa-user-circle-o fa-user-mobile-nav fa-2x" aria-hidden="true"></i></button>
                       <div className="dropdown-content" style={{left:0}}>
                         <a href="#">Mi Perfil</a>
-                      <a href="user.profile.html">Mi Perfil</a>
-                      <a href="usuarios.html">Usuarios</a>
-                      <a href="sub-tutorial.html">Tutoriales</a>
-                      <a href="#">Mis preguntas</a>
-                      <a href="login.html">Cerrar Sesion</a>
+                      <a href="user.profile.html">'Mi Perfil'</a>
+                      <a href="usuarios.html">'Usuarios'</a>
+                      <a href="sub-tutorial.html">'Tutoriales'</a>
+                      <a href="#">'Mis preguntas'</a>
+                      <a href="login.html">'Cerrar Sesion'</a>
                       </div>
                     </div>
                   </nav>
