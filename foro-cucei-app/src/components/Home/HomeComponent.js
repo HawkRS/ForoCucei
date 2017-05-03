@@ -8,20 +8,25 @@ require('styles/style.css');
 import CategoriesSideBarComponent from '../SideBar/CategoriesSideBarComponent';
 import HeaderComponent from '../Helpers/HeaderComponent';
 import FooterComponent from '../Helpers/FooterComponent';
-//import TutorialListComponent from './TutorialListComponent';
-//import QuestionsListComponent from './QuestionsListComponent';
+import TutorialListComponent from './TutorialListComponent';
+import QuestionsListComponent from './QuestionsListComponent';
 
 class HomeComponent extends React.Component {
+  constructor() {
+        super();
+  }
+
   render() {
+    const { content } = this.props;
     return (
-      <div className="root">
+      <div className='root'>
         <HeaderComponent />
-        <main className="main-container">
+        <main className='main-container'>
           <CategoriesSideBarComponent />
-          <section className="center-container">
-            <div className="">
-              <div className="bienvenida">
-                <article className="article-block">
+          <section className='center-container'>
+            <div className=''>
+              <div className='bienvenida'>
+                <article className='article-block'>
                   <h1>Bienvenidos</h1>
                   <p>
                     The path of the righteous man is beset on all sides by the iniquities
@@ -35,8 +40,7 @@ class HomeComponent extends React.Component {
                   <small>Atte: Samuel L. Jackson</small>
                 </article>
               </div>
-              <TutorialListComponent />
-              <QuestionsListComponent />
+              {content || <div><TutorialListComponent /><QuestionsListComponent /></div>}
             </div>
           </section>
         </main>

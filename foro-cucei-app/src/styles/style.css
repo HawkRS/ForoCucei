@@ -30,7 +30,9 @@ a:hover {
 
 .root {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: black;
+}
 
 h1, h2 {
   color: #002B33; }

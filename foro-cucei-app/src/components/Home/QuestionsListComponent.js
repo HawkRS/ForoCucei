@@ -7,22 +7,22 @@ require('styles//home/QuestionsList.css');
 class QuestionListItemComponent extends React.Component {
   getCategoriesIcons(categories) {
     if(categories && Array.isArray(categories) && categories.length > 0) {
-      return categories.map((c) => {
+      return categories.map((c, i) => {
         switch(c) {
           case 'C#':
-            return <span className="lang-tag csharp-tag">C#</span>;
+            return <span className='lang-tag csharp-tag' key={i}>C#</span>;
           case 'C++':
-            return <span className="lang-tag c-tag">C++</span>;
+            return <span className='lang-tag c-tag' key={i}>C++</span>;
           case 'PHP':
-            return <span className="lang-tag php-tag">PHP</span>;
+            return <span className='lang-tag php-tag' key={i}>PHP</span>;
           case 'HTML':
-            return <span className="lang-tag html-tag">HTML</span>;
+            return <span className='lang-tag html-tag' key={i}>HTML</span>;
           case 'CSS':
-            return <span className="lang-tag css-tag">CSS</span>;
+            return <span className='lang-tag css-tag' key={i}>CSS</span>;
           case 'PYTHON':
-            return <span className="lang-tag python-tag">PYTHON</span>;
+            return <span className='lang-tag python-tag' key={i}>PYTHON</span>;
           case 'JAVA':
-            return <span className="lang-tag java-tag">JAVA</span>
+            return <span className='lang-tag java-tag' key={i}>JAVA</span>
         }
       })
     } else {
@@ -33,13 +33,13 @@ class QuestionListItemComponent extends React.Component {
     const question = this.props.question;
     const questionCategories = this.getCategoriesIcons(question.categories);
     return(
-      <article className="ask-article">
+      <article className='ask-article'>
         <h3>{question.title}</h3>
-        <div className="ask-content">
-          <figure className="ask-image">
-            <img className="img-responsive" src={"images/ask.png"} alt="tutorial" />
+        <div className='ask-content'>
+          <figure className='ask-image'>
+            <img className='img-responsive' src={'images/ask.png'} alt='tutorial' />
           </figure>
-          <p className="ask-text">
+          <p className='ask-text'>
             {question.description}
           </p>
         </div>
@@ -106,14 +106,14 @@ class QuestionsListComponent extends React.Component {
       }
     ];
 
-    return questions.map((q) => {
-      return <QuestionListItemComponent question={q} />
+    return questions.map((q, i) => {
+      return <QuestionListItemComponent question={q} key={'question'+i}/>
     });
   }
   render() {
     let questions = this.getQuestions();
     return (
-      <div className="ask-container">
+      <div className='ask-container'>
         <h2>ULTIMAS PREGUNTAS</h2>
         {questions}
       </div>

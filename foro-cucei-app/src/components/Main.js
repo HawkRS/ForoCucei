@@ -2,9 +2,7 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-import {Router, Route, browserHistory, hashHistory } from 'react-router';
-import createBrowserHistory from 'history/createBrowserHistory'
-const customHistory = createBrowserHistory()
+import { Route, Router, browserHistory } from 'react-router';
 
 import SignInComponent          from './Login/SignInComponent';
 import SignUpComponent          from './Login/SignUpComponent';
@@ -27,26 +25,26 @@ import AdmIndexComponent        from './Admin/AdmIndexComponent';
 class AppComponent extends React.Component {
   render() {
     return (
-      <Router history={customHistory}>
+      <Router history={browserHistory}>
         <div>
-          <Route exact={true} path={"/"} component={HomeComponent}/>
-          <Route exact={true} path={"/signin"} component={SignInComponent}/>
-          <Route exact={true} path={"/signup"} component={SignUpComponent}/>
-          <Route exact={true} path={"/forgot-password"} component={ForgotPasswordComponent}/>
-          <Route exact={true} path={"/faq"} component={FaqComponent}/>
-          <Route exact={true} path={"/terminos"} component={TerminosComponent}/>
-          <Route exact={true} path={"/contacto"} component={ContactoComponent}/>
-          <Route exact={true} path={"/nosotros"} component={NosotrosComponent}/>
-          <Route exact={true} path={"/tutoriales"} component={TutorialesComponent}/>
-          <Route exact={true} path={"/preguntas"} component={PreguntasComponent}/>
-          <Route exact={true} path={"/tutorial-ind"} component={TutoIndComponent}/>
-          <Route exact={true} path={"/nueva-pregunta"} component={PreguntaComponent}/>
-          <Route exact={true} path={"/pregunta-ind"} component={PregIndComponent}/>
-          <Route exact={true} path={"/perfil"} component={PerfilComponent}/>
-          <Route exact={true} path={"/usuario-editar"} component={UserEditComponent}/>
-          <Route exact={true} path={"/admin/usuarios"} component={UsuariosComponent}/>
-          <Route exact={true} path={"/admin/index"} component={AdmIndexComponent}/>
-
+            <Route path={'/signin'} component={SignInComponent}/>
+            <Route path={'/signup'} component={SignUpComponent}/>
+            <Route path={'/forgot-password'} component={ForgotPasswordComponent}/>
+            <Route path={'/'} component={HomeComponent}>
+              <Route path={'faq'} components={{ content: FaqComponent }}/>
+              <Route path={'terminos'} components={{ content: TerminosComponent }}/>
+              <Route path={'contacto'} components={{ content: ContactoComponent }}/>
+              <Route path={'nosotros'} components={{ content: NosotrosComponent }}/>
+              <Route path={'tutoriales'} components={{ content: TutorialesComponent }}/>
+              <Route path={'preguntas'} components={{ content: PreguntasComponent }}/>
+              <Route path={'tutorial-ind'} components={{ content: TutoIndComponent }}/>
+              <Route path={'nueva-pregunta'} components={{ content: PreguntaComponent }}/>
+              <Route path={'pregunta-ind'} components={{ content: PregIndComponent }}/>
+              <Route path={'perfil'} components={{ content: PerfilComponent }}/>
+              <Route path={'usuario-editar'} components={{ content: UserEditComponent }}/>
+              <Route path={'admin/usuarios'} components={{ content: UsuariosComponent }}/>
+              <Route path={'admin/index'} components={{ content: AdmIndexComponent }}/>
+            </Route>
         </div>
       </Router>
     );

@@ -8,13 +8,13 @@ class TutorialListItem extends React.Component {
   render() {
     const tutorial = this.props.tutorial;
     return(
-      <article className="tutorial-article">
+      <article className='tutorial-article'>
         <h3>{tutorial.title}</h3>
-        <div className="tuto-content">
-          <figure className="tuto-image">
-            <img className="img-responsive" src={"images/tuto.png"} alt="tutorial" />
+        <div className='tuto-content'>
+          <figure className='tuto-image'>
+            <img className='img-responsive' src={'images/tuto.png'} alt='tutorial' />
           </figure>
-          <p className="tuto-text">
+          <p className='tuto-text'>
             {tutorial.description}
           </p>
         </div>
@@ -57,17 +57,17 @@ class TutorialListComponent extends React.Component {
               choke. We get some in our lungs, we drown. However unreal it
               may seem, we are connected, you and I. We're on the same curve,
               just on opposite ends.`
-      },
+      }
     ];
     //Wrapping data to an array of TutorialListItemComponent
-    return tutorials.map((t) => {
-      return <TutorialListItem tutorial={t} />
+    return tutorials.map((t, i) => {
+      return <TutorialListItem tutorial={t} key={'tutorial'+i}/>
     });
   }
   render() {
     const tutorials = this.getTutorials();
     return (
-      <div className="tuto-container">
+      <div className='tuto-container'>
         <h2>ULTIMOS TUTORIALES</h2>
         {tutorials}
       </div>
