@@ -44,7 +44,7 @@ class HeaderComponent extends React.Component {
                           <li><a href='#canales'>Canales</a></li>
                           <li><a href='faq.html'>FAQ</a></li>
                           <li><a href='contacto.html'>Contacto</a></li>
-                          <li><a href='nosotros.html'>Nosotros</a></li>
+                          <li><a href='nosotros'>Nosotros</a></li>
                         </div>
                       </div>
                     </nav>
@@ -54,7 +54,7 @@ class HeaderComponent extends React.Component {
                         <li><a href='tutoriales.html'>Tutoriales</a></li>
                         <li><a href='faq.html'>FAQ</a></li>
                         <li><a href='contacto.html'>Contacto</a></li>
-                        <li><a href='nosotros.html'>Nosotros</a></li>
+                        <li><a href='nosotros'>Nosotros</a></li>
                       </ul>
                     </nav>
                   </div>
