@@ -1,12 +1,11 @@
 <?php
 
-  include('C:/xampp/htdocs/Forocucei/foro-cucei-api/models/Users.php');
+  include('models/Users.php');
 
   class UsersController {
 
     function __construct(){
-      //
-      $model = new Users();
+      $this->model = new Users();
     }
 
     function ejecutar(){
@@ -26,8 +25,8 @@
     }// TERMINA FUNCION EJECUTAR
 
     function listar(){
-      echo 'Este debe listar los productos';
-      var_dump($model->ShowUsers());
-    }// TERMINA FUNCION LISTAR
+      //echo 'Este debe listar los productos';
+      echo json_encode($this->model->ShowUsers());
+    }// TERMINA FUNCION EJECUTAR
 
   }
