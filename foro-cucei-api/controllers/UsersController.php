@@ -11,22 +11,46 @@
     function ejecutar(){
       if (!isset($_GET['act']))
       {
-        $_GET['act'] = 'listar';
+        $_GET['act'] = 'read';
       }
 
       switch($_GET['act'])
       {
-        case 'listar':
-          $this->listar();
+        case 'read':
+          $this->read();
+          break;
+        case 'create':
+          $this->create();
+          break;
+        case 'update':
+          $this->update();
           break;
         default:
           echo 'Acción no reconocida';
       }
     }// TERMINA FUNCION EJECUTAR
 
-    function listar(){
+
+  // FUNCIONES CRUD
+    function create(){
+      echo json_encode($this->model->CreateUsers());
+    }
+
+    function read(){
       //echo 'Este debe listar los productos';
       echo json_encode($this->model->ShowUsers());
-    }// TERMINA FUNCION EJECUTAR
+    }
+
+    function update(){
+      //echo 'Este debe listar los productos';
+      echo json_encode($this->model->UpdateUsers());
+    }
+
+    function delete(){
+      //echo 'Este debe listar los productos';
+      echo json_encode($this->model->ShowUsers());
+    }
+
+
 
   }
