@@ -28,10 +28,18 @@
     }
 
     function CreateUsers(){
+      $name = 'Ayrton';
+      $last = 'Senna';
+      $nick = 'Magic';
+      $mail = 'Senna@mail.com';
 
-      $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail) VALUES (?, ?,?,?)');
+      $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail) VALUES (:name, :last, :nick, :mail)');
+      $st->bindValue(":name", $name);
+      $st->bindValue(":last", $last);
+      $st->bindValue(":nick", $nick);
+      $st->bindValue(":mail", $mail);
 
-      $st->execute(array('Jesus', 'Casillas', 'Chuyo', 'chuy@mail.com'));
+      $st->execute();
 
       $result = $st->fetchAll(PDO::FETCH_OBJ);
 
@@ -39,7 +47,11 @@
     }
 
     function UpdateUsers(){
-      $id = 2;$name = 'Kimi';$last = 'Raikkonen';$nick = 'iceman';$mail = 'iceone@mail.com';
+      $id = 2;
+      $name = 'Kimi';
+      $last = 'Raikkonen';
+      $nick = 'iceman';
+      $mail = 'iceone@mail.com';
 
       $st = $this->pdo->prepare('UPDATE users
         SET `name` = :name,
