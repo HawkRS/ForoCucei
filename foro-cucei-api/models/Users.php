@@ -61,4 +61,15 @@
       return $result;
     }
 
+    function DeleteUsers(){
+      $id = 3;
+      $st = $this->pdo->prepare('DELETE FROM users WHERE `iduser` = :id');
+      $st->bindValue(":id", $id);
+      $st->execute();
+
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+
+      return $result;
+    }
+
   }

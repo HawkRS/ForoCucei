@@ -25,6 +25,9 @@
         case 'update':
           $this->update();
           break;
+        case 'delete':
+          $this->delete();
+          break;
         default:
           echo 'Acción no reconocida';
       }
@@ -48,7 +51,7 @@
 
     function delete(){
       //echo 'Este debe listar los productos';
-      echo json_encode($this->model->ShowUsers());
+      echo json_encode($this->model->DeleteUsers());
     }
 
 
