@@ -28,16 +28,19 @@
     }
 
     function CreateUsers(){
-      $name = 'Ayrton';
-      $last = 'Senna';
-      $nick = 'Magic';
-      $mail = 'Senna@mail.com';
+      $name = 'Damon';
+      $last = 'Hill';
+      $nick = 'Hilltop';
+      $mail = 'DamonH@mail.com';
+      $pass = '+Carlos1';
+      $passHash = password_hash($pass, PASSWORD_BCRYPT);
 
-      $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail) VALUES (:name, :last, :nick, :mail)');
+      $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
       $st->bindValue(":name", $name);
       $st->bindValue(":last", $last);
       $st->bindValue(":nick", $nick);
       $st->bindValue(":mail", $mail);
+      $st->bindValue(":pass", $passHash);
 
       $st->execute();
 
