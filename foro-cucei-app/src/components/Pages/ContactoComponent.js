@@ -24,10 +24,10 @@ class ContactoComponent extends React.Component {
             </p>
           </article>
           <div className="contact-container">
-            <form className="contact-form" action="index.html" method="post">
+            <form className="contact-form" action="index.html" name="myForm" method="post" onsubmit="return validateForm()">
               <div className="form-element">
                 <label for="nombre">Tu nombre</label>
-                <input type="text" name="nombre" required />
+                <input type="text" name="fname" required />
               </div>
               <div className="form-element">
                 <label for="correo">Tu correo</label>

@@ -8,6 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Krona+One" rel="stylesheet">
   <script src="https://use.fontawesome.com/af69e7979f.js"></script>
+  <script>
+  function validateForm() {
+      var x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+          alert("Name must be filled out");
+          return false;
+      }
+  }
+  </script>
 </head>
 <body>
   <div id="app">APPLICATION CONTENT</div>
