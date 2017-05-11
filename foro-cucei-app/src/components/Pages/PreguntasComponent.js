@@ -109,10 +109,10 @@ class PreguntasComponent extends React.Component {
     );
   }
 }
-      PreguntasComponent.displayName = 'PreguntasComponent';
+PreguntasComponent.displayName = 'PreguntasComponent';
 
-      // Uncomment properties you need
-      // HomeComponent.propTypes = {};
-      // HomeComponent.defaultProps = {};
+// Uncomment properties you need
+// HomeComponent.propTypes = {};
+// HomeComponent.defaultProps = {};
 
-      export default PreguntasComponent;
+export default PreguntasComponent;

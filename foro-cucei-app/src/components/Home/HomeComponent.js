@@ -5,7 +5,7 @@ import React from 'react';
 require('styles//Home.css');
 require('styles/style.css');
 
-import CategoriesSideBarComponent from '../SideBar/CategoriesSideBarComponent';
+// import CategoriesSideBarComponent from '../SideBar/CategoriesSideBarComponent';
 import HeaderComponent from '../Helpers/HeaderComponent';
 import FooterComponent from '../Helpers/FooterComponent';
 import TutorialListComponent from './TutorialListComponent';
@@ -18,14 +18,7 @@ class HomeComponent extends React.Component {
 
   render() {
     const { content } = this.props;
-    return (
-      <div className='root'>
-        <HeaderComponent />
-        <main className='main-container'>
-          <CategoriesSideBarComponent />
-          <section className='center-container'>
-            <div className=''>
-              <div className='bienvenida'>
+    const bienvenida = (<div className='bienvenida'>
                 <article className='article-block'>
                   <h1>Bienvenidos</h1>
                   <p>
@@ -39,8 +32,15 @@ class HomeComponent extends React.Component {
                   </p>
                   <small>Atte: Samuel L. Jackson</small>
                 </article>
-              </div>
-              {content || <div><TutorialListComponent /><QuestionsListComponent /></div>}
+              </div>);
+    return (
+      <div className='root'>
+        <HeaderComponent />
+        <main className='main-container'>
+          <section className='center-container'>
+            {content ? '': bienvenida}
+            <div className=''>
+              {content || <div><TutorialListComponent limit={3}/><QuestionsListComponent limit={3}/></div>}
             </div>
           </section>
         </main>

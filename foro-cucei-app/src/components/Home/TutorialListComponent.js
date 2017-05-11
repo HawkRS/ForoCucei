@@ -27,6 +27,7 @@ class TutorialListComponent extends React.Component {
   
   getTutorials() {
     //Instead of static data, here we should fetch data from server.
+    let {limit} = this.props;
     let tutorials  = [
       {
         title: 'Como instalar LAMP y no morir en el intento',
@@ -60,9 +61,14 @@ class TutorialListComponent extends React.Component {
       }
     ];
     //Wrapping data to an array of TutorialListItemComponent
-    return tutorials.map((t, i) => {
+    let result = tutorials.map((t, i) => {
       return <TutorialListItem tutorial={t} key={'tutorial'+i}/>
     });
+    if(limit && limit > 0 && limit < result.length) {
+      return result.slice(0, limit);
+    } else {
+      return result;
+    }
   }
   render() {
     const tutorials = this.getTutorials();

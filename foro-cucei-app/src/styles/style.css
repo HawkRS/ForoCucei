@@ -110,7 +110,8 @@ h1, h2 {
   display: flex;
   -webkit-flex-flow: row;
   -ms-flex-flow: row;
-  flex-flow: row; }
+  flex-flow: row;
+  align-items: center; }
 
 /* usa el tag header, pero se cambiara a clase si usamos mas headers*/
 header {
@@ -142,7 +143,6 @@ header {
 
 /*MENUS*/
 .navbar-container {
-  float: right;
   /*border: 5px solid red;*/
   width: 80%;
   display: -webkit-flex;
