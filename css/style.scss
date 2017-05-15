@@ -1,0 +1,635 @@
+@import "normalize.css";
+@import "bootstrap.css";
+
+/* TRANSITIONS */
+@mixin transition($transition) {
+  transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+}
+
+
+
+/* COLORES */
+/*opcion UNO*/
+/*$color-primario: #caebf2;
+$color-secundario: #ff3b3f;
+$color-terciario: #a9a9a9;*/
+/*opcion DOS*/
+/*$color-primario: #4484ce;
+$color-secundario: #d9d9d9;
+$color-terciario: #f9cf00;*/
+/*opcion TRES*/
+/*$color-primario: #6e3667;
+$color-secundario: #88d317;
+$color-terciario: #1a0315;*/
+/*opcion CUATRO*/
+/*$color-primario: #6e3667;
+$color-secundario: #88d317;
+$color-terciario: #1a0315;*/
+/*opcion CUATRO*/
+$color-primario: #002B33;
+$color-secundario: #0EB5B2;
+$color-terciario: #5CBF00;
+
+$background: #eaeaea;
+$texto: #1c1c1c;
+$sidebar: #cecece;
+$complementario: #efefef;
+$search-bar : lighten($color-primario, 5);
+
+/*ESTILO GENERAL DEL DOCUMENTO*/
+* {
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Hammersmith One', sans-serif;
+}
+a:hover{text-decoration: none;}
+
+.root{
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2{
+  color: $color-primario;
+}
+.lang-tag{
+  font-size: .8em;
+  padding: 3px 4px 2px;
+}
+/* ESTILO LENGUAJES */
+$c-color : #0061EA;
+$python-color:#e2b600;
+$php-color:#773bc5;
+$csharp-color:#8E00BA;
+$java-color:#EA0000;
+$html-color:#DD4200;
+$css-color:#338ff7;
+.c-tag      {background: $css-color;   color: white;box-shadow: 0px 5px (darken($css-color, 15));}
+.python-tag {background: $python-color;color: white;box-shadow: 0px 5px (darken($python-color, 15));}
+.php-tag    {background: $php-color;   color: white;box-shadow: 0px 5px (darken($php-color, 15));}
+.csharp-tag {background: $csharp-color;color: white;box-shadow: 0px 5px (darken($csharp-color, 15));}
+.css-tag    {background: $css-color;   color: white;box-shadow: 0px 5px (darken($css-color, 15));}
+.java-tag   {background: $java-color;  color: white;box-shadow: 0px 5px (darken($java-color, 15));}
+.html-tag   {background: $html-color;  color: white;box-shadow: 0px 5px (darken($html-color, 15));}
+
+
+/*ESTILOS PARA DATOS DEL USUARIO */
+.user-name, .forum-header{
+  color: lighten($color-primario, 10);
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: right;
+  right: 5px;
+  padding: 10px;
+}
+/* TABLAS Y PANELES*/
+
+.panel{
+  background: $background;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.edit-panel{
+  margin: auto;
+}
+.panel-header{
+  margin: 0;
+  background: lighten($color-primario, 20);
+  color: $background;
+  text-align: left;
+  padding: 15px 5px;
+}
+
+
+/* HEADER */
+.header-container{
+  background: $color-primario;
+  padding: 10px;
+  display: flex;
+  flex-flow: row;
+  }
+/* usa el tag header, pero se cambiara a clase si usamos mas headers*/
+header{  border-bottom: 3px solid $color-terciario;}
+/*pruebas de acomodo del header*/
+.header-element{/*border: 5px solid red;*/}
+
+/*USER - LOGO - MENU*/
+#logo{
+  font-family: 'Krona One', sans-serif;
+  color: $color-terciario;
+  flex-grow: 3;
+  text-align: center;
+  font-size: 1.2em;
+}
+#menu-nav, #user-nav{
+  flex-grow: 1;
+  text-align: center;
+}
+.fa-user-mobile-nav, .fa-bars, .fa-search{
+  margin: auto;
+  color: $color-secundario;
+}
+
+/*MENUS*/
+
+.navbar-container {
+  float: right;
+  /*border: 5px solid red;*/
+  width: 80%;
+  display: flex;
+  flex-flow: row;
+  li {
+    text-align: center;
+    flex-grow: 1;
+    /*border: 5px solid silver;*/
+    a {
+      text-decoration: none;
+      color: $color-secundario;
+      border-bottom: 3px solid $color-primario;}
+    a:hover{
+      text-decoration: none;
+      border-bottom: 3px solid $color-terciario;
+      @include transition(600ms);
+
+    }
+  }
+}
+.mobile-nav, .desk-nav {
+  text-align: right; }
+
+/* DROPDOWN MENU */
+.dropbtn {
+    background-color: $color-primario;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: silver;
+  border-bottom: 2px solid $color-secundario;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: $color-primario;
+  .fa-user-mobile-nav, .fa-bars{
+  color: $color-terciario;}
+}
+
+/* SEARCH BAR */
+.search-container{
+  background: $search-bar;
+  padding: 5px;
+
+}
+.search-bar{
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  /*border: 5px solid red;*/}
+.search-bar-form{
+  display: flex;
+  flex-flow: row;
+  }
+.input-text{
+  flex-grow: 4;
+  margin: 0px 5px;
+}
+.btn{
+  flex-grow: 1;
+  margin: 0px 5px;
+}
+
+/* MIDDLE SECTION */
+.main-container{
+  display: flex;
+}
+.side-container{
+  background: $sidebar;
+  padding: 5px;
+}
+.center-container{
+  background: $background;
+  padding: 20px;
+}
+/* USER DESK NAV */
+.desk-user-nav{
+  border-bottom: 2px solid silver;
+  display: block;
+}
+.desk-user-header{
+  background: darken($sidebar, 5);
+  box-shadow: 0px 5px (darken($sidebar, 15));
+}
+.fa-user-desk-nav{
+  color: $color-secundario;
+  margin: 5px;
+}
+.user-info-container{
+  float: right;
+  display: flex;
+  flex-flow: column;
+  text-align: right;
+  padding: 5px;
+  border: 2px solid darken($sidebar, 15);
+  background: darken($sidebar, 5);
+}
+
+
+/* SECCION CANALES */
+
+.desk-forums{
+  padding: 10px 0;
+  display: flex;
+  flex-flow: column;
+}
+.forum-list{
+  padding: 0;
+  li{
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    text-align: left;
+    border-bottom: 3px solid gray;
+    a{color: $texto;}
+    font-weight: bold;
+    .fa-code{
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
+.forum-list{
+  li:hover{
+    a{color: white;}
+    .fa-code{
+      color: white;}
+    @include transition(600ms);
+  }
+}
+
+.c-forum{.fa-code{color: $c-color;}}
+.c-forum:hover{
+  background: $c-color;
+  border-bottom: 3px solid darken($c-color, 20);
+}
+.csharp-forum{.fa-code{color: $csharp-color;}}
+.csharp-forum:hover{
+  background: $csharp-color;
+  border-bottom: 3px solid darken($csharp-color, 20);
+}
+.css-forum{.fa-code{color: $css-color;}}
+.css-forum:hover{
+  background: $css-color;
+  border-bottom: 3px solid darken($css-color, 20);
+}
+.html-forum{.fa-code{color: $html-color;}}
+.html-forum:hover{
+  background: $html-color;
+  border-bottom: 3px solid darken($html-color, 20);
+}
+.java-forum{.fa-code{color: $java-color;}}
+.java-forum:hover{
+  background: $java-color;
+  border-bottom: 3px solid darken($java-color, 20);
+}
+.php-forum{.fa-code{color: $php-color;}}
+.php-forum:hover{
+  background: $php-color;
+  border-bottom: 3px solid darken($php-color, 20);
+}
+.python-forum{.fa-code{color: $python-color;}}
+.python-forum:hover{
+  background: $python-color;
+  border-bottom: 3px solid darken($python-color, 20);
+}
+
+
+/* CENTER SECCION */
+.bienvenida{
+  border-bottom: 2px solid $color-secundario;
+}
+/* BLOQUE DE TUTORIALES*/
+.tuto-container{
+  h2{
+    color: black;
+  }
+  border-bottom: 3px solid $color-terciario;
+}
+.tutorial-article{
+  background: $color-primario;
+  margin: 10px 0;
+  h3{
+    padding: 5px 0px;
+    margin: 0;
+    color: $color-secundario;
+    border-left: 4px solid $color-terciario;
+  }
+  padding: 5px;
+}
+.tutorial-article-all{
+  background: lightgrey;
+  margin: 10px 0;
+  h3{
+    padding: 5px 0px;
+    margin: 0;
+    color: $color-primario;
+  }
+  padding: 5px;
+}
+.tuto-content{
+  background: $background;
+  display: flex;
+}
+.tuto-content-all{
+  background: $background;
+  margin: 20px 80px;
+  padding: 5px;
+  border-top: 1px solid lightgrey;
+  .vote-count{
+    margin: 5px;
+    padding: 5px;
+    color: lighten(red, 10%);
+  }
+}
+.ask-text,.ask-image,.tuto-text, .tuto-image{
+  margin: 2px 10px;
+}
+.ask-image, .tuto-image{
+  display: block;
+  img{
+    margin: auto;
+  }
+}
+.add-tuto{
+  display: flex;
+  background: lightgrey;
+  padding: 10px;
+}
+.add-tuto-element{
+  flex: 1;
+}
+.add-tuto-text{color: $color-primario;}
+.admin-section{
+  background: darken($background, 10);
+  margin: auto;
+  padding: 10px;
+  display: flex;
+}
+.btn-admin{
+  flex:1;
+}
+
+.tuto-res{
+  margin: 10px 0;
+  padding: 15px;
+  background: darken($background, 5);
+  border: 2px solid darken($background, 20);
+}
+.user-name-res{
+  color: $color-primario;
+}
+/* BLOQUE DE PREGUNTAS*/
+.ask-article{
+  background: $color-secundario;
+  margin: 10px 0;
+  h3{
+    padding: 5px 0px;
+    margin: 0;
+    color: $color-primario;
+    border-left: 4px solid $color-terciario;
+  }
+  padding: 5px;
+}
+.ask-content{
+  background: $background;
+  display: flex;
+}
+.ask-article-all{
+  background: lightgrey;
+  margin: 10px 10px;
+  h3{
+    padding: 5px 0px;
+    margin: 0;
+    color: $color-primario;
+  }
+  padding: 5px;
+}
+.answer-content{
+  background: $background;
+  margin: 20px 80px;
+  padding: 5px;
+  border-top: 1px solid lightgrey;
+  .vote-count{
+    margin: 5px;
+    padding: 5px;
+    color: lighten(red, 10%);
+  }
+}
+/* FOOTER */
+
+.footer-container{
+  background: #1e1e1e;
+  height: 120px;
+  display: flex;
+  flex-flow: row;
+
+}
+
+.contact, .site-map{
+  text-align: center;
+  color: snow;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.fa-arrow-circle-up{
+  text-align: center;
+  color: lighten(#1e1e1e, 5);
+}
+/* TEAM STYLE */
+.team-container{
+  display: flex;
+}
+.member-block{
+
+  background: darken($background, 20);
+  margin: 10px;
+  padding: 5px;
+  flex: 1;
+}
+.fa-user{
+  display: block !important;
+  color: $color-primario;
+  margin: auto;
+  text-align: center;
+  /*border: 5px solid red;*/}
+
+h4{
+  padding: 5px;
+  background: lighten($color-primario, 20);
+  color: $complementario;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 0;
+  /*border: 5px solid red;*/
+}
+.member-text{padding: 0 10px 5px;}
+.member-content{
+  height: auto;
+  color: $background;
+  background: lighten($color-primario, 10);
+}
+
+/* CONTACTO */
+.contact-container{
+  background: $background;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  margin: auto;
+}
+.contact-form{
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+.form-element{
+  display: flex;
+  flex-flow: column;
+}
+.form-element-tuto{
+  display: flex;
+  flex-flow: column;
+  margin: 25px;
+  padding: 20px;
+  width: 70%;
+}
+.form-element-ask{
+  display: flex;
+  flex-flow: column;
+  margin: 25px;
+  padding: 20px;
+  width: 70%;
+}
+.form-btn{
+  margin: 10px;
+  display: flex;
+  flex-flow: row;
+}
+/* MEDIA QUERIES */
+/* SMALL - MEDIUM PHONES */
+@media (max-width: 767px)
+{
+  .mobile-nav {
+    position: relative;
+    float: right;
+    display: flex;
+    text-align: right;}
+  .desk-nav {
+    display: none; }
+  .main-container{
+    flex-flow: column-reverse;}
+  .tuto-content, .ask-content{
+    flex-flow: column;}
+  .desk-user-nav{
+    display:none;}
+  .team-container, .add-tuto, .admin-section{flex-flow: column;}
+  .contact-container, .edit-panel, .admin-section{width: 80%;}
+}
+/* LARGE PHONES -TABLETS */
+@media (max-width: 991px)
+{
+  .mobile-nav {
+    position: relative;
+    float: right;
+    display: flex;
+    text-align: right; }
+  .desk-nav{
+    display: none; }
+  .main-container{
+    flex-flow: column-reverse;}
+  .tuto-content, .ask-content{
+    flex-flow: column;}
+  .desk-user-nav{
+    display:none;}
+  .team-container, .add-tuto, .admin-section{flex-flow: column;}
+  .contact-container, .edit-panel, .admin-section{width: 80%;}
+}
+/* LAPTOPS - SMALL SCREENS */
+@media (min-width: 992px) {
+  .mobile-nav, .mobile-user-nav {
+    display: none; }
+  .navbar-container {
+    width: 90%; }
+  .navbar-container li a {
+    margin: 5px;
+    font-size: .75em; }
+  .desk-nav {
+    position: relative;
+    top: 15px; }
+  .search-bar{
+    float: right;
+  }
+  .main-container{
+    flex-flow: row;
+  }
+  .side-container{flex: 1;}
+  .center-container{flex: 5;}
+  .tuto-content, .ask-content{
+    flex-flow: row;}
+  .team-container, .add-tuto, .admin-section{flex-flow: row;}
+  .contact-container, .edit-panel{width: 50%;}
+  .admin-section{width: 70%;}
+}
+/* LARGE SCREENS */
+@media (min-width: 1200px) {
+  .mobile-nav, .mobile-user-nav {
+    display: none; }
+  .desk-nav {
+    position: relative;
+    top: 15px; }
+  .navbar-container {
+    width: 90%; }
+  .navbar-container li a {
+    margin: 5px;
+    font-size: 1em; }
+  .main-container{
+    flex-flow: row;
+  }
+  .side-container{flex: 1;}
+  .center-container{flex: 5;}
+  .tuto-content, .ask-content{
+    flex-flow: row;}
+  .team-container, .add-tuto, .admin-section{flex-flow: row;}
+  .contact-container, .edit-panel{width: 50%;}
+  .admin-section{width: 70%;}
+}
