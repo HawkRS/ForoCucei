@@ -1,9 +1,7 @@
 <?php
-
 	if (!isset($_GET['ctrl'])){
 		$_GET['ctrl'] = 'index';
 	}
-
 	switch($_GET['ctrl']){
 		case 'index':
 			echo "No hagas nada";
