@@ -20,8 +20,8 @@
         break;
       case 'questions':
         echo 'Preguntas';
-        //require_once('controllers/UsersController.php');
-        //$controller = new UsersController();
+        require_once('controllers/QuestionsController.php');
+        $controller = new QuestionsController();
         break;
       case 'contact':
         echo 'Contacto';
