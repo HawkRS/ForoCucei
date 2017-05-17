@@ -1,27 +1,25 @@
 <?php
 
-  include_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/Database.php');
+  require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/models/Model.php');
 
-  class Users {
+  class Users extends Model{
+
     function __construct(){
-      $this->connection = DataBase::connection();
+      parent::__construct();
     }
 
-    //function SignUp($data){
-      //return $this->db->insert('users', $data);
-    //  return $this->db->insert('users', $data);
-    //}
     function Show(){
       $st = $this->pdo->prepare('SELECT * FROM users');
       $st->execute();
       $result = $st->fetchAll(PDO::FETCH_OBJ);
       return $result;
     }
+
     function Create(){
-      $name = 'Tony';
-      $last = 'Stark';
-      $nick = 'Ironman';
-      $mail = 'Stark@mail.com';
+      $name = 'John';
+      $last = 'Doe';
+      $nick = 'JDoe';
+      $mail = 'JDoe@mail.com';
       $pass = '+Carlos1';
       $passHash = password_hash($pass, PASSWORD_BCRYPT);
       $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
@@ -34,18 +32,19 @@
       $result = $st->fetchAll(PDO::FETCH_OBJ);
       return $result;
     }
+
     function Update(){
       $id = 2;
-      $name = 'Kimi';
-      $last = 'Raikkonen';
-      $nick = 'iceman';
-      $mail = 'iceone@mail.com';
+      $name = 'MikaS';
+      $last = 'Hakkinen';
+      $nick = 'flying finn';
+      $mail = 'Mika@mail.com';
       $st = $this->pdo->prepare('UPDATE users
-        SET `name` = :name,
-            `last` = :last,
-            `nick` = :nick,
-            `mail` = :mail
-        WHERE `iduser` = :id
+        SET name = :name,
+            last = :last,
+            nick = :nick,
+            mail = :mail
+        WHERE iduser = :id
       ');
       $st->bindValue(":id", $id);
       $st->bindValue(":name", $name);
@@ -56,9 +55,10 @@
       $result = $st->fetchAll(PDO::FETCH_OBJ);
       return $result;
     }
+
     function Delete(){
       $id = 3;
-      $st = $this->pdo->prepare('DELETE FROM users WHERE `iduser` = :id');
+      $st = $this->pdo->prepare('DELETE FROM users WHERE iduser = :id');
       $st->bindValue(":id", $id);
       $st->execute();
       $result = $st->fetchAll(PDO::FETCH_OBJ);

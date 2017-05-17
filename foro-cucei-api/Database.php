@@ -1,9 +1,10 @@
 <?php
-include('config.php');
+require('config.php');
 
 class Database extends PDO{
 
   public function __construct(){
+    parent::__construct();
   }
 
   public function connection(){
@@ -11,7 +12,7 @@ class Database extends PDO{
     try{
       $this->pdo = new PDO($dsn, DB_USER, DB_PASS);
       //$pdo = new PDO($dsn, DB_USER, DB_PASS);
-      //echo 'Entre a la base';
+      echo 'Entre a la base';
     }
     catch (PDOException $e){
       echo 'Connection failed: ' . $e->getMessage();

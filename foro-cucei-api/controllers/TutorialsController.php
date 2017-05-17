@@ -2,14 +2,14 @@
 
   require_once('Controller.php');
 
-  class UsersController extends Controller{
+  class TutorialsController extends Controller{
 
     private $model;
 
     public function __construct(){
       parent::__construct();
-      require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/models/Users.php');
-      $this->model = new Users();
+      require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/models/Tutorials.php');
+      $this->model = new Tutorials();
     }
 
     public function execute(){
