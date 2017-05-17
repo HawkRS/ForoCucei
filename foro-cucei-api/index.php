@@ -25,8 +25,8 @@
         break;
       case 'contact':
         echo 'Contacto';
-        //require_once('controllers/UsersController.php');
-        //$controller = new UsersController();
+        require_once('controllers/ContactController.php');
+        $controller = new ContactController();
         break;
       default:
       echo 'Inicio default';
