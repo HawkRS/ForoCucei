@@ -19,13 +19,17 @@
       }
       switch($_GET['act'])
       {
-        case 'read':
-          //echo 'READ';
-          echo json_encode ($this->model->Show());
-          break;
-        case 'create':
+        case 'signup':
           //echo 'CREATE';
-          echo json_encode ($this->model->create());
+          echo json_encode ($this->model->signup());
+          break;
+        case 'show':
+          //echo 'READ';
+          echo json_encode ($this->model->show());
+          break;
+        case 'signin':
+          //echo 'CREATE';
+          echo json_encode ($this->model->signin());
           break;
         case 'update':
           //echo 'UPDATE';
@@ -34,6 +38,10 @@
         case 'delete':
           //echo 'DELETE';
           echo json_encode ($this->model->delete());
+          break;
+        case 'find':
+          //echo 'DELETE';
+          echo json_encode ($this->model->find());
           break;
         default:
           echo 'Acción no reconocida';

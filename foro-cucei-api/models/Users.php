@@ -8,14 +8,24 @@
       parent::__construct();
     }
 
-    function Show(){
+    function show(){
       $st = $this->pdo->prepare('SELECT * FROM users');
       $st->execute();
       $result = $st->fetchAll(PDO::FETCH_OBJ);
       return $result;
     }
 
-    function Create(){
+    function find(){
+      $id = 2;
+      $st = $this->pdo->prepare('SELECT * FROM users WHERE iduser = :id');
+      $st->bindValue(":id", $id);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      //var_dump($st);
+      return $result;
+    }
+
+    function signup(){
       $name = 'John';
       $last = 'Doe';
       $nick = 'JDoe';
@@ -31,6 +41,20 @@
       $st->execute();
       $result = $st->fetchAll(PDO::FETCH_OBJ);
       return $result;
+    }
+
+    function signin(){
+      $name = 'John';
+      $last = 'Doe';
+      $nick = 'JDoe';
+      $mail = 'JDoe@mail.com';
+      $pass = '+Carlos1';
+      $passHash = password_hash($pass, PASSWORD_BCRYPT);
+      $st = $this->pdo->prepare('SELECT * FROM users WHERE mail = :mail');
+      $st->bindValue(":mail", $mail, PDO::PARAM_STR);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      var_dump($st);
     }
 
     function Update(){
