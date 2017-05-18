@@ -35,8 +35,8 @@
         break;
       case 'answer':
         echo 'Respuestas';
-        //require_once('controllers/ContactController.php');
-        //$controller = new ContactController();
+        require_once('controllers/AnswersController.php');
+        $controller = new AnswersController();
         break;
       default:
       echo 'Inicio default';
