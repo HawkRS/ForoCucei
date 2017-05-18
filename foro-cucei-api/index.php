@@ -28,6 +28,16 @@
         require_once('controllers/ContactController.php');
         $controller = new ContactController();
         break;
+      case 'comment':
+        echo 'Comentarios';
+        require_once('controllers/ComentsController.php');
+        $controller = new ComentsController();
+        break;
+      case 'answer':
+        echo 'Respuestas';
+        //require_once('controllers/ContactController.php');
+        //$controller = new ContactController();
+        break;
       default:
       echo 'Inicio default';
       break;
