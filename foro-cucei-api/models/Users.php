@@ -56,6 +56,18 @@
       var_dump($st);
     }
 
+    function ResetPass(){
+      $id = 2;
+      $pass = '+Carlos1';
+      $newpass = '+Carlos1';
+      $passHash = password_hash($newpass, PASSWORD_BCRYPT);
+      $st = $this->pdo->prepare('UPDATE users
+        SET pass = :pass,
+        WHERE iduser = :id
+      ');
+      $st->bindValue(":pass", $passHash);
+    }
+
     function Update(){
       $id = 2;
       $name = 'MikaS';
