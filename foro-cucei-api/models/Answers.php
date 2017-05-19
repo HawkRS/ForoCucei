@@ -28,10 +28,20 @@
       return $result;
     }
 
+    function find(){
+      $id = 1;
+      $st = $this->pdo->prepare('SELECT * FROM answersq WHERE idanswerQ = :id');
+      $st->bindValue(":id", $id);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      return $result;
+    }
+
+
     function Create(){
-      $category = 4;
-      $description = 'Muy bueno';
-      $users_idusers = 8;
+      $category = 3;
+      $description = 'Excelente';
+      $users_idusers = 2;
       $questions_idquestions = 1;
       $st = $this->pdo->prepare('INSERT INTO answersq (category, description, users_iduser, questions_idquestions)
                                  VALUES (:category, :description, :users_iduser, :questions_idquestions)
@@ -56,7 +66,7 @@
             description             = :description,
             users_iduser            = :users_iduser,
             questions_idquestions   = :questions_idquestions,
-        WHERE idanswersQ = :id
+        WHERE idanswerQ = :id
       ');
       $st->bindValue(":id", $id);
       $st->bindValue(":category", $category);
@@ -70,7 +80,7 @@
 
     function Delete(){
       $id = 1;
-      $st = $this->pdo->prepare('DELETE FROM answersq WHERE idanswersQ = :id');
+      $st = $this->pdo->prepare('DELETE FROM answersq WHERE idanswerQ = :id');
       $st->bindValue(":id", $id);
       $st->execute();
 

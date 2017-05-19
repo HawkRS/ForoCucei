@@ -31,6 +31,10 @@
           //echo 'UPDATE';
           echo json_encode ($this->model->update());
           break;
+        case 'find':
+          //echo 'DELETE';
+          echo json_encode ($this->model->find());
+          break;
         case 'delete':
           //echo 'DELETE';
           echo json_encode ($this->model->delete());

@@ -15,6 +15,15 @@
       return $result;
     }
 
+    function find(){
+      $id = 2;
+      $st = $this->pdo->prepare('SELECT * FROM tutorials WHERE idtutorials = :id');
+      $st->bindValue(":id", $id);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      return $result;
+    }
+
     function Create(){
       $category = 4;
       $description = 'lkslkjsdfakjlsfdgkjlsdflkjsdfañjflña';

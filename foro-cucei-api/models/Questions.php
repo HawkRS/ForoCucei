@@ -27,6 +27,15 @@
       return $result;
     }
 
+    function find(){
+      $id = 1;
+      $st = $this->pdo->prepare('SELECT * FROM questions WHERE idquestions = :id');
+      $st->bindValue(":id", $id);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      return $result;
+    }
+
     function Create(){
       $category = 'python';
       $description = 'Soy la jenny?';

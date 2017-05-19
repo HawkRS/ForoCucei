@@ -21,7 +21,6 @@
       $st->bindValue(":id", $id);
       $st->execute();
       $result = $st->fetchAll(PDO::FETCH_OBJ);
-      //var_dump($st);
       return $result;
     }
 

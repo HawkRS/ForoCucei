@@ -35,6 +35,10 @@
           //echo 'DELETE';
           echo json_encode ($this->model->delete());
           break;
+        case 'find':
+          //echo 'DELETE';
+          echo json_encode ($this->model->find());
+          break;
         default:
           echo 'Acción no reconocida';
       }

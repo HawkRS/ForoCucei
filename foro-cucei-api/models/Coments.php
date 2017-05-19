@@ -28,6 +28,15 @@
       return $result;
     }
 
+    function find(){
+      $id = 1;
+      $st = $this->pdo->prepare('SELECT * FROM answerst WHERE idanswerT = :id');
+      $st->bindValue(":id", $id);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      return $result;
+    }
+
     function Create(){
       $category = 4;
       $description = 'Muy bueno';
@@ -56,7 +65,7 @@
             description             = :description,
             users_iduser            = :users_iduser,
             tutorials_idtutorials   = :tutorials_idtutorials,
-        WHERE idanswersT = :id
+        WHERE idanswerT = :id
       ');
       $st->bindValue(":id", $id);
       $st->bindValue(":category", $category);
@@ -70,7 +79,7 @@
 
     function Delete(){
       $id = 1;
-      $st = $this->pdo->prepare('DELETE FROM answerst WHERE idanswersT = :id');
+      $st = $this->pdo->prepare('DELETE FROM answerst WHERE idanswerT = :id');
       $st->bindValue(":id", $id);
       $st->execute();
 
