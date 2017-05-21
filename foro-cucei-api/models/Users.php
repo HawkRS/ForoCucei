@@ -1,6 +1,7 @@
 <?php
 
   require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/models/Model.php');
+  require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
 
   class Users extends Model{
 
@@ -25,21 +26,27 @@
     }
 
     function signup(){
-      $name = 'John';
+      $name = 'Jane';
       $last = 'Doe';
       $nick = 'JDoe';
-      $mail = 'JDoe@mail.com';
+      $mail = 'JanyDoe@mail.com';
       $pass = '+Carlos1';
-      $passHash = password_hash($pass, PASSWORD_BCRYPT);
-      $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
-      $st->bindValue(":name", $name);
-      $st->bindValue(":last", $last);
-      $st->bindValue(":nick", $nick);
-      $st->bindValue(":mail", $mail);
-      $st->bindValue(":pass", $passHash);
-      $st->execute();
-      $result = $st->fetchAll(PDO::FETCH_OBJ);
-      return $result;
+      if(empty($name) || empty($last) ||empty($nick) ||empty($mail) ||empty($pass)){
+        echo "variables vacias";
+        //return False;
+      }
+      else{
+        $passHash = password_hash($pass, PASSWORD_BCRYPT);
+        $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
+        $st->bindValue(":name", $name);
+        $st->bindValue(":last", $last);
+        $st->bindValue(":nick", $nick);
+        $st->bindValue(":mail", $mail);
+        $st->bindValue(":pass", $passHash);
+        $st->execute();
+        $result = $st->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+      }
     }
 
     function signin(){
