@@ -41,11 +41,11 @@
       $special   = preg_match('#[\W]#', $trimmedstr);
       if($special > 0 || strlen($trimmedstr) < 2) {
         //echo "Contraseña invalida";
-        echo "<br>El " . $aux . " es invalido";
+        //echo "<br>El " . $aux . " es invalido";
         return False;
       }
       else {
-        echo "<br>" . $aux . " valido";
+        //echo "<br>" . $aux . " valido";
         return True;
       }
     }

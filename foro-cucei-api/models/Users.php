@@ -7,6 +7,7 @@
 
     function __construct(){
       parent::__construct();
+      //$error = []
     }
 
     function show(){
@@ -28,7 +29,7 @@
     function signup(){
       require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
       $validador = new Validator();
-      $name = 'Guera';
+      $name = 'Guer+a';
       $last = 'Gonzalez';
       $nick = 'Weris';
       $mail = 'Weris@mail.com';
@@ -39,34 +40,55 @@
       if(empty($name) || empty($last) ||empty($nick) ||empty($mail) ||empty($pass)){
         echo "<br>variables vacias";
         //return False;
+        //$error = ['Falta de llenar uno de los campos'];
+        //return $error;
       }
       else{
-        if($validador->isValidEmail($mail)== False){
-          return "<br>El correo ingresado es invalido";
+        if($validador->isValidName($name, $FieldName)==False){
+          //$error = ['El nombre es invalido'];
+          //return $error
         }
         else{
-          $this->BuscarCorreo($mail);
-          $this->BuscarNick($nick);
-          $validador->isValidName($name, $FieldName);
-          $validador->isValidName($last, $FieldLast);
-          if($validador->isValidPass($pass) != False)
-          {
-            $passHash = password_hash($pass, PASSWORD_BCRYPT);
-            $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
-            $st->bindValue(":name", $name);
-            $st->bindValue(":last", $last);
-            $st->bindValue(":nick", $nick);
-            $st->bindValue(":mail", $mail);
-            $st->bindValue(":pass", $passHash);
-            $st->execute();
-            $result = $st->fetchAll(PDO::FETCH_OBJ);
-            return $result;
+          if($validador->isValidName($last, $FieldLast)==False){
+            //$error = ['El apellido es invalido'];
+            //return $error
           }
-          //VALIDANDO TAMAÑO Y FORMATO DE LA CONTRASEÑA
-          //echo "Correo valido";
-        }
-
-      }
+          else{
+            if($this->BuscarNick($nick) == False){
+              //$error = ['Este nickname ya esta tomado'];
+              //return $error
+            }
+            else{
+              if($validador->isValidEmail($mail)== False){
+                //$error = ['El correo es invalido'];
+                //return $error
+              }
+              else{
+                if($this->BuscarCorreo($mail) == False){
+                  //$error = ['Este correo ya esta en uso'];
+                  //return $error
+                }
+                else{
+                  if($validador->isValidPass($pass) != False){
+                    $passHash = password_hash($pass, PASSWORD_BCRYPT);
+                    $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
+                    $st->bindValue(":name", $name);
+                    $st->bindValue(":last", $last);
+                    $st->bindValue(":nick", $nick);
+                    $st->bindValue(":mail", $mail);
+                    $st->bindValue(":pass", $passHash);
+                    $st->execute();
+                    $result = $st->fetchAll(PDO::FETCH_OBJ);
+                    return $result;
+                  }/* SE INSERTARON LOS DATOS */
+                  //$error = ['Esta contraseña no es valida'];
+                  //return $error
+                }/* ELSE PARA INSERTAR */
+              }/* CORREO UNICO */
+            }/* VALIDAR CORREO */
+          }/* NICKNAME UNICO*/
+        }/* VALIDAR APELLIDO */
+      }/* VALIDAR NOMBRE */
     }
 
     function signin(){
