@@ -1,7 +1,7 @@
 <?php
 
   require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/models/Model.php');
-  require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
+
 
   class Users extends Model{
 
@@ -26,26 +26,39 @@
     }
 
     function signup(){
-      $name = 'Jane';
-      $last = 'Doe';
-      $nick = 'JDoe';
-      $mail = 'JanyDoe@mail.com';
+      require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
+      $validador = new Validator();
+      $name = 'Diego';
+      $last = 'Gonzalez';
+      $nick = 'Tapia';
+      $mail = 'Tapia@mail.com';
       $pass = '+Carlos1';
+      // VALIDANDO QUE NO TENGAMOS CAMPOS VACIOS
       if(empty($name) || empty($last) ||empty($nick) ||empty($mail) ||empty($pass)){
         echo "variables vacias";
         //return False;
       }
       else{
-        $passHash = password_hash($pass, PASSWORD_BCRYPT);
-        $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
-        $st->bindValue(":name", $name);
-        $st->bindValue(":last", $last);
-        $st->bindValue(":nick", $nick);
-        $st->bindValue(":mail", $mail);
-        $st->bindValue(":pass", $passHash);
-        $st->execute();
-        $result = $st->fetchAll(PDO::FETCH_OBJ);
-        return $result;
+        if($validador->isValidEmail($mail)== False){
+          return "El correo ingresado es invalido";
+        }
+        else{
+          $this->BuscarCorreo($mail);
+          $this->BuscarNick($nick);
+          //VALIDANDO TAMAÑO Y FORMATO DE LA CONTRASEÑA
+          //echo "Correo valido";
+          $passHash = password_hash($pass, PASSWORD_BCRYPT);
+          $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
+          $st->bindValue(":name", $name);
+          $st->bindValue(":last", $last);
+          $st->bindValue(":nick", $nick);
+          $st->bindValue(":mail", $mail);
+          $st->bindValue(":pass", $passHash);
+          $st->execute();
+          $result = $st->fetchAll(PDO::FETCH_OBJ);
+          return $result;
+        }
+
       }
     }
 
@@ -104,6 +117,38 @@
       $st->bindValue(":id", $id);
       $st->execute();
       $result = $st->fetchAll(PDO::FETCH_OBJ);
+      return $result;
+    }
+
+    function BuscarCorreo($mail){
+      $st = $this->pdo->prepare('SELECT COUNT(mail) AS correos FROM users WHERE mail = :mail');
+      $st->bindValue(":mail", $mail);
+      $st->execute();
+      $result = $st->fetch(PDO::FETCH_OBJ);
+      //echo ($result->correos);
+      //var_dump($result->correos);
+      if ($result->correos == 0) {
+          echo 'Thank you for Submitting. Redirecting back to Home Page';
+      } else {
+          echo 'E-mail exists!';
+          return False;
+      }
+      return $result;
+    }
+
+    function BuscarNick($nick){
+      $st = $this->pdo->prepare('SELECT COUNT(nick) AS correos FROM users WHERE nick = :nick');
+      $st->bindValue(":nick", $nick);
+      $st->execute();
+      $result = $st->fetch(PDO::FETCH_OBJ);
+      //echo ($result->correos);
+      //var_dump($result->correos);
+      if ($result->correos == 0) {
+          echo 'Thank you for Submitting. Redirecting back to Home Page';
+      } else {
+          echo 'Nickname exists!';
+          return False;
+      }
       return $result;
     }
   }
