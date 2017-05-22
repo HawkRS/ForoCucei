@@ -28,35 +28,42 @@
     function signup(){
       require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
       $validador = new Validator();
-      $name = 'Diego';
+      $name = 'Guera';
       $last = 'Gonzalez';
-      $nick = 'Tapia';
-      $mail = 'Tapia@mail.com';
-      $pass = '+Carlos1';
+      $nick = 'Weris';
+      $mail = 'Weris@mail.com';
+      $pass = 'Carlos1';
+      $FieldName = 'Nombre';
+      $FieldLast = 'Apellido';
       // VALIDANDO QUE NO TENGAMOS CAMPOS VACIOS
       if(empty($name) || empty($last) ||empty($nick) ||empty($mail) ||empty($pass)){
-        echo "variables vacias";
+        echo "<br>variables vacias";
         //return False;
       }
       else{
         if($validador->isValidEmail($mail)== False){
-          return "El correo ingresado es invalido";
+          return "<br>El correo ingresado es invalido";
         }
         else{
           $this->BuscarCorreo($mail);
           $this->BuscarNick($nick);
+          $validador->isValidName($name, $FieldName);
+          $validador->isValidName($last, $FieldLast);
+          if($validador->isValidPass($pass) != False)
+          {
+            $passHash = password_hash($pass, PASSWORD_BCRYPT);
+            $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
+            $st->bindValue(":name", $name);
+            $st->bindValue(":last", $last);
+            $st->bindValue(":nick", $nick);
+            $st->bindValue(":mail", $mail);
+            $st->bindValue(":pass", $passHash);
+            $st->execute();
+            $result = $st->fetchAll(PDO::FETCH_OBJ);
+            return $result;
+          }
           //VALIDANDO TAMAÑO Y FORMATO DE LA CONTRASEÑA
           //echo "Correo valido";
-          $passHash = password_hash($pass, PASSWORD_BCRYPT);
-          $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
-          $st->bindValue(":name", $name);
-          $st->bindValue(":last", $last);
-          $st->bindValue(":nick", $nick);
-          $st->bindValue(":mail", $mail);
-          $st->bindValue(":pass", $passHash);
-          $st->execute();
-          $result = $st->fetchAll(PDO::FETCH_OBJ);
-          return $result;
         }
 
       }
@@ -128,9 +135,9 @@
       //echo ($result->correos);
       //var_dump($result->correos);
       if ($result->correos == 0) {
-          echo 'Thank you for Submitting. Redirecting back to Home Page';
+          echo '<br>Correo valido';
       } else {
-          echo 'E-mail exists!';
+          echo '<br>E-mail exists!';
           return False;
       }
       return $result;
@@ -144,9 +151,9 @@
       //echo ($result->correos);
       //var_dump($result->correos);
       if ($result->correos == 0) {
-          echo 'Thank you for Submitting. Redirecting back to Home Page';
+          echo '<br>Nickname valido';
       } else {
-          echo 'Nickname exists!';
+          echo '<br>Nickname exists!';
           return False;
       }
       return $result;
