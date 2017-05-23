@@ -50,4 +50,13 @@
       }
     }
 
+    /*function isSamePass($str1, $str2){
+      if(password_verify()){
+        return True;
+      }
+      else{
+        return False;
+      }
+    }*/
+
   }

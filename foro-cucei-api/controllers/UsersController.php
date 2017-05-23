@@ -43,6 +43,10 @@
           //echo 'DELETE';
           echo json_encode ($this->model->find());
           break;
+        case 'resetpass':
+          //echo 'DELETE';
+          echo json_encode ($this->model->ResetPass());
+          break;
         default:
           echo 'Acción no reconocida';
       }
