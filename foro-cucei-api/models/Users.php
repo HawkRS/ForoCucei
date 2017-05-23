@@ -7,7 +7,7 @@
 
     function __construct(){
       parent::__construct();
-      //$error = []
+      $error = [];
     }
 
     function show(){
@@ -29,66 +29,60 @@
     function signup(){
       require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
       $validador = new Validator();
-      $name = 'Guer+a';
-      $last = 'Gonzalez';
+      $name = 'Guera';
+      $last = 'Gonza+lez';
       $nick = 'Weris';
-      $mail = 'Weris@mail.com';
-      $pass = 'Carlos1';
+      $mail = 'Werismail.com';
+      $pass = '+Carlos1';
       $FieldName = 'Nombre';
       $FieldLast = 'Apellido';
       // VALIDANDO QUE NO TENGAMOS CAMPOS VACIOS
       if(empty($name) || empty($last) ||empty($nick) ||empty($mail) ||empty($pass)){
-        echo "<br>variables vacias";
-        //return False;
-        //$error = ['Falta de llenar uno de los campos'];
+        //echo "<br>variables vacias";
+        $error[] = 'Falta de llenar uno de los campos';
         //return $error;
       }
+      if($validador->isValidName($name, $FieldName)==False){
+        $error[] = 'El nombre es invalido';
+        //return $error
+      }
+      if($validador->isValidName($last, $FieldLast)==False){
+        $error[] = 'El apellido es invalido';
+        //return $error
+      }
+      if($this->BuscarNick($nick) == False){
+        $error[] = 'Este nickname ya esta tomado';
+        //return $error
+      }
+      if($validador->isValidEmail($mail)== False){
+        $error[] = 'El correo es invalido';
+        //return $error
+      }
+      if($this->BuscarCorreo($mail) == False){
+        $error[] = 'Este correo ya esta en uso';
+        //return $error
+      }
+      if($validador->isValidPass($pass) == False){
+        $error[] = 'Esta contraseña no es valida';
+        //return $error
+      }
+      if($error == [])
+      {
+        $passHash = password_hash($pass, PASSWORD_BCRYPT);
+        $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
+        $st->bindValue(":name", $name);
+        $st->bindValue(":last", $last);
+        $st->bindValue(":nick", $nick);
+        $st->bindValue(":mail", $mail);
+        $st->bindValue(":pass", $passHash);
+        $st->execute();
+        $result = $st->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+      }
       else{
-        if($validador->isValidName($name, $FieldName)==False){
-          //$error = ['El nombre es invalido'];
-          //return $error
-        }
-        else{
-          if($validador->isValidName($last, $FieldLast)==False){
-            //$error = ['El apellido es invalido'];
-            //return $error
-          }
-          else{
-            if($this->BuscarNick($nick) == False){
-              //$error = ['Este nickname ya esta tomado'];
-              //return $error
-            }
-            else{
-              if($validador->isValidEmail($mail)== False){
-                //$error = ['El correo es invalido'];
-                //return $error
-              }
-              else{
-                if($this->BuscarCorreo($mail) == False){
-                  //$error = ['Este correo ya esta en uso'];
-                  //return $error
-                }
-                else{
-                  if($validador->isValidPass($pass) != False){
-                    $passHash = password_hash($pass, PASSWORD_BCRYPT);
-                    $st = $this->pdo->prepare('INSERT INTO users(name, last, nick, mail, pass) VALUES (:name, :last, :nick, :mail, :pass)');
-                    $st->bindValue(":name", $name);
-                    $st->bindValue(":last", $last);
-                    $st->bindValue(":nick", $nick);
-                    $st->bindValue(":mail", $mail);
-                    $st->bindValue(":pass", $passHash);
-                    $st->execute();
-                    $result = $st->fetchAll(PDO::FETCH_OBJ);
-                    return $result;
-                  }/* SE INSERTARON LOS DATOS */
-                  //$error = ['Esta contraseña no es valida'];
-                  //return $error
-                }/* ELSE PARA INSERTAR */
-              }/* CORREO UNICO */
-            }/* VALIDAR CORREO */
-          }/* NICKNAME UNICO*/
-        }/* VALIDAR APELLIDO */
-      }/* VALIDAR NOMBRE */
+        print_r($error);
+        return $error;
+      }
     }
 
     function signin(){
@@ -157,9 +151,9 @@
       //echo ($result->correos);
       //var_dump($result->correos);
       if ($result->correos == 0) {
-          echo '<br>Correo valido';
+          //echo '<br>Correo valido';
       } else {
-          echo '<br>E-mail exists!';
+          //echo '<br>E-mail exists!';
           return False;
       }
       return $result;
@@ -173,9 +167,9 @@
       //echo ($result->correos);
       //var_dump($result->correos);
       if ($result->correos == 0) {
-          echo '<br>Nickname valido';
+          //echo '<br>Nickname valido';
       } else {
-          echo '<br>Nickname exists!';
+          //echo '<br>Nickname exists!';
           return False;
       }
       return $result;

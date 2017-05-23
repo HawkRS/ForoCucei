@@ -27,11 +27,11 @@
       $special   = preg_match('@[\W]@', $pass);
 
       if(!$uppercase || !$special || !$lowercase || !$number || strlen($pass) < 8) {
-        echo "<br>Contraseña invalida";
+        //echo "<br>Contraseña invalida";
         return False;
       }
       else {
-        echo "<br>Contraseña valida";
+        //echo "<br>Contraseña valida";
         return True;
       }
     }
