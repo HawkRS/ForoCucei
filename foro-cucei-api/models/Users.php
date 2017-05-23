@@ -26,7 +26,7 @@
       return $result;
     }
 
-    function signup(){
+    function create(){
       require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
       $validador = new Validator();
       $name = 'Rick';

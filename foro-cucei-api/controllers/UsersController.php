@@ -20,31 +20,24 @@
       switch($_GET['act'])
       {
         case 'signup':
-          //echo 'CREATE';
-          echo json_encode ($this->model->signup());
+          echo json_encode ($this->model->create());
           break;
         case 'show':
-          //echo 'READ';
           echo json_encode ($this->model->show());
           break;
         case 'signin':
-          //echo 'CREATE';
           echo json_encode ($this->model->signin());
           break;
         case 'update':
-          //echo 'UPDATE';
           echo json_encode ($this->model->update());
           break;
         case 'delete':
-          //echo 'DELETE';
           echo json_encode ($this->model->delete());
           break;
         case 'find':
-          //echo 'DELETE';
           echo json_encode ($this->model->find());
           break;
         case 'resetpass':
-          //echo 'DELETE';
           echo json_encode ($this->model->ResetPass());
           break;
         default:
