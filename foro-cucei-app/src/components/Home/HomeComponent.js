@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import config from 'config';
 
 require('styles//Home.css');
 require('styles/style.css');
@@ -11,16 +12,30 @@ import FooterComponent from '../Helpers/FooterComponent';
 import TutorialListComponent from './TutorialListComponent';
 import QuestionsListComponent from './QuestionsListComponent';
 
+import User from '../../models/User';
+
 class HomeComponent extends React.Component {
   constructor() {
         super();
+  }
+
+  sendAccount() {
+    let user = new User();
+    user.create({
+      name: 'hola esto se envio con jquery!!!!'
+    }).then((data) => {
+      alert('this is the data!!!!'+JSON.stringify(data));
+    }).catch((err) => {
+      console.log(err);
+    });
   }
 
   render() {
     const { content } = this.props;
     const bienvenida = (<div className='bienvenida'>
                 <article className='article-block'>
-                  <h1>Bienvenidos</h1>
+                  <h1>Bienvenidos {config.appEnv}</h1>
+                  <button className="btn btn-success" onClick={this.sendAccount.bind(this)}>TAP TO CALL SERVER</button>
                   <p>
                     The path of the righteous man is beset on all sides by the iniquities
                     of the selfish and the tyranny of evil men. Blessed is he who, in the
