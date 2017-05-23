@@ -29,11 +29,11 @@
     function create(){
       require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
       $validador = new Validator();
-      $name = 'Rick';
-      $last = 'Sanchez';
-      $nick = 'Rick';
-      $mail = 'Rick@mail.com';
-      $pass = '+Carlos1';
+      $name = 'Morty';
+      $last = 'Smith';
+      $nick = 'Morty';
+      $mail = 'Morty@mail.com';
+      $pass = '+MortyS1';
       $FieldName = 'Nombre';
       $FieldLast = 'Apellido';
       // VALIDANDO QUE NO TENGAMOS CAMPOS VACIOS
@@ -101,7 +101,7 @@
 
     function ResetPass(){
       echo "Consiguiendo old pass<br>";
-      $id = 79;
+      $id = 80;
       $st = $this->pdo->prepare('SELECT pass FROM users WHERE iduser = :id');
       $st->bindValue(":id", $id);
       $st->execute();
@@ -110,8 +110,9 @@
       //return $result;
       require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/controllers/Validator.php');
       $validador = new Validator();
-      $pass = '+Carlos1';
-      $newpass = $result->pass;
+      $pass = '+MortyS1';
+      $oldpass = $result->pass;
+      $newpass = '+Carlos1';
       if($validador->isValidPass($pass) == False){
         $error[] = 'Esta contraseña no es valida';
         //return $error
@@ -120,12 +121,12 @@
         $error[] = 'Esta contraseña no es valida';
         //return $error
       }
-      if (password_verify($pass, $newpass)) {
+      if (password_verify($pass, $oldpass)) {
           echo '<br>Las contraseñas coinciden';
       } else {
           $error[] = 'Las contraseñas no coinciden';
           echo '<br>Las contraseñas no coinciden';
-      }
+        }
       if(empty($error)){
         echo "<br>Datos correctos, cambiando password<br>";
         $passHash = password_hash($newpass, PASSWORD_BCRYPT);
@@ -134,6 +135,7 @@
           WHERE iduser = :id
         ');
         $st->bindValue(":pass", $passHash);
+        $st->bindValue(":id", $id);
         $st->execute();
         $result = $st->fetch(PDO::FETCH_OBJ);
         return $result;

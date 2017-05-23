@@ -19,7 +19,7 @@
       }
       switch($_GET['act'])
       {
-        case 'signup':
+        case 'create':
           echo json_encode ($this->model->create());
           break;
         case 'show':
