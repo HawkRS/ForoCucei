@@ -2,7 +2,6 @@
 
   require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/models/Model.php');
 
-
   class Users extends Model{
 
     function __construct(){
@@ -175,7 +174,7 @@
         $error[] = 'Este correo ya esta en uso';
       }
       if(empty($error)){
-        echo "<br>Datos correctos, creando usuario<br>";
+        //echo "<br>Datos correctos, creando usuario<br>";
         $st = $this->pdo->prepare('UPDATE users
           SET name = :name,
               last = :last,

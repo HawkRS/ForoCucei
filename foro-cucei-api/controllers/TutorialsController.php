@@ -19,9 +19,9 @@
       }
       switch($_GET['act'])
       {
-        case 'read':
+        case 'show':
           //echo 'READ';
-          echo json_encode ($this->model->Show());
+          echo json_encode ($this->model->show());
           break;
         case 'create':
           //echo 'CREATE';
@@ -38,6 +38,18 @@
         case 'delete':
           //echo 'DELETE';
           echo json_encode ($this->model->delete());
+          break;
+        case 'likeup':
+          //echo 'DELETE';
+          echo json_encode ($this->model->likeup());
+          break;
+        case 'approve':
+          //echo 'DELETE';
+          echo json_encode ($this->model->isApproved());
+          break;
+        case 'disapprove':
+          //echo 'DELETE';
+          echo json_encode ($this->model->isDisapproved());
           break;
         default:
           echo 'Acción no reconocida';
