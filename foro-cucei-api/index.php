@@ -39,8 +39,8 @@
         $controller = new AnswersController();
         break;
       default:
-      echo 'Inicio default';
-      break;
+        echo 'Inicio default';
+        break;
     }
     $controller->execute();
   }

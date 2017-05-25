@@ -29,11 +29,11 @@
       $category = 4;
       $description = 'lkslkjsdfakjlsfdgkjlsdflkjsdfañjflña';
       $users_idusers = 2;
+      if(empty($category) || empty($description))){
+        $error[] = 'Falta de llenar uno de los campos';
+      }
       if($category <= 0 || $category > 7){
         $error[] = 'Esta categoria no existe';
-      }
-      if(empty($category)){
-        $error[] = 'Falta de llenar uno de los campos';
       }
       if(empty($error)){
         $st = $this->pdo->prepare('INSERT INTO tutorials (category, description, users_iduser) VALUES (:category, :description, :users_iduser)');

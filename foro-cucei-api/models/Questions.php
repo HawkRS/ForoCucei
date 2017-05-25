@@ -37,9 +37,16 @@
     }
 
     function Create(){
-      $category = 'python';
+      $category = 1;
       $description = 'Soy la jenny?';
       $users_idusers = 2;
+      if(empty($category) || empty($description)){
+        $error[] = 'Falta de llenar uno de los campos';
+      }
+      if($category <= 0 || $category > 7){
+        $error[] = 'Esta categoria no existe';
+      }
+      if(empty($error)){
       $st = $this->pdo->prepare('INSERT INTO questions (category, description, users_iduser) VALUES (:category, :description, :users_iduser)');
       $st->bindValue(":category", $category);
       $st->bindValue(":description", $description);
@@ -48,12 +55,23 @@
       $result = $st->fetchAll(PDO::FETCH_OBJ);
       return $result;
     }
+    else{
+      return $error;
+    }
+  }
 
     function Update(){
       $id = 2;
       $category = 3;
       $description = 'Raikkonen';
       $users_idusers = 11;
+      if(empty($category) || empty($description)){
+        $error[] = 'Falta de llenar uno de los campos';
+      }
+      if($category <= 0 || $category > 7){
+        $error[] = 'Esta categoria no existe';
+      }
+      if(empty($error)){
       $st = $this->pdo->prepare('UPDATE questions
         SET category      = :category,
             description   = :description,
@@ -68,15 +86,72 @@
       $result = $st->fetchAll(PDO::FETCH_OBJ);
       return $result;
     }
+    else{
+      return $error;
+    }
+  }
 
     function Delete(){
       $id = 4;
       $st = $this->pdo->prepare('DELETE FROM questions WHERE idquestions = :id');
       $st->bindValue(":id", $id);
       $st->execute();
-
       $result = $st->fetchAll(PDO::FETCH_OBJ);
+      return $result;
+    }
 
+    function likeup(){
+      $id = 1;//Variable de prueba
+      $st = $this->pdo->prepare('UPDATE questions
+        SET likes = likes+1
+        WHERE idquestions = :id
+      ');
+      $st->bindValue(":id", $id);
+      //$st->bindValue(":likes", $newstatus);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      //var_dump($result);
+      return $result;
+    }
+
+    function isApproved(){
+      $id = 1;//Variable de prueba
+      $st = $this->pdo->prepare('UPDATE questions
+        SET status = 1
+        WHERE idquestions = :id
+      ');
+      $st->bindValue(":id", $id);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      //var_dump($result);
+      return $result;
+    }
+
+    function isDisapproved(){
+      $id = 1;//Variable de prueba
+      $st = $this->pdo->prepare('UPDATE questions
+        SET status = 0
+        WHERE idquestions = :id
+      ');
+      $st->bindValue(":id", $id);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      //var_dump($result);
+      return $result;
+    }
+
+    function isAnswer(){
+      $id = 1;//Variable de prueba
+      $answer = 2;//Variable de prueba
+      $st = $this->pdo->prepare('UPDATE questions
+        SET answer = :answer
+        WHERE idquestions = :id
+      ');
+      $st->bindValue(":id", $id);
+      $st->bindValue(":answer", $answer);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      //var_dump($result);
       return $result;
     }
 
