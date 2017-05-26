@@ -35,7 +35,6 @@ class HomeComponent extends React.Component {
     const bienvenida = (<div className='bienvenida'>
                 <article className='article-block'>
                   <h1>Bienvenidos {config.appEnv}</h1>
-                  <button className="btn btn-success" onClick={this.sendAccount.bind(this)}>TAP TO CALL SERVER</button>
                   <p>
                     The path of the righteous man is beset on all sides by the iniquities
                     of the selfish and the tyranny of evil men. Blessed is he who, in the
