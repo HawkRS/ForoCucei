@@ -12,8 +12,8 @@ import FaqComponent             from './Pages/FaqComponent';
 import TerminosComponent        from './Pages/TerminosComponent';
 import ContactoComponent        from './Pages/ContactoComponent';
 import NosotrosComponent        from './Pages/NosotrosComponent';
-import TutorialesComponent      from './Pages/TutorialesComponent';
-import PreguntasComponent       from './Pages/PreguntasComponent';
+import TutorialListComponent      from './Home/TutorialListComponent';
+import QuestionsListComponent       from './Home/QuestionsListComponent';
 import TutoIndComponent         from './Pages/TutoIndComponent';
 import PreguntaComponent        from './Pages/PreguntaComponent';
 import PregIndComponent         from './Pages/PregIndComponent';
@@ -31,15 +31,15 @@ class AppComponent extends React.Component {
             <Route path={'/signup'} component={SignUpComponent}/>
             <Route path={'/forgot-password'} component={ForgotPasswordComponent}/>
             <Route path={'/'} component={HomeComponent}>
+              <Route exact path={'preguntas'} components={{ content: QuestionsListComponent }}/>
+              <Route path={'preguntas/:id'} components={{ content: PregIndComponent }}/>
+              <Route exact path={'tutoriales'} components={{ content: TutorialListComponent }}/>
+              <Route path={'tutoriales/:id'} components={{ content: TutoIndComponent }}/>
               <Route path={'faq'} components={{ content: FaqComponent }}/>
               <Route path={'terminos'} components={{ content: TerminosComponent }}/>
               <Route path={'contacto'} components={{ content: ContactoComponent }}/>
               <Route path={'nosotros'} components={{ content: NosotrosComponent }}/>
-              <Route path={'tutoriales'} components={{ content: TutorialesComponent }}/>
-              <Route path={'preguntas'} components={{ content: PreguntasComponent }}/>
-              <Route path={'tutorial-ind'} components={{ content: TutoIndComponent }}/>
               <Route path={'nueva-pregunta'} components={{ content: PreguntaComponent }}/>
-              <Route path={'pregunta-ind'} components={{ content: PregIndComponent }}/>
               <Route path={'perfil'} components={{ content: PerfilComponent }}/>
               <Route path={'usuario-editar'} components={{ content: UserEditComponent }}/>
               <Route path={'admin/usuarios'} components={{ content: UsuariosComponent }}/>

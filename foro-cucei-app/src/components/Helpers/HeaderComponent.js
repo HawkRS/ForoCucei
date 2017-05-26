@@ -2,10 +2,16 @@
 
 import React from 'react';
 
-require('styles//HeaderComponent.css');
+require('styles/HeaderComponent.css');
 require('styles/style.css');
 
+import { Link } from 'react-router';
+
 class HeaderComponent extends React.Component {
+  goToSignup() {
+    window.location = '/signup';
+  }
+
   render() {
     return (
       <div className='headercomponent-component'>
@@ -39,33 +45,36 @@ class HeaderComponent extends React.Component {
                       <div className='dropdown' style={{float:'right'}}>
                         <button className='dropbtn'><i className='fa fa-bars fa-2x' aria-hidden='true'></i></button>
                         <div className='dropdown-content'>
-                          <li><a href='index.html'>Inicio</a></li>
-                          <li><a href='tutoriales.html'>Tutoriales</a></li>
-                          <li><a href='#canales'>Canales</a></li>
-                          <li><a href='faq.html'>FAQ</a></li>
-                          <li><a href='contacto.html'>Contacto</a></li>
-                          <li><a href='nosotros'>Nosotros</a></li>
+                          <li><Link to={'/'}>Inicio</Link></li>
+                          <li><Link to={'/tutoriales'}>Tutoriales</Link></li>
+                          <li><Link to={'/preguntas'}>Preguntas</Link></li>
+                          <li><Link to={'/faq'}>FAQ</Link></li>
+                          <li><Link to={'/nosotros'}>Nosotros</Link></li>
                         </div>
                       </div>
                     </nav>
-                    <nav className='desk-nav'>
-                      <ul className='navbar-container'>
-                        <li><a href='index.html'>Inicio</a></li>
-                        <li><a href='tutoriales.html'>Tutoriales</a></li>
-                        <li><a href='faq.html'>FAQ</a></li>
-                        <li><a href='contacto.html'>Contacto</a></li>
-                        <li><a href='nosotros'>Nosotros</a></li>
+                    <nav className='desk-nav menu-conatainer'>
+                      <ul className='navbar-container nav-menu-container'>
+                        <li><Link to={'/'}>Inicio</Link></li>
+                        <li><Link to={'/tutoriales'}>Tutoriales</Link></li>
+                        <li><Link to={'/preguntas'}>Preguntas</Link></li>
+                        <li><Link to={'/faq'}>FAQ</Link></li>
+                        <li><Link to={'/nosotros'}>Nosotros</Link></li>
+                        <li>
+                          <div className='search-bar'>
+                            <form className='search-bar-form'>
+                              <input type='search' className='input-text' name='Buscar' placeholder='Buscar' style={{height: '35px', borderRadius: '2px', borderColor: '#0EB5B2'}}/>
+                              <button type='submit' className='btn' name='Buscar' style={{height: '35px'}}><i className='fa fa-search fa-1x' aria-hidden='true'></i></button>
+                            </form>
+                          </div>
+                        </li>
+                        <li style={{marginLeft: '5px'}}><Link to='/signin'>Log in</Link></li>
+                        <li style={{marginLeft: '5px'}}>
+                          <button className='btn btn-success header-menu-button' style={{marginLeft: '5px'}} onClick={() => {this.goToSignup()}}>Sign up</button>
+                        </li>
                       </ul>
                     </nav>
                   </div>
-                </div>
-              </div>
-              <div className='search-container col-xs-12'>
-                <div className='search-bar'>
-                  <form className='search-bar-form' action='index.html' method='post'>
-                    <input type='search' className='input-text' name='Buscar' placeholder='Buscar'/>
-                    <button type='submit' className='btn' name='Buscar'><i className='fa fa-search fa-2x' aria-hidden='true'></i></button>
-                  </form>
                 </div>
               </div>
             </header>

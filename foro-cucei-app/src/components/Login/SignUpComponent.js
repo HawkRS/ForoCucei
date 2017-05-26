@@ -31,7 +31,7 @@ class SignUpComponent extends React.Component {
                           <label htmlFor="password-confirm">Confirmar Password</label>
                           <input type="password" className="form-control" name="password-confirm" id="password-confirm-input" placeholder="Confirmar Password"/>
                       </div>
-                      <button onClick="goToIndex()" type="submit" className="btn btn-success btn-lg btn-block" style={{margin: 0, borderRadius: 0}}>Registrar</button>
+                      <button type="submit" className="btn btn-success btn-lg btn-block" style={{margin: 0, borderRadius: 0}}>Registrar</button>
                   </form>
               </div>
           </div>
