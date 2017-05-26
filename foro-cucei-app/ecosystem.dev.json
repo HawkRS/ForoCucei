@@ -1,0 +1,27 @@
+{
+    "apps": [
+        {
+            "name": "FOROCUCEI_DEV",
+            "script": "./server.js",
+            "exec_mode": "fork_mode",
+            "env": {
+                "NODE_ENV": "development",
+                "PORT": 3000
+            }
+        }
+    ],
+    "deploy" : {
+        "development" : {
+            "user": "mserrano",
+            "host" : ["104.154.201.246"],
+            "ref"  : "origin/development",
+            "repo" : "git@github.com:HawkRS/ForoCucei.git",
+            "path" : "/var/www/forocucei/development",
+            "pre-deploy-local" : "echo 'Starting deploy development'",
+            "post-deploy" : "cd foro-cucei-app && npm install && pm2 startOrRestart ecosystem.dev.json --env development",
+            "env"  : {
+                "NODE_ENV": "development"
+            }
+        }
+    }
+}
