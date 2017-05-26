@@ -2,14 +2,14 @@
 
   require_once('Controller.php');
 
-  class UsersController extends Controller{
+  class ContactController extends Controller{
 
     private $model;
 
     public function __construct(){
       parent::__construct();
-      require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/models/Users.php');
-      $this->model = new Users();
+      require_once('c:/xampp/htdocs/ForoCucei/foro-cucei-api/models/Contact.php');
+      $this->model = new Contact();
     }
 
     public function execute(){
@@ -19,26 +19,21 @@
       }
       switch($_GET['act'])
       {
+        case 'read':
+          //echo 'READ';
+          echo json_encode ($this->model->Show());
+          break;
         case 'create':
+          //echo 'CREATE';
           echo json_encode ($this->model->create());
           break;
-        case 'show':
-          echo json_encode ($this->model->show());
-          break;
-        case 'signin':
-          echo json_encode ($this->model->signin());
-          break;
         case 'update':
+          //echo 'UPDATE';
           echo json_encode ($this->model->update());
           break;
         case 'delete':
+          //echo 'DELETE';
           echo json_encode ($this->model->delete());
-          break;
-        case 'find':
-          echo json_encode ($this->model->find());
-          break;
-        case 'resetpass':
-          echo json_encode ($this->model->ResetPass());
           break;
         default:
           echo 'Acción no reconocida';

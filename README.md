@@ -46,4 +46,3 @@ La idea es crear en cucei una comunidad de estudiantes, maestros y entusiastas e
 - Podra crear y borrar tutoriales.
 - Podra ver todos los usuarios registrados.
 - Podra editar o eliminar usuarios registrados.
-
