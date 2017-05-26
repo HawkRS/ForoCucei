@@ -88,4 +88,18 @@
       return $result;
     }
 
+    function likeup(){
+      $id = 2;//Variable de prueba
+      $st = $this->pdo->prepare('UPDATE answerst
+        SET likes = likes+1
+        WHERE idanswerT = :id
+      ');
+      $st->bindValue(":id", $id);
+      //$st->bindValue(":likes", $newstatus);
+      $st->execute();
+      $result = $st->fetchAll(PDO::FETCH_OBJ);
+      var_dump($result);
+      return $result;
+    }
+
   }
