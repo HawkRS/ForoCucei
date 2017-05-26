@@ -1,6 +1,6 @@
 # Foro Cucei
 ============
-Ver la [demo](https://forocucei.000webhostapp.com/)
+Ver la [demo](http://104.154.201.246/)
 ## Descripcion del proyecto
 ===================================
 Este sera un foro de ayuda a los estudiantes, aqui habran tutoriales sobre temas informaticos(lenguajes, frameworks, programas) asi como una seccion de pregunta y respuesta(Parecido a lo que ofrece stackoverflow). 
