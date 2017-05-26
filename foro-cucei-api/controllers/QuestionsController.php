@@ -20,33 +20,43 @@
       switch($_GET['act'])
       {
         case 'read':
-          echo json_encode ($this->model->Show());
+          $result=json_encode($this->model->Show());
+          return $result;
           break;
         case 'create':
-          echo json_encode ($this->model->create());
+          $result=json_encode($this->model->create());
+          return $result;
           break;
         case 'update':
-          echo json_encode ($this->model->update());
+          $result=json_encode($this->model->update());
+          return $result;
           break;
         case 'delete':
-          echo json_encode ($this->model->delete());
+          $result=json_encode($this->model->delete());
+          return $result;
           break;
         case 'find':
-          echo json_encode ($this->model->find());
+          $result=json_encode($this->model->find());
+          return $result;
           break;
         case 'answer':
-          echo json_encode ($this->model->isAnswer());
+          $result=json_encode($this->model->isAnswer());
+          return $result;
           break;
         case 'likeup':
-          echo json_encode ($this->model->likeup());
+          $result=json_encode($this->model->likeup());
+          return $result;
           break;
         case 'approve':
-          echo json_encode ($this->model->isApproved());
+          $result=json_encode($this->model->isApproved());
+          return $result;
           break;
         case 'disapprove':
-          echo json_encode ($this->model->isDisapproved());
+          $result=json_encode($this->model->isDisapproved());
+          return $result;
         default:
-          echo 'Acción no reconocida';
+          $result='Acción no reconocida';
+          return $result;
       }
     }
 

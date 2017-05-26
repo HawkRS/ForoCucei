@@ -20,28 +20,37 @@
       switch($_GET['act'])
       {
         case 'create':
-          echo json_encode ($this->model->create());
+          $result=json_encode ($this->model->create());
+          return $result;
           break;
         case 'show':
-          echo json_encode ($this->model->show());
+          $result=json_encode ($this->model->show());
+          return $result;
           break;
         case 'signin':
-          echo json_encode ($this->model->signin());
+          $result=json_encode ($this->model->signin());
+          return $result;
           break;
         case 'update':
-          echo json_encode ($this->model->update());
+          $result=json_encode ($this->model->update());
+          return $result;
           break;
         case 'delete':
-          echo json_encode ($this->model->delete());
+          $result=json_encode ($this->model->delete());
+          return $result;
           break;
         case 'find':
-          echo json_encode ($this->model->find());
+          $result=json_encode ($this->model->find());
+          return $result;
           break;
         case 'resetpass':
-          echo json_encode ($this->model->ResetPass());
+          $result=json_encode ($this->model->ResetPass());
+          return $result;
           break;
         default:
-          echo 'Acción no reconocida';
+          $result='Acción no reconocida';
+          return $result;
+          break;
       }
     }
 
