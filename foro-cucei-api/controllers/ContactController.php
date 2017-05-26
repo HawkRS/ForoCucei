@@ -24,7 +24,9 @@
           return $result;
           break;
         case 'create':
-          $result=json_encode ($this->model->create());
+          if(isset($_POST['variable']) && !empty($_POST['variable'])) {
+            $result=json_encode ($this->model->create());
+          }
           return $result;
           break;
         case 'update':
@@ -41,5 +43,6 @@
           break;
       }
     }
+
 
   }

@@ -1,4 +1,5 @@
 <?php
+  return($_GET);
   if(isset($_GET) && !empty($_GET['ctrl']))
   {
     $controller = $_GET['ctrl'];
