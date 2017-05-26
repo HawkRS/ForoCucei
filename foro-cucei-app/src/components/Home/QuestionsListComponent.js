@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-
+import {Link} from 'react-router';
 require('styles//home/QuestionsList.css');
 
 class QuestionListItemComponent extends React.Component {
@@ -34,12 +34,12 @@ class QuestionListItemComponent extends React.Component {
     const questionCategories = this.getCategoriesIcons(question.categories);
     return(
       <article className='ask-article'>
-        <h3>{question.title}</h3>
+        <Link to={'/preguntas/'+question.id}><h3>{question.title}</h3></Link>
         <div className='ask-content'>
           <figure className='ask-image'>
-            <img className='img-responsive' src={'images/ask.png'} alt='tutorial' />
+            <Link to={'/preguntas/'+question.id}><img className='img-responsive' src={'images/ask.png'} alt='tutorial' /></Link>
           </figure>
-          <p className='ask-text'>
+          <p className='ask-text ask-description'>
             {question.description}
           </p>
         </div>
@@ -50,9 +50,14 @@ class QuestionListItemComponent extends React.Component {
 }
 
 class QuestionsListComponent extends React.Component {
+  constructor() {
+    super();
+  }
   getQuestions() {
+    let {limit} = this.props;
     let questions = [
       {
+        id: 1,
         title: 'Como funciona flexbox?',
         description: `
               Two words: nail, salon. It's perfect for money laundering, it's a
@@ -62,6 +67,7 @@ class QuestionsListComponent extends React.Component {
         categories: ['C#']
       },
       {
+        id: 2,
         title: 'Problema con printf c++',
         description: `
               Drum roll, please. Wait for it. Lazer tag. Lazer tag! 7,000 square
@@ -71,6 +77,7 @@ class QuestionsListComponent extends React.Component {
         categories: ['C++']
       },
       {
+        id: 3,
         title: 'De donde saco el proyecto para proga web con Michelle?',
         description: `
               Si llego a este punto no crea que lo copiamos, pase todo el fin
@@ -80,6 +87,7 @@ class QuestionsListComponent extends React.Component {
         categories: ['PHP','HTML','CSS']
       },
       {
+        id: 4,
         title: 'Como hago una instancia?',
         description: `
               This is glass grade. I mean, you got... Jesus, you got crystals
@@ -91,6 +99,7 @@ class QuestionsListComponent extends React.Component {
         categories: ['PYTHON']
       },
       {
+        id: 5,
         title: 'Heil Hitler Bitch!',
         description: `
               What? Come on! Man, you're smart. You made poison out of beans,
@@ -106,15 +115,21 @@ class QuestionsListComponent extends React.Component {
       }
     ];
 
-    return questions.map((q, i) => {
+    let result =  questions.map((q, i) => {
       return <QuestionListItemComponent question={q} key={'question'+i}/>
     });
+    if(limit && limit > 0 && limit < result.length) {
+      return result.slice(0, limit);
+    } else {
+      return result;
+    }
   }
+
   render() {
     let questions = this.getQuestions();
     return (
       <div className='ask-container'>
-        <h2>ULTIMAS PREGUNTAS</h2>
+        {<h2>ULTIMAS PREGUNTAS</h2>}
         {questions}
       </div>
     );

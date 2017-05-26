@@ -1,5 +1,7 @@
 <?php
-  return($_GET);
+  //$result=json_encode('Acción no reconocida');
+  //return $result;
+  var_dump($_GET);
   if(isset($_GET) && !empty($_GET['ctrl']))
   {
     $controller = $_GET['ctrl'];
@@ -47,5 +49,5 @@
   }
   else
   {
-    echo 'Inicio Else';
+    //echo 'Inicio Else';
   }
