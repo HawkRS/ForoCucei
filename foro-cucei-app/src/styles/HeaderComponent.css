@@ -1,0 +1,19 @@
+.headercomponent-component {
+}
+
+.nav-menu-container {
+  align-items: center;
+  align-self: center;
+  flex-flow: row;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  width: 700px;
+}
+
+.header-menu-button {
+  min-width: 80px;
+}
